@@ -12,6 +12,7 @@ import {
   Sparkles,
   Users,
 } from "lucide-react";
+import PortfolioPage from "../components/Portfolio";
 
 const cx = (...classes) => classes.filter(Boolean).join(" ");
 
@@ -350,7 +351,6 @@ function RolesSection() {
         <SectionHeader
           eyebrow="Open Roles"
           title="Opportunities to join the team"
-          body="Keep these role cards easy to scan. They should feel premium, direct, and action-oriented."
         />
         <motion.div
           variants={stagger}
@@ -359,7 +359,7 @@ function RolesSection() {
           viewport={{ once: true, amount: 0.2 }}
           className="grid gap-6"
         >
-          {pageData.roles.map((role) => (
+         {/* {pageData.roles.map((role) => (
             <motion.div
               key={role.title}
               variants={fadeUp}
@@ -376,7 +376,9 @@ function RolesSection() {
               </div>
               <Button className="md:min-w-[150px]">Apply Now</Button>
             </motion.div>
-          ))}
+          ))}*/}
+
+          < PortfolioPage />
         </motion.div>
       </Container>
     </section>
@@ -391,7 +393,6 @@ function FitSection() {
           <SectionHeader
             eyebrow="Who Thrives Here"
             title="The kind of people who tend to do well with us"
-            body="This section gives candidates a more honest signal than generic culture language. Keep it clear and useful."
           />
           <motion.div
             variants={stagger}
@@ -427,7 +428,6 @@ function HiringProcessSection() {
           center
           eyebrow="Hiring Process"
           title="A simple application journey"
-          body="A clear process lowers friction and signals that the team values structure and communication."
         />
         <motion.div
           variants={stagger}
@@ -508,7 +508,7 @@ function CareersFinalCTA() {
                 Ready to build something meaningful?
               </h2>
               <p className="mt-4 max-w-2xl text-lg leading-8 text-white/70">
-                Use this closing section to reinforce ambition, momentum, and a strong next step for the candidate.
+                Start an exciting journey with us.
               </p>
             </div>
             <div className="flex flex-wrap gap-3 lg:justify-end">

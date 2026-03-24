@@ -1,6 +1,29 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
+import { Button } from "./Buttons";
+import {
+  ArrowRight,
+  Briefcase,
+  CheckCircle2,
+  Clock3,
+  Globe,
+  HeartHandshake,
+  MapPin,
+  Send,
+  Sparkles,
+  Users,
+} from "lucide-react";
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 24 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.55, ease: [0.16, 1, 0.3, 1] },
+  },
+};
 
 export default function PortfolioPage() {
   const [portfolio, setPortfolio] = useState(null);
@@ -20,32 +43,50 @@ export default function PortfolioPage() {
       });
   }, []);
 
-  if (portfolio === null) return <p>Loading portfolio...</p>;
+  if (portfolio === null) return <h2>Loading Vacancies...</h2>;
   if (error) return <p>Error: {error}</p>;
 
   return (
-    <div style={{ padding: "20px" }}>
-      <h1>Avada Portfolio</h1>
+    <div id="vacancies" style={{ padding: "20px" }}>
       {portfolio.length === 0 ? (
         <p>No items found.</p>
       ) : (
-        <ul>
+        <div>
           {portfolio.map((item) => (
-            <li key={item.id}>
-              <h2 dangerouslySetInnerHTML={{ __html: item.title.rendered }} />
+            <div
+              className="grid gap-5 rounded-[1.85rem] border border-[#E6EBE7] bg-white p-7 shadow-[0_8px_24px_rgba(24,32,28,0.04)] md:grid-cols-[1fr_auto] md:items-center"
+            >
+
               {item._embedded?.["wp:featuredmedia"]?.[0]?.source_url && (
                 <img
                   src={item._embedded["wp:featuredmedia"][0].source_url}
                   alt={item.title.rendered}
-                  style={{ maxWidth: "300px" }}
+                  style={{ maxWidth: "900px" }}
                 />
               )}
-              <div
-                dangerouslySetInnerHTML={{ __html: item.content.rendered }}
-              />
-            </li>
+            </div>
           ))}
-        </ul>
+
+        {/* <ul>
+            {portfolio.map((item) => (
+              <li key={item.id}>
+                <h2 dangerouslySetInnerHTML={{ __html: item.title.rendered }} />
+                {item._embedded?.["wp:featuredmedia"]?.[0]?.source_url && (
+                  <img
+                    src={item._embedded["wp:featuredmedia"][0].source_url}
+                    alt={item.title.rendered}
+                    style={{ maxWidth: "900px" }}
+                  />
+                )}
+                <div
+                  dangerouslySetInnerHTML={{ __html: item.content.rendered }}
+                />
+              </li>
+            ))}
+          </ul> */}
+
+        </div>
+
       )}
     </div>
   );

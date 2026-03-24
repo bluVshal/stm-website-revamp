@@ -36,14 +36,14 @@ export function NavBar() {
           {siteData.nav.map((item) => (
             <a
               key={item}
-              href={`#${item.toLowerCase()}`}
+              href={`/#${item.toLowerCase()}`}
               className="group relative text-sm font-medium text-[#4B504C] transition hover:text-[#202220]"
             >
               {item}
               <span className="absolute -bottom-2 left-0 h-0.5 w-0 rounded-full bg-[#8DC53E] transition-all duration-200 group-hover:w-full" />
             </a>
           ))}
-          <a href="">Careers Page</a>
+          <a href="/careers">Careers Page</a>
         </nav>
 
         <div className="hidden md:block">
