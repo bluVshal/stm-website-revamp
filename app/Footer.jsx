@@ -21,7 +21,7 @@ export function Footer() {
 
             <FooterColumn title="Navigation" items={["About", "Services", "Work", "Process", "Careers", "Contact"]} />
             <FooterColumn title="Services" items={["SEO", "Paid Media", "CRM", "Creative", "Analytics", "Strategy"]} />
-            <FooterColumn title="Contact" items={["hello@stmagency.com", "+230 000 0000", "Mauritius"]} />
+            <FooterColumn title="Contact" items={["info@stmconsulting.io", /*"+230 000 0000",*/ "8th Floor, Nexteracom 1, Ebène, Mauritius"]} />
           </div>
 
           <div className="mt-10 flex flex-col gap-3 border-t border-white/10 pt-6 text-sm text-white/55 md:flex-row md:items-center md:justify-between">

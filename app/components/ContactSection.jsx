@@ -19,14 +19,11 @@ export function ContactSection() {
           className="rounded-[2rem] border border-[#E6EBE7] bg-white p-8 shadow-[0_8px_24px_rgba(24,32,28,0.04)] md:p-10"
         >
           <h3 className="text-2xl font-semibold tracking-tight text-[#202220]">Contact us</h3>
-          <p className="mt-4 text-base leading-7 text-[#5E645F]">
-            Use a clear, low-friction contact area with fast trust signals and refined form styling.
-          </p>
           <div className="mt-8 grid gap-4">
             {[
-              { icon: Mail, label: "Email", value: "hello@stmagency.com" },
-              { icon: Phone, label: "Phone", value: "+230 000 0000" },
-              { icon: Globe, label: "Location", value: "Mauritius · Serving global brands" },
+              { icon: Mail, label: "Email", value: "info@stmconsulting.io" },
+              /*{ icon: Phone, label: "Phone", value: "+230 000 0000" },*/
+              { icon: Globe, label: "Location", value: "8th Floor, Nexteracom 1, Ebène, Mauritius" },
             ].map((item) => (
               <div key={item.label} className="flex items-start gap-4 rounded-2xl bg-[#F8FAF9] p-4">
                 <div className="rounded-2xl bg-[#EAF5DA] p-3 text-[#5A7B24]">

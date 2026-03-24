@@ -36,14 +36,14 @@ export function HeroSection() {
               <Button variant="secondary">Book a Call</Button>
             </motion.div>
 
-            <motion.div variants={fadeUp} className="mt-10 flex flex-wrap items-center gap-3 text-sm text-[#5E645F]">
+            {/*<motion.div variants={fadeUp} className="mt-10 flex flex-wrap items-center gap-3 text-sm text-[#5E645F]">
               <span className="font-medium text-[#202220]">Trusted across sectors:</span>
               {siteData.trust.map((item) => (
                 <span key={item} className="rounded-full border border-[#E6EBE7] bg-white px-3 py-1.5 shadow-sm">
                   {item}
                 </span>
               ))}
-            </motion.div>
+            </motion.div> */}
           </motion.div>
 
           <motion.div
