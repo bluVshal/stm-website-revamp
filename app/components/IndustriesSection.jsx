@@ -31,7 +31,7 @@ export function IndustriesSection() {
       id="work"
       eyebrow="Industries"
       title="We work across ambitious sectors."
-      body="The agency is positioned as a broad growth partner first, with specialized capability across several industries including iGaming."
+      body="The agency is positioned as a broad growth partner first, with specialized capability across several industries."
     >
       <motion.div
         variants={stagger}

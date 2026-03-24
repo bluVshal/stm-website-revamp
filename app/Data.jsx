@@ -96,11 +96,6 @@ export const siteData = {
       title: "Tech & Digital",
       body: "Go-to-market systems that balance brand clarity with performance execution.",
     },
-    /*{
-      icon: Sparkles,
-      title: "iGaming",
-      body: "Performance-driven support in fast-moving acquisition and retention environments.",
-    },*/
   ],
   process: [
     {

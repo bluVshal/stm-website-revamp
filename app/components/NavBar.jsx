@@ -28,7 +28,7 @@ export function NavBar() {
             : "border-transparent bg-white/60 backdrop-blur-md"
         )}
       >
-        <a href="#top" className="flex items-center gap-3">
+        <a href="/" className="flex items-center gap-3">
           <img src="/STM-Consulting_Logo_(small).png" alt="STM Logo" className="h-auto w-auto" />
         </a>
 

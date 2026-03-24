@@ -346,7 +346,7 @@ function BenefitsSection() {
 
 function RolesSection() {
   return (
-    <section className="bg-[#F6F8F7] py-20 md:py-24">
+    <section id="roles" className="bg-[#F6F8F7] py-20 md:py-24">
       <Container>
         <SectionHeader
           eyebrow="Open Roles"

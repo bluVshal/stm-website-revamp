@@ -54,7 +54,7 @@ export default function PortfolioPage() {
         <div>
           {portfolio.map((item) => (
             <div
-              className="grid gap-5 rounded-[1.85rem] border border-[#E6EBE7] bg-white p-7 shadow-[0_8px_24px_rgba(24,32,28,0.04)] md:grid-cols-[1fr_auto] md:items-center"
+              className="grid gap-5 rounded-[1.85rem] border border-[#E6EBE7] bg-white p-7 shadow-[0_8px_24px_rgba(24,32,28,0.04)] md:grid-cols-[1fr_auto] md:items-center md:gap-10 mb-4"
             >
 
               {item._embedded?.["wp:featuredmedia"]?.[0]?.source_url && (

@@ -27,8 +27,12 @@ export function CareersSection() {
             energy, ambition, and the quality of client work.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <Button>View Roles</Button>
-            <Button variant="secondary">Send Your CV</Button>
+            <Button onClick={() => location.href='/careers#roles'} icon={<Sparkles size={16} />}>
+              View Roles
+            </Button>
+            <Button variant="secondary">
+              Send Your CV
+            </Button>
           </div>
         </motion.div>
 
