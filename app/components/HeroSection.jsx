@@ -95,6 +95,16 @@ export function HeroSection() {
               </div>
             </motion.div>
           </motion.div>
+
+       {/*   <motion.div
+            initial="hidden"
+            animate="visible"
+            variants={scaleIn}
+            className="relative mx-auto w-full max-w-2xl"
+          >
+
+            <p>Add content here</p>
+          </motion.div>*/}
         </div>
       </Container>
     </section>
