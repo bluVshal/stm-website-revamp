@@ -130,6 +130,10 @@ const pageData = {
   ],
 };
 
+const handleClick = () => {
+  alert("Button clicked!");
+}
+
 function Container({ children, className }) {
   return <div className={cx("mx-auto max-w-7xl px-6 md:px-8", className)}>{children}</div>;
 }
@@ -201,7 +205,9 @@ function CareersHero() {
               clarity, challenge, and impact, you’ll feel at home here.
             </motion.p>
             <motion.div variants={fadeUp} className="mt-8 flex flex-wrap gap-3">
-              <Button>View Open Roles</Button>
+              <Button onClick={handleClick} >
+                View Open Roles
+              </Button>
               <Button variant="secondary">Send Your CV</Button>
             </motion.div>
             <motion.div variants={fadeUp} className="mt-8 flex flex-wrap items-center gap-4 text-sm text-[#5E645F]">
@@ -218,16 +224,24 @@ function CareersHero() {
             className="grid grid-cols-2 gap-4"
           >
             <div className="col-span-2 h-48 rounded-[1.75rem] bg-[linear-gradient(135deg,#DCEBC1,#F7FAF5)] p-3 shadow-sm md:h-56">
-              <div className="h-full rounded-[1.35rem] bg-[radial-gradient(circle_at_30%_20%,rgba(141,197,62,0.25),transparent_18%),linear-gradient(135deg,#2C2E2C,#4A4D4A)]" />
+              <div className="h-full rounded-[1.35rem] bg-[radial-gradient(circle_at_30%_20%,rgba(141,197,62,0.25),transparent_18%),linear-gradient(135deg,#2C2E2C,#4A4D4A)]">
+                <img src="/career-desktop2.jpg" alt="STM Team" className="h-auto w-auto rounded-[1.35rem] object-contain" />
+              </div>
             </div>
             <div className="h-32 rounded-[1.5rem] bg-[linear-gradient(135deg,#EAF5DA,#F8FBF5)] p-3 shadow-sm md:h-36">
-              <div className="h-full rounded-[1.2rem] bg-[linear-gradient(135deg,#202220,#353835)]" />
+              <div className="h-full rounded-[1.2rem] bg-[linear-gradient(135deg,#202220,#353835)]">
+                <img src="/career-desktop.jpg" alt="STM Team" className="h-auto w-auto rounded-[1.35rem] object-cover" />
+              </div>
             </div>
             <div className="h-32 rounded-[1.5rem] bg-[linear-gradient(135deg,#F3F6F3,#EAF5DA)] p-3 shadow-sm md:h-36">
-              <div className="h-full rounded-[1.2rem] bg-[linear-gradient(135deg,#535752,#2A2D2A)]" />
+              <div className="h-full rounded-[1.2rem] bg-[linear-gradient(135deg,#535752,#2A2D2A)]">
+                <img src="/career-desktop3.jpg" alt="STM Team" className="h-auto w-auto rounded-[1.35rem] object-cover" />
+              </div>
             </div>
             <div className="col-span-2 ml-auto h-24 w-1/2 rounded-[1.4rem] bg-[linear-gradient(135deg,#F6F8F7,#EDF4E5)] p-3 shadow-sm">
-              <div className="h-full rounded-[1.1rem] bg-[linear-gradient(135deg,#2B2E2B,#414441)]" />
+              <div className="h-full rounded-[1.1rem] bg-[linear-gradient(135deg,#2B2E2B,#414441)]">
+                <img src="/inclusivity.jpg" alt="STM Team" className="h-auto w-auto rounded-[1.35rem] object-cover" />
+              </div>
             </div>
           </motion.div>
         </div>
@@ -346,7 +360,7 @@ function BenefitsSection() {
 
 function RolesSection() {
   return (
-    <section id="roles" className="bg-[#F6F8F7] py-20 md:py-24">
+    <section id="open-roles" className="bg-[#F6F8F7] py-20 md:py-24">
       <Container>
         <SectionHeader
           eyebrow="Open Roles"
@@ -359,7 +373,7 @@ function RolesSection() {
           viewport={{ once: true, amount: 0.2 }}
           className="grid gap-6"
         >
-         {/* {pageData.roles.map((role) => (
+          {/* {pageData.roles.map((role) => (
             <motion.div
               key={role.title}
               variants={fadeUp}
@@ -444,7 +458,7 @@ function HiringProcessSection() {
               className="relative rounded-[1.75rem] border border-[#E6EBE7] bg-white p-7 shadow-[0_8px_24px_rgba(24,32,28,0.04)]"
             >
               <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-[#8DC53E] text-sm font-bold text-[#202220]">
-                {step.number}
+                <p className="font-semibold text-lg">{step.number}</p>
               </div>
               <h3 className="mt-6 text-xl font-semibold tracking-tight text-[#202220]">{step.title}</h3>
               <p className="mt-3 text-base leading-7 text-[#5E645F]">{step.body}</p>

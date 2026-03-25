@@ -33,7 +33,7 @@ export function ProcessSection() {
               transition={{ duration: 0.45 }}
               className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-[#8DC53E] text-sm font-bold text-[#202220]"
             >
-              {step.number}
+              <p className="font-semibold text-lg">{step.number}</p>
             </motion.div>
             <h3 className="mt-6 text-xl font-semibold tracking-tight text-[#202220]">{step.title}</h3>
             <p className="mt-3 text-base leading-7 text-[#5E645F]">{step.body}</p>

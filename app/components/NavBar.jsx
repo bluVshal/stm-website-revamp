@@ -44,6 +44,8 @@ export function NavBar() {
             </a>
           ))}
           <a href="/careers">Careers Page</a>
+          <a href="/seo">SEO Page</a>
+          <a href="/crm">CRM Page</a>
         </nav>
 
         <div className="hidden md:block">

@@ -65,7 +65,7 @@ export function AboutSection() {
             <motion.div
               key={item.title}
               variants={fadeUp}
-              whileHover={{ y: -6 }}
+              whileHover={{ x: -6 }}
               className={cx(
                 "rounded-[2rem] border border-[#E6EBE7] bg-white p-8 shadow-[0_8px_24px_rgba(24,32,28,0.05)]",
                 index === 1 && "lg:ml-8",

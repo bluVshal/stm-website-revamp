@@ -33,7 +33,7 @@ export function HeroSection() {
 
             <motion.div variants={fadeUp} className="mt-8 flex flex-wrap gap-3">
               <Button icon={<ArrowRight size={16} />}>View Services</Button>
-              <Button variant="secondary">Book a Call</Button>
+              <Button variant="secondary">Book a Meeting</Button>
             </motion.div>
 
             {/*<motion.div variants={fadeUp} className="mt-10 flex flex-wrap items-center gap-3 text-sm text-[#5E645F]">

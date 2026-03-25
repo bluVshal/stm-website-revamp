@@ -25,7 +25,7 @@ export function Footer() {
           </div>
 
           <div className="mt-10 flex flex-col gap-3 border-t border-white/10 pt-6 text-sm text-white/55 md:flex-row md:items-center md:justify-between">
-            <div>© 2026 STM Agency. All rights reserved.</div>
+            <div>© 2021 - 2026 STM Consulting Ltd. All rights reserved.</div>
             <div className="flex gap-5">
               <a href="#" className="hover:text-white">Privacy</a>
               <a href="#" className="hover:text-white">Terms</a>
