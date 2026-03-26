@@ -15,7 +15,7 @@ export function HeroSection() {
           <motion.div initial="hidden" animate="visible" variants={stagger} className="max-w-2xl">
             <motion.div variants={fadeUp}>
               <span className="inline-flex items-center gap-2 rounded-full border border-[#E6EBE7] bg-white/80 px-4 py-2 text-xs font-semibold uppercase tracking-[0.14em] text-[#5E645F] shadow-sm backdrop-blur">
-                <Sparkles size={14} className="text-[#8DC53E]" /> Growth Marketing Agency
+                <Sparkles size={14} className="text-[#8DC53E]" /> Growth Marketing Company
               </span>
             </motion.div>
 

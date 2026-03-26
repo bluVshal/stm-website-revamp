@@ -41,12 +41,7 @@ export const stagger = {
 };
 
 export const siteData = {
-  nav: ["About", "Services", "Work", "Process", "Careers", "Contact"],
-  stats: [
-    { value: "+184%", label: "Lead growth" },
-    { value: "4.2x", label: "ROAS" },
-    { value: "+230%", label: "SEO visibility" },
-  ],
+  nav: ["About Us", "Services", "Careers"],
   trust: ["Fintech", "Professional Services", "B2B SaaS", "E-commerce"],
   services: [
     {
