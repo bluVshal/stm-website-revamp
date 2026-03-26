@@ -131,7 +131,7 @@ const pageData = {
 };
 
 const handleClick = () => {
-  alert("Button clicked!");
+  window.location.href = "#open-roles";
 }
 
 function Container({ children, className }) {
@@ -158,7 +158,7 @@ function SectionHeader({ eyebrow, title, body, center }) {
   );
 }
 
-function Button({ children, variant = "primary", className }) {
+function Button({ children, variant = "primary", className, ...props }) {
   const styles = {
     primary:
       "bg-[#8DC53E] text-[#414042] shadow-[0_8px_24px_rgba(24,32,28,0.08)] hover:bg-[#7FB436] hover:-translate-y-0.5",
@@ -175,6 +175,7 @@ function Button({ children, variant = "primary", className }) {
         styles[variant],
         className
       )}
+      {...props}
       type="button"
     >
       {children}

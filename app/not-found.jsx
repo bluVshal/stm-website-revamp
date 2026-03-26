@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Search, ArrowRight } from "lucide-react";
+import { Search, ArrowRight, Pointer, TextCursor } from "lucide-react";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -14,7 +14,7 @@ const stagger = {
   visible: { transition: { staggerChildren: 0.08 } }
 };
 
-function Button({ children, variant = "primary" }) {
+function Button({ children, variant = "primary", ...props }) {
   const styles = {
     primary: "bg-[#8DC53E] text-[#202220]",
     secondary: "border border-[#E6EBE7] bg-white"
@@ -25,6 +25,7 @@ function Button({ children, variant = "primary" }) {
       whileHover={{ y: -3 }}
       whileTap={{ scale: 0.97 }}
       className={`px-6 py-3 rounded-xl font-semibold ${styles[variant]}`}
+      {...props}
     >
       {children}
     </motion.button>
@@ -42,15 +43,23 @@ function Card({ title }) {
   );
 }
 
+
+
 export default function NotFound() {
+
+  function handleGoBackBtn() {
+    window.location.href = "/";
+  }
+
   return (
     <div className="relative min-h-screen bg-[#F6F8F7] text-[#202220] flex flex-col items-center justify-center px-6 overflow-hidden">
-      
+
       {/* Background Glow */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-[radial-gradient(circle,rgba(141,197,62,0.25),transparent)] blur-3xl" />
 
       {/* Floating Visual */}
-
+      <motion.div
+      />
 
       {/* Main Content */}
       <motion.div
@@ -75,8 +84,9 @@ export default function NotFound() {
         </motion.p>
 
         <motion.div variants={fadeUp} className="mt-8 flex justify-center gap-4 flex-wrap">
-          <Button>Go Home</Button>
-          <Button variant="secondary">Explore Services</Button>
+          <Button onClick={handleGoBackBtn}>
+            Go Back Home
+          </Button>
         </motion.div>
       </motion.div>
 
