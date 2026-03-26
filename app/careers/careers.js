@@ -373,25 +373,6 @@ function RolesSection() {
           viewport={{ once: true, amount: 0.2 }}
           className="grid gap-6"
         >
-          {/* {pageData.roles.map((role) => (
-            <motion.div
-              key={role.title}
-              variants={fadeUp}
-              whileHover={{ y: -4 }}
-              className="grid gap-5 rounded-[1.85rem] border border-[#E6EBE7] bg-white p-7 shadow-[0_8px_24px_rgba(24,32,28,0.04)] md:grid-cols-[1fr_auto] md:items-center"
-            >
-              <div>
-                <h3 className="text-2xl font-semibold tracking-tight text-[#414042]">{role.title}</h3>
-                <div className="mt-3 flex flex-wrap gap-3 text-sm text-[#5E645F]">
-                  <span className="inline-flex items-center gap-2 rounded-full bg-[#F1F4F2] px-3 py-1.5"><Clock3 size={14} />{role.type}</span>
-                  <span className="inline-flex items-center gap-2 rounded-full bg-[#F1F4F2] px-3 py-1.5"><MapPin size={14} />{role.location}</span>
-                </div>
-                <p className="mt-4 max-w-2xl text-base leading-7 text-[#5E645F]">{role.body}</p>
-              </div>
-              <Button className="md:min-w-[150px]">Apply Now</Button>
-            </motion.div>
-          ))}*/}
-
           < PortfolioPage />
         </motion.div>
       </Container>
@@ -434,42 +415,6 @@ function FitSection() {
   );
 }
 
-function HiringProcessSection() {
-  return (
-    <section className="bg-[#F6F8F7] py-20 md:py-24">
-      <Container>
-        <SectionHeader
-          center
-          eyebrow="Hiring Process"
-          title="A simple application journey"
-        />
-        <motion.div
-          variants={stagger}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
-          className="relative grid gap-6 xl:grid-cols-4"
-        >
-          <div className="absolute left-0 right-0 top-12 hidden h-px bg-[#DDE4DE] xl:block" />
-          {pageData.process.map((step) => (
-            <motion.div
-              key={step.number}
-              variants={fadeUp}
-              className="relative rounded-[1.75rem] border border-[#E6EBE7] bg-white p-7 shadow-[0_8px_24px_rgba(24,32,28,0.04)]"
-            >
-              <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-[#8DC53E] text-sm font-bold text-[#414042]">
-                <p className="font-semibold text-lg">{step.number}</p>
-              </div>
-              <h3 className="mt-6 text-xl font-semibold tracking-tight text-[#414042]">{step.title}</h3>
-              <p className="mt-3 text-base leading-7 text-[#5E645F]">{step.body}</p>
-            </motion.div>
-          ))}
-        </motion.div>
-      </Container>
-    </section>
-  );
-}
-
 function SpontaneousApplicationSection() {
   return (
     <section className="py-20 md:py-24">
@@ -502,40 +447,6 @@ function SpontaneousApplicationSection() {
   );
 }
 
-function CareersFinalCTA() {
-  return (
-    <section className="pb-24 pt-4">
-      <Container>
-        <motion.div
-          variants={fadeUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.25 }}
-          className="rounded-[2rem] border border-[#E6EBE7] bg-[#414042] p-8 text-white shadow-[0_24px_60px_rgba(24,32,28,0.14)] md:p-10"
-        >
-          <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
-            <div>
-              <span className="inline-flex rounded-full bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.14em] text-white/70">
-                Careers CTA
-              </span>
-              <h2 className="mt-5 text-3xl font-semibold tracking-tight text-white md:text-5xl">
-                Ready to build something meaningful?
-              </h2>
-              <p className="mt-4 max-w-2xl text-lg leading-8 text-white/70">
-                Start an exciting journey with us.
-              </p>
-            </div>
-            <div className="flex flex-wrap gap-3 lg:justify-end">
-              <Button>Apply Now</Button>
-              <Button variant="secondary">Contact Us</Button>
-            </div>
-          </div>
-        </motion.div>
-      </Container>
-    </section>
-  );
-}
-
 export default function Careers() {
   return (
     <main className="min-h-screen bg-[#FFFFFF] text-[#414042]">
@@ -545,9 +456,7 @@ export default function Careers() {
       <BenefitsSection />
       <RolesSection />
       <FitSection />
-      <HiringProcessSection />
       <SpontaneousApplicationSection />
-      <CareersFinalCTA />
     </main>
   );
 }
