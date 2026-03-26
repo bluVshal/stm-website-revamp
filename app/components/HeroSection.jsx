@@ -46,56 +46,6 @@ export function HeroSection() {
             </motion.div> */}
           </motion.div>
 
-          <motion.div
-            initial="hidden"
-            animate="visible"
-            variants={scaleIn}
-            className="relative mx-auto w-full max-w-2xl"
-          >
-            <motion.div
-              animate={{ y: [0, -8, 0] }}
-              transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
-              className="relative overflow-hidden rounded-[2rem] border border-white/70 bg-white p-5 shadow-[0_24px_60px_rgba(24,32,28,0.12)]"
-            >
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(141,197,62,0.18),transparent_22%),linear-gradient(180deg,rgba(246,248,247,0.3),rgba(255,255,255,0.9))]" />
-              <div className="relative">
-                <div className="mb-5 flex items-center justify-between rounded-2xl border border-[#E6EBE7] bg-[#F8FAF9] px-4 py-3">
-                  <div>
-                    <div className="text-xs font-medium uppercase tracking-[0.14em] text-[#858C86]">Growth dashboard</div>
-                    <div className="mt-1 text-sm font-semibold text-[#202220]">Campaign performance overview</div>
-                  </div>
-                  <div className="rounded-full bg-[#EAF5DA] px-3 py-1 text-xs font-semibold text-[#4B5F27]">Live</div>
-                </div>
-
-                <div className="grid gap-4 md:grid-cols-[1.2fr_0.8fr]">
-                  <div className="rounded-3xl border border-[#E6EBE7] bg-[#202220] p-6 text-white">
-                    <div className="text-xs uppercase tracking-[0.14em] text-white/60">Acquisition velocity</div>
-                    <div className="mt-4 text-5xl font-semibold tracking-tight">4.2x</div>
-                    <div className="mt-2 text-sm text-white/70">Return on ad spend over 90 days</div>
-                    <div className="mt-8 h-28 rounded-2xl bg-[linear-gradient(180deg,rgba(141,197,62,0.35),rgba(141,197,62,0.02))]" />
-                  </div>
-
-                  <div className="grid gap-4">
-                    {siteData.stats.map((stat, index) => (
-                      <motion.div
-                        key={stat.label}
-                        initial={{ opacity: 0, x: 18 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ delay: 0.25 + index * 0.1, duration: 0.45 }}
-                        whileHover={{ y: -4, rotate: index % 2 === 0 ? -1 : 1 }}
-                        className="rounded-3xl border border-[#E6EBE7] bg-white p-5 shadow-[0_8px_24px_rgba(24,32,28,0.05)]"
-                      >
-                        <div className="text-xs uppercase tracking-[0.14em] text-[#858C86]">Performance</div>
-                        <div className="mt-2 text-3xl font-semibold tracking-tight text-[#202220]">{stat.value}</div>
-                        <div className="mt-1 text-sm text-[#5E645F]">{stat.label}</div>
-                      </motion.div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          </motion.div>
-
        {/*   <motion.div
             initial="hidden"
             animate="visible"
