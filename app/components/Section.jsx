@@ -21,7 +21,7 @@ export function Section({ id, eyebrow, title, body, children, className }) {
               </span>
             )}
             {title && (
-              <h2 className="text-3xl font-semibold tracking-tight text-[#202220] md:text-5xl">
+              <h2 className="text-3xl font-semibold tracking-tight text-[#414042] md:text-5xl">
                 {title}
               </h2>
             )}

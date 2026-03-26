@@ -7,13 +7,13 @@ export function Button({ children, variant = "primary", className, icon, ...prop
 
   const variants = {
     primary:
-      "bg-[#8DC53E] text-[#202220] shadow-[0_8px_24px_rgba(24,32,28,0.08)] hover:-translate-y-0.5 hover:bg-[#7FB436] hover:shadow-[0_16px_40px_rgba(24,32,28,0.12)]",
+      "bg-[#8DC53E] text-[#414042] shadow-[0_8px_24px_rgba(24,32,28,0.08)] hover:-translate-y-0.5 hover:bg-[#7FB436] hover:shadow-[0_16px_40px_rgba(24,32,28,0.12)]",
     secondary:
-      "border border-[#E6EBE7] bg-white text-[#202220] shadow-sm hover:-translate-y-0.5 hover:border-[#D7DED8] hover:bg-[#F8FAF9]",
+      "border border-[#E6EBE7] bg-white text-[#414042] shadow-sm hover:-translate-y-0.5 hover:border-[#D7DED8] hover:bg-[#F8FAF9]",
     ghost:
-      "text-[#202220] hover:bg-[#F1F4F2]",
+      "text-[#414042] hover:bg-[#F1F4F2]",
     dark:
-      "bg-[#202220] text-white shadow-[0_8px_24px_rgba(0,0,0,0.18)] hover:-translate-y-0.5 hover:bg-[#2B2D2B]",
+      "bg-[#414042] text-white shadow-[0_8px_24px_rgba(0,0,0,0.18)] hover:-translate-y-0.5 hover:bg-[#2B2D2B]",
   };
 
   return (

@@ -152,8 +152,8 @@ function SectionHeader({ eyebrow, title, body, center }) {
           {eyebrow}
         </span>
       )}
-      <h2 className="text-3xl font-semibold tracking-tight text-[#202220] md:text-5xl">{title}</h2>
-      {body && <p className="mt-5 text-lg leading-8 text-[#5E645F]">{body}</p>}
+      <h2 className="text-3xl font-semibold tracking-tight text-[#414042] md:text-5xl">{title}</h2>
+      {body && <p className="mt-5 text-lg leading-8 text-[#FFF]">{body}</p>}
     </motion.div>
   );
 }
@@ -161,9 +161,9 @@ function SectionHeader({ eyebrow, title, body, center }) {
 function Button({ children, variant = "primary", className }) {
   const styles = {
     primary:
-      "bg-[#8DC53E] text-[#202220] shadow-[0_8px_24px_rgba(24,32,28,0.08)] hover:bg-[#7FB436] hover:-translate-y-0.5",
+      "bg-[#8DC53E] text-[#414042] shadow-[0_8px_24px_rgba(24,32,28,0.08)] hover:bg-[#7FB436] hover:-translate-y-0.5",
     secondary:
-      "border border-[#E6EBE7] bg-white text-[#202220] shadow-sm hover:bg-[#F8FAF9] hover:-translate-y-0.5",
+      "border border-[#E6EBE7] bg-white text-[#414042] shadow-sm hover:bg-[#F8FAF9] hover:-translate-y-0.5",
   };
 
   return (
@@ -196,7 +196,7 @@ function CareersHero() {
             </motion.div>
             <motion.h1
               variants={fadeUp}
-              className="mt-6 max-w-2xl text-5xl font-semibold leading-[1.02] tracking-[-0.04em] text-[#202220] md:text-6xl"
+              className="mt-6 max-w-2xl text-5xl font-semibold leading-[1.02] tracking-[-0.04em] text-[#414042] md:text-6xl"
             >
               Join a team building smarter <span className="text-[#7FAF2D] italic">digital growth</span>
             </motion.h1>
@@ -229,7 +229,7 @@ function CareersHero() {
               </div>
             </div>
             <div className="h-32 rounded-[1.5rem] bg-[linear-gradient(135deg,#EAF5DA,#F8FBF5)] p-3 shadow-sm md:h-36">
-              <div className="h-full rounded-[1.2rem] bg-[linear-gradient(135deg,#202220,#353835)]">
+              <div className="h-full rounded-[1.2rem] bg-[linear-gradient(135deg,#414042,#353835)]">
                 <img src="/career-desktop.jpg" alt="STM Team" className="h-auto w-auto rounded-[1.35rem] object-cover" />
               </div>
             </div>
@@ -279,7 +279,7 @@ function CultureSection() {
                 <div className="mb-5 inline-flex rounded-2xl bg-[#EAF5DA] p-3 text-[#5A7B24]">
                   <Icon size={18} />
                 </div>
-                <h3 className="text-xl font-semibold tracking-tight text-[#202220]">{item.title}</h3>
+                <h3 className="text-xl font-semibold tracking-tight text-[#414042]">{item.title}</h3>
                 <p className="mt-3 text-base leading-7 text-[#5E645F]">{item.body}</p>
               </motion.div>
             );
@@ -293,13 +293,13 @@ function CultureSection() {
 function LifeAtSTMSection() {
   const items = new Array(6).fill(0);
   return (
-    <section className="bg-[#202220] py-20 text-white md:py-24">
+    <section className="bg-[#414042] py-20 text-white md:py-24">
       <Container>
         <SectionHeader
           center
           eyebrow="Life at STM"
           title="A glimpse inside the team"
-          body="Use this area for photography, team moments, remote setups, work sessions, and brand-building visuals."
+          body="We work hard, move fast, and celebrate wins together. Here are a few moments from our journey so far."
         />
         <motion.div
           variants={stagger}
@@ -348,7 +348,7 @@ function BenefitsSection() {
               whileHover={{ y: -6 }}
               className="rounded-[1.75rem] border border-[#E6EBE7] bg-white p-7 shadow-[0_8px_24px_rgba(24,32,28,0.04)]"
             >
-              <h3 className="text-xl font-semibold tracking-tight text-[#202220]">{item.title}</h3>
+              <h3 className="text-xl font-semibold tracking-tight text-[#414042]">{item.title}</h3>
               <p className="mt-3 text-base leading-7 text-[#5E645F]">{item.body}</p>
             </motion.div>
           ))}
@@ -381,7 +381,7 @@ function RolesSection() {
               className="grid gap-5 rounded-[1.85rem] border border-[#E6EBE7] bg-white p-7 shadow-[0_8px_24px_rgba(24,32,28,0.04)] md:grid-cols-[1fr_auto] md:items-center"
             >
               <div>
-                <h3 className="text-2xl font-semibold tracking-tight text-[#202220]">{role.title}</h3>
+                <h3 className="text-2xl font-semibold tracking-tight text-[#414042]">{role.title}</h3>
                 <div className="mt-3 flex flex-wrap gap-3 text-sm text-[#5E645F]">
                   <span className="inline-flex items-center gap-2 rounded-full bg-[#F1F4F2] px-3 py-1.5"><Clock3 size={14} />{role.type}</span>
                   <span className="inline-flex items-center gap-2 rounded-full bg-[#F1F4F2] px-3 py-1.5"><MapPin size={14} />{role.location}</span>
@@ -424,7 +424,7 @@ function FitSection() {
                 <div className="rounded-2xl bg-[#EAF5DA] p-2.5 text-[#5A7B24]">
                   <CheckCircle2 size={18} />
                 </div>
-                <span className="pt-1 text-base font-medium text-[#202220]">{item}</span>
+                <span className="pt-1 text-base font-medium text-[#414042]">{item}</span>
               </motion.div>
             ))}
           </motion.div>
@@ -457,10 +457,10 @@ function HiringProcessSection() {
               variants={fadeUp}
               className="relative rounded-[1.75rem] border border-[#E6EBE7] bg-white p-7 shadow-[0_8px_24px_rgba(24,32,28,0.04)]"
             >
-              <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-[#8DC53E] text-sm font-bold text-[#202220]">
+              <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-[#8DC53E] text-sm font-bold text-[#414042]">
                 <p className="font-semibold text-lg">{step.number}</p>
               </div>
-              <h3 className="mt-6 text-xl font-semibold tracking-tight text-[#202220]">{step.title}</h3>
+              <h3 className="mt-6 text-xl font-semibold tracking-tight text-[#414042]">{step.title}</h3>
               <p className="mt-3 text-base leading-7 text-[#5E645F]">{step.body}</p>
             </motion.div>
           ))}
@@ -485,7 +485,7 @@ function SpontaneousApplicationSection() {
             <span className="inline-flex rounded-full bg-[#F1F4F2] px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.14em] text-[#5E645F]">
               Open application
             </span>
-            <h2 className="mx-auto mt-5 max-w-3xl text-3xl font-semibold tracking-tight text-[#202220] md:text-5xl">
+            <h2 className="mx-auto mt-5 max-w-3xl text-3xl font-semibold tracking-tight text-[#414042] md:text-5xl">
               Don’t see a role that fits?
             </h2>
             <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-[#5E645F]">
@@ -511,7 +511,7 @@ function CareersFinalCTA() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.25 }}
-          className="rounded-[2rem] border border-[#E6EBE7] bg-[#202220] p-8 text-white shadow-[0_24px_60px_rgba(24,32,28,0.14)] md:p-10"
+          className="rounded-[2rem] border border-[#E6EBE7] bg-[#414042] p-8 text-white shadow-[0_24px_60px_rgba(24,32,28,0.14)] md:p-10"
         >
           <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
             <div>
@@ -538,7 +538,7 @@ function CareersFinalCTA() {
 
 export default function Careers() {
   return (
-    <main className="min-h-screen bg-[#FFFFFF] text-[#202220]">
+    <main className="min-h-screen bg-[#FFFFFF] text-[#414042]">
       <CareersHero />
       <CultureSection />
       <LifeAtSTMSection />

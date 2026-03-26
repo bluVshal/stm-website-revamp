@@ -35,7 +35,7 @@ export function AboutSection() {
             ].map((item) => (
               <div key={item} className="flex items-start gap-3 rounded-2xl bg-[#F8FAF9] p-4">
                 <CheckCircle2 size={18} className="mt-0.5 text-[#8DC53E]" />
-                <span className="text-sm font-medium text-[#202220]">{item}</span>
+                <span className="text-sm font-medium text-[#414042]">{item}</span>
               </div>
             ))}
           </div>
@@ -75,7 +75,7 @@ export function AboutSection() {
               <div className="mb-4 inline-flex rounded-2xl bg-[#EAF5DA] p-3 text-[#5A7B24]">
                 <Sparkles size={18} />
               </div>
-              <h3 className="text-2xl font-semibold tracking-tight text-[#202220]">{item.title}</h3>
+              <h3 className="text-2xl font-semibold tracking-tight text-[#414042]">{item.title}</h3>
               <p className="mt-3 text-base leading-7 text-[#5E645F]">{item.body}</p>
             </motion.div>
           ))}

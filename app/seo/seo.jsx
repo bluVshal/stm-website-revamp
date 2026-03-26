@@ -36,7 +36,7 @@ function SEOServiceCard({ icon: Icon, title, body }) {
       <div className="mb-5 inline-flex rounded-2xl bg-[#EAF5DA] p-3 text-[#5A7B24]">
         <Icon size={18} />
       </div>
-      <h3 className="text-xl font-semibold tracking-tight text-[#202220]">{title}</h3>
+      <h3 className="text-xl font-semibold tracking-tight text-[#414042]">{title}</h3>
       <p className="mt-3 text-base leading-7 text-[#5E645F]">{body}</p>
     </motion.div>
   );
@@ -45,10 +45,10 @@ function SEOServiceCard({ icon: Icon, title, body }) {
 // SEO Page Component
 export default function SEOPage() {
   return (
-    <div className="bg-[#F6F8F7] text-[#202220]">
+    <div className="bg-[#F6F8F7] text-[#414042]">
       <section className="py-24 px-6">
         <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="max-w-7xl mx-auto">
-          <h1 className="text-5xl font-bold leading-tight text-[#202220]">Performance-Driven SEO Services</h1>
+          <h1 className="text-5xl font-bold leading-tight text-[#414042]">Performance-Driven SEO Services</h1>
           <p className="mt-4 text-lg text-[#5E645F]">
             We provide tailored SEO strategies that grow visibility and drive targeted traffic to your business.
           </p>
@@ -56,7 +56,7 @@ export default function SEOPage() {
             <motion.button whileHover={{ y: -4 }} className="px-6 py-3 rounded-xl bg-[#8DC53E] text-white font-semibold">
               Get Started
             </motion.button>
-            <motion.button whileHover={{ y: -4 }} className="px-6 py-3 rounded-xl bg-white text-[#202220] border border-[#E6EBE7] font-semibold">
+            <motion.button whileHover={{ y: -4 }} className="px-6 py-3 rounded-xl bg-white text-[#414042] border border-[#E6EBE7] font-semibold">
               See Our Results
             </motion.button>
           </div>
@@ -75,7 +75,7 @@ export default function SEOPage() {
 
       <section className="py-24 px-6">
         <div className="max-w-7xl mx-auto text-center">
-          <motion.h2 variants={fadeUp} initial="hidden" whileInView="visible" className="text-3xl font-semibold text-[#202220]">
+          <motion.h2 variants={fadeUp} initial="hidden" whileInView="visible" className="text-3xl font-semibold text-[#414042]">
             Ready to Grow Your Organic Traffic?
           </motion.h2>
           <motion.p variants={fadeUp} initial="hidden" whileInView="visible" className="mt-4 text-lg text-[#5E645F]">

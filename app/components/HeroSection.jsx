@@ -21,7 +21,7 @@ export function HeroSection() {
 
             <motion.h1
               variants={fadeUp}
-              className="mt-6 text-5xl font-semibold leading-[1.02] tracking-[-0.04em] text-[#202220] md:text-6xl xl:text-7xl"
+              className="mt-6 text-5xl font-semibold leading-[1.02] tracking-[-0.04em] text-[#414042] md:text-6xl xl:text-7xl"
             >
               We build digital growth systems for ambitious brands.
             </motion.h1>
@@ -37,7 +37,7 @@ export function HeroSection() {
             </motion.div>
 
             {/*<motion.div variants={fadeUp} className="mt-10 flex flex-wrap items-center gap-3 text-sm text-[#5E645F]">
-              <span className="font-medium text-[#202220]">Trusted across sectors:</span>
+              <span className="font-medium text-[#414042]">Trusted across sectors:</span>
               {siteData.trust.map((item) => (
                 <span key={item} className="rounded-full border border-[#E6EBE7] bg-white px-3 py-1.5 shadow-sm">
                   {item}

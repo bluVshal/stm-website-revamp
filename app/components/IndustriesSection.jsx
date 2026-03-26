@@ -11,14 +11,14 @@ export function IndustryCard({ icon: Icon, title, body }) {
       whileHover={{ y: -6 }}
       className="group overflow-hidden rounded-[1.75rem] border border-[#E6EBE7] bg-white shadow-[0_8px_24px_rgba(24,32,28,0.04)]"
     >
-      <div className="relative h-40 overflow-hidden bg-[radial-gradient(circle_at_20%_20%,rgba(141,197,62,0.28),transparent_24%),linear-gradient(135deg,#202220,#2C2E2C)]">
+      <div className="relative h-40 overflow-hidden bg-[radial-gradient(circle_at_20%_20%,rgba(141,197,62,0.28),transparent_24%),linear-gradient(135deg,#414042,#2C2E2C)]">
         <motion.div whileHover={{ scale: 1.04 }} className="absolute inset-0" />
         <div className="absolute left-6 top-6 flex h-12 w-12 items-center justify-center rounded-2xl bg-white/12 text-white backdrop-blur">
           <Icon size={20} />
         </div>
       </div>
       <div className="p-7">
-        <h3 className="text-xl font-semibold tracking-tight text-[#202220]">{title}</h3>
+        <h3 className="text-xl font-semibold tracking-tight text-[#414042]">{title}</h3>
         <p className="mt-3 text-base leading-7 text-[#5E645F]">{body}</p>
       </div>
     </motion.div>

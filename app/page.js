@@ -15,7 +15,7 @@ import { Footer } from "./Footer";
 
 export default function STMPremiumUILibrary() {
   return (
-    <div className="min-h-screen bg-[#F6F8F7] text-[#202220]">
+    <div className="min-h-screen bg-[#F6F8F7] text-[#414042]">
       <NavBar />
       <HeroSection />
       {/* <TrustStrip /> */}

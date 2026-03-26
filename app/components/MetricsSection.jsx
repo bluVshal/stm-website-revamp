@@ -12,7 +12,7 @@ export function MetricsSection() {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
-        className="overflow-hidden rounded-[2rem] border border-[#2D302D] bg-[#202220] p-8 shadow-[0_24px_60px_rgba(24,32,28,0.14)] md:p-10"
+        className="overflow-hidden rounded-[2rem] border border-[#2D302D] bg-[#414042] p-8 shadow-[0_24px_60px_rgba(24,32,28,0.14)] md:p-10"
       >
         <div className="max-w-2xl">
           <span className="inline-flex rounded-full bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.14em] text-white/70">

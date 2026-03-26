@@ -45,7 +45,7 @@ export function CareersSection() {
         >
           {siteData.culture.map((item) => (
             <motion.div key={item} variants={fadeUp} whileHover={{ y: -4 }} className="rounded-[1.75rem] border border-[#E6EBE7] bg-[#F8FAF9] p-6">
-              <div className="flex items-center gap-3 text-[#202220]">
+              <div className="flex items-center gap-3 text-[#414042]">
                 <div className="rounded-2xl bg-[#EAF5DA] p-3 text-[#5A7B24]">
                   <Sparkles size={18} />
                 </div>

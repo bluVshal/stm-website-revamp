@@ -20,7 +20,7 @@ export function CTASection() {
           <span className="inline-flex rounded-full bg-[#F1F4F2] px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.14em] text-[#5E645F]">
             Let&apos;s build your next growth phase
           </span>
-          <h2 className="mx-auto mt-5 max-w-3xl text-3xl font-semibold tracking-tight text-[#202220] md:text-5xl">
+          <h2 className="mx-auto mt-5 max-w-3xl text-3xl font-semibold tracking-tight text-[#414042] md:text-5xl">
             Ready to grow with a partner that thinks beyond campaigns?
           </h2>
           <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-[#5E645F]">

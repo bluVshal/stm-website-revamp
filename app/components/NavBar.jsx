@@ -37,7 +37,7 @@ export function NavBar() {
             <a
               key={item}
               href={`/#${item.toLowerCase()}`}
-              className="group relative text-sm font-medium text-[#4B504C] transition hover:text-[#202220]"
+              className="group relative text-sm font-medium text-[#4B504C] transition hover:text-[#414042]"
             >
               {item}
               <span className="absolute -bottom-2 left-0 h-0.5 w-0 rounded-full bg-[#8DC53E] transition-all duration-200 group-hover:w-full" />
@@ -54,7 +54,7 @@ export function NavBar() {
 
         <button
           type="button"
-          className="rounded-xl border border-[#E6EBE7] p-2 text-[#202220] md:hidden"
+          className="rounded-xl border border-[#E6EBE7] p-2 text-[#414042] md:hidden"
           onClick={() => setOpen((v) => !v)}
           aria-label="Toggle navigation"
         >
@@ -71,7 +71,7 @@ export function NavBar() {
         >
           <div className="grid gap-2">
             {siteData.nav.map((item) => (
-              <a key={item} href={`#${item.toLowerCase()}`} className="rounded-xl px-3 py-2 text-sm font-medium text-[#202220] hover:bg-[#F1F4F2]">
+              <a key={item} href={`#${item.toLowerCase()}`} className="rounded-xl px-3 py-2 text-sm font-medium text-[#414042] hover:bg-[#F1F4F2]">
                 {item}
               </a>
             ))}
