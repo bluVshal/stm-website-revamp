@@ -41,7 +41,7 @@ export const stagger = {
 };
 
 export const siteData = {
-  nav: ["About Us", "Services", "Careers"],
+  nav: ["About Us", "People And Culture", "Services", "Careers"],
   trust: ["Fintech", "Professional Services", "B2B SaaS", "E-commerce"],
   services: [
     {
