@@ -36,69 +36,6 @@ const stagger = {
 };
 
 const pageData = {
-  culture: [
-    {
-      icon: Sparkles,
-      title: "Strategy-first",
-      body: "We solve the right problems before jumping into execution. Every channel has a purpose.",
-    },
-    {
-      icon: Briefcase,
-      title: "Performance-led",
-      body: "Decisions are driven by data, testing, and curiosity. We optimize relentlessly.",
-    },
-    {
-      icon: HeartHandshake,
-      title: "No fluff",
-      body: "We value clarity, efficiency, and real impact over busy work and corporate noise.",
-    },
-  ],
-  benefits: [
-    {
-      title: "Hybrid Work",
-      body: "Work with flexibility while staying connected to a collaborative team rhythm.",
-    },
-    {
-      title: "Growth-Focused",
-      body: "You’ll sharpen your thinking, expand your skillset, and take on meaningful responsibility.",
-    },
-    {
-      title: "Real Impact",
-      body: "Your work won’t sit in a deck. It will influence campaigns, performance, and client growth.",
-    },
-    {
-      title: "Flexible Hours",
-      body: "We care more about quality output and accountability than rigid clock-watching.",
-    },
-    {
-      title: "Learning Support",
-      body: "We encourage experimentation, strategic thinking, and continuous improvement.",
-    },
-    {
-      title: "Strong Team",
-      body: "Join a team that values clear communication, ownership, and ambition.",
-    },
-  ],
-  roles: [
-    {
-      title: "SEO Specialist",
-      type: "Full-time",
-      location: "Hybrid / Remote",
-      body: "Own technical and content-driven SEO initiatives across ambitious client accounts.",
-    },
-    {
-      title: "Paid Media Manager",
-      type: "Full-time",
-      location: "Hybrid / Remote",
-      body: "Plan, launch, and optimize paid campaigns with a strong focus on ROAS and efficiency.",
-    },
-    {
-      title: "Content Strategist",
-      type: "Full-time",
-      location: "Remote",
-      body: "Shape content systems, messaging, and landing page narratives that support performance.",
-    },
-  ],
   fit: [
     "Problem-solvers, not task-doers",
     "People who think in systems",
@@ -251,114 +188,6 @@ function CareersHero() {
   );
 }
 
-function CultureSection() {
-  return (
-    <section className="py-20 md:py-24">
-      <Container>
-        <SectionHeader
-          center
-          eyebrow="Culture"
-          title="How we work"
-          body="Our culture is built on clarity, ownership, and a bias for measurable progress. We care about the thinking behind the work as much as the results."
-        />
-        <motion.div
-          variants={stagger}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
-          className="grid gap-6 md:grid-cols-3"
-        >
-          {pageData.culture.map((item) => {
-            const Icon = item.icon;
-            return (
-              <motion.div
-                key={item.title}
-                variants={fadeUp}
-                whileHover={{ y: -6 }}
-                className="rounded-[1.75rem] border border-[#E6EBE7] bg-white p-7 shadow-[0_8px_24px_rgba(24,32,28,0.04)]"
-              >
-                <div className="mb-5 inline-flex rounded-2xl bg-[#EAF5DA] p-3 text-[#5A7B24]">
-                  <Icon size={18} />
-                </div>
-                <h3 className="text-xl font-semibold tracking-tight text-[#414042]">{item.title}</h3>
-                <p className="mt-3 text-base leading-7 text-[#5E645F]">{item.body}</p>
-              </motion.div>
-            );
-          })}
-        </motion.div>
-      </Container>
-    </section>
-  );
-}
-
-function LifeAtSTMSection() {
-  const items = new Array(6).fill(0);
-  return (
-    <section className="bg-[#414042] py-20 text-white md:py-24">
-      <Container>
-        <SectionHeader
-          center
-          eyebrow="Life at STM"
-          title="A glimpse inside the team"
-          body="We work hard, move fast, and celebrate wins together. Here are a few moments from our journey so far."
-        />
-        <motion.div
-          variants={stagger}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.15 }}
-          className="grid gap-5 md:grid-cols-3"
-        >
-          {items.map((_, index) => (
-            <motion.div
-              key={index}
-              variants={fadeUp}
-              whileHover={{ y: -4, scale: 1.01 }}
-              className="overflow-hidden rounded-[1.75rem] border border-white/10 bg-[linear-gradient(135deg,#313431,#1F211F)] p-3"
-            >
-              <div className="h-56 rounded-[1.3rem] bg-[radial-gradient(circle_at_20%_20%,rgba(141,197,62,0.20),transparent_18%),linear-gradient(135deg,#5A5E59,#2C2F2C)]" />
-            </motion.div>
-          ))}
-        </motion.div>
-      </Container>
-    </section>
-  );
-}
-
-function BenefitsSection() {
-  return (
-    <section className="py-20 md:py-24">
-      <Container>
-        <SectionHeader
-          center
-          eyebrow="Benefits"
-          title="What you get"
-          body="We invest in the team’s growth, well-being, and environment so people can do their best work."
-        />
-        <motion.div
-          variants={stagger}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
-          className="grid gap-6 md:grid-cols-2 xl:grid-cols-3"
-        >
-          {pageData.benefits.map((item) => (
-            <motion.div
-              key={item.title}
-              variants={fadeUp}
-              whileHover={{ y: -6 }}
-              className="rounded-[1.75rem] border border-[#E6EBE7] bg-white p-7 shadow-[0_8px_24px_rgba(24,32,28,0.04)]"
-            >
-              <h3 className="text-xl font-semibold tracking-tight text-[#414042]">{item.title}</h3>
-              <p className="mt-3 text-base leading-7 text-[#5E645F]">{item.body}</p>
-            </motion.div>
-          ))}
-        </motion.div>
-      </Container>
-    </section>
-  );
-}
-
 function RolesSection() {
   return (
     <section id="open-roles" className="bg-[#F6F8F7] py-20 md:py-24">
@@ -452,9 +281,6 @@ export default function Careers() {
   return (
     <main className="min-h-screen bg-[#FFFFFF] text-[#414042]">
       <CareersHero />
-      <CultureSection />
-      <LifeAtSTMSection />
-      <BenefitsSection />
       <RolesSection />
       <FitSection />
       <SpontaneousApplicationSection />
