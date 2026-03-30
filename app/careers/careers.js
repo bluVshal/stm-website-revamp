@@ -142,12 +142,6 @@ function CareersHero() {
               We partner with ambitious brands, move fast, solve real problems, and focus on measurable results. If you like
               clarity, challenge, and impact, you’ll feel at home here.
             </motion.p>
-            <motion.div variants={fadeUp} className="mt-8 flex flex-wrap gap-3">
-              <Button onClick={handleClick} >
-                View Open Roles
-              </Button>
-              <Button variant="secondary">Send Your CV</Button>
-            </motion.div>
             <motion.div variants={fadeUp} className="mt-8 flex flex-wrap items-center gap-4 text-sm text-[#5E645F]">
               <span className="inline-flex items-center gap-2"><span className="h-2 w-2 rounded-full bg-[#8DC53E]" />Hybrid-first</span>
               <span className="inline-flex items-center gap-2"><span className="h-2 w-2 rounded-full bg-[#8DC53E]" />Performance-driven</span>
