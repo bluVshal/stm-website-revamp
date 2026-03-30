@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight, Sparkles } from "lucide-react";
-import { fadeUp, scaleIn, stagger, siteData } from "../Data";
+import { fadeUp, stagger } from "../Data";
 import { Container } from "../Container";
 import { Button } from "./Buttons";
 
@@ -35,26 +35,7 @@ export function HeroSection() {
               <Button icon={<ArrowRight size={16} />}>View Services</Button>
               <Button variant="secondary">Book a Meeting</Button>
             </motion.div>
-
-            {/*<motion.div variants={fadeUp} className="mt-10 flex flex-wrap items-center gap-3 text-sm text-[#5E645F]">
-              <span className="font-medium text-[#414042]">Trusted across sectors:</span>
-              {siteData.trust.map((item) => (
-                <span key={item} className="rounded-full border border-[#E6EBE7] bg-white px-3 py-1.5 shadow-sm">
-                  {item}
-                </span>
-              ))}
-            </motion.div> */}
           </motion.div>
-
-       {/*   <motion.div
-            initial="hidden"
-            animate="visible"
-            variants={scaleIn}
-            className="relative mx-auto w-full max-w-2xl"
-          >
-
-            <p>Add content here</p>
-          </motion.div>*/}
         </div>
       </Container>
     </section>

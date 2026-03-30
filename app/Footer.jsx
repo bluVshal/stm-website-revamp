@@ -11,7 +11,7 @@ export function Footer() {
             <div>
               <div className="flex items-center gap-3">
                 <div>
-                 <img src="/STM-Consulting_logo_White.png" alt="STM Logo" className="h-auto w-auto" />
+                 <img loading="lazy" src="/STM-Consulting_logo_White.png" alt="STM Logo" className="h-auto w-auto" />
                 </div>
               </div>
               <p className="mt-5 max-w-xs text-sm leading-7 text-white/70">

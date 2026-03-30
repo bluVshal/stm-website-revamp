@@ -50,6 +50,7 @@ export default function PortfolioPage() {
 
               {item._embedded?.["wp:featuredmedia"]?.[0]?.source_url && (
                 <img
+                  loading="lazy"
                   src={item._embedded["wp:featuredmedia"][0].source_url}
                   alt={item.title.rendered}
                   style={{ maxWidth: "900px" }}
