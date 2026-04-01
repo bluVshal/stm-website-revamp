@@ -36,7 +36,7 @@ export function ContactSection() {
               </div>
             ))}
             <div>
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3743.395179281549!2d57.48591977654895!3d-20.24243914811641!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x217c5ae1d1f68fc9%3A0xf67722ad33dc19d!2sNeXTeracom%20Tower%201%2C%20Quatre%20Bornes%2072201%2C%20Mauritius!5e0!3m2!1sen!2sus!4v1774521487873!5m2!1sen!2sus" width="360" height="190" style={{marginLeft: "2rem", border: "0"}} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3743.395179281549!2d57.48591977654895!3d-20.24243914811641!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x217c5ae1d1f68fc9%3A0xf67722ad33dc19d!2sNeXTeracom%20Tower%201%2C%20Quatre%20Bornes%2072201%2C%20Mauritius!5e0!3m2!1sen!2sus!4v1774521487873!5m2!1sen!2sus" width="360" height="190" style={{marginLeft: "2rem", border: "0"}} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="STM Office Location"></iframe>
             </div>
           </div>
         </motion.div>

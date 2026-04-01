@@ -117,11 +117,6 @@ function CareersHero() {
                 <img loading="lazy" src="/career-desktop3-small.avif" alt="STM Team" className="h-auto w-auto rounded-[1.35rem] object-cover" />
               </div>
             </div>
-            <div className="col-span-2 ml-auto h-24 w-1/2 rounded-[1.4rem] bg-[linear-gradient(135deg,#F6F8F7,#EDF4E5)] p-3 shadow-sm">
-              <div className="h-full rounded-[1.1rem] bg-[linear-gradient(135deg,#2B2E2B,#414441)]">
-                <img loading="lazy" src="/inclusivity-small.avif" alt="STM Team" className="h-auto w-auto rounded-[1.35rem] object-cover" />
-              </div>
-            </div>
           </motion.div>
         </div>
       </Container>

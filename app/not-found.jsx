@@ -2,7 +2,6 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Search, ArrowRight, Pointer, TextCursor } from "lucide-react";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -89,34 +88,6 @@ export default function NotFound() {
           </Button>
         </motion.div>
       </motion.div>
-
-      {/* Search Bar */}
-      <motion.div
-        variants={fadeUp}
-        initial="hidden"
-        animate="visible"
-        className="mt-10 w-full max-w-md relative"
-      >
-        <input
-          placeholder="Search the site..."
-          className="w-full px-5 py-3 rounded-xl border border-[#E6EBE7] focus:outline-none"
-        />
-        <Search className="absolute right-4 top-3.5 text-gray-400" size={18} />
-      </motion.div>
-
-      {/* Smart Links */}
-      <motion.div
-        variants={stagger}
-        initial="hidden"
-        animate="visible"
-        className="mt-12 grid md:grid-cols-4 gap-4 max-w-5xl w-full"
-      >
-        <Card title="SEO Services" />
-        <Card title="CRM Solutions" />
-        <Card title="Careers" />
-        <Card title="Contact" />
-      </motion.div>
-
     </div>
   );
 }
