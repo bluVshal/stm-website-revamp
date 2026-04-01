@@ -38,7 +38,7 @@ export function IndustriesSection() {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
-        className="grid gap-6 md:grid-cols-2 xl:grid-cols-4"
+        className="grid gap-6 md:grid-cols-2 xl:grid-cols-3"
       >
         {siteData.industries.map((item) => (
           <IndustryCard key={item.title} {...item} />
