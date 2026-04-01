@@ -3,12 +3,14 @@ import PeopleAndCultureHero from './components/PeopleAndCultureHero';
 import CultureSection from './components/CultureSection';
 import LifeAtSTMSection from './components/LifeAtSTMSection';
 import BenefitsSection from './components/BenefitsSection';
+import FitSection from './components/FitSection';
 
 const PeopleAndCulture = () => {
   return (
      <main className="min-h-screen bg-[#FFFFFF] text-[#414042]">
       <PeopleAndCultureHero />
       <CultureSection />
+      <FitSection />
       <LifeAtSTMSection />
       <BenefitsSection />
     </main>

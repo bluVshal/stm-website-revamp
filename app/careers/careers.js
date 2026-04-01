@@ -1,17 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-import {
-  ArrowRight,
-  Briefcase,
-  CheckCircle2,
-  Clock3,
-  Globe,
-  HeartHandshake,
-  MapPin,
-  Send,
-  Sparkles,
-  Users,
-} from "lucide-react";
 import PortfolioPage from "../components/Portfolio";
 
 const cx = (...classes) => classes.filter(Boolean).join(" ");
@@ -34,42 +22,6 @@ const stagger = {
     },
   },
 };
-
-const pageData = {
-  fit: [
-    "Problem-solvers, not task-doers",
-    "People who think in systems",
-    "Curious and data-driven minds",
-    "Clear communicators",
-    "Comfortable with responsibility",
-  ],
-  process: [
-    {
-      number: "01",
-      title: "Apply",
-      body: "Send your CV, portfolio, or LinkedIn profile with a short introduction.",
-    },
-    {
-      number: "02",
-      title: "Intro Call",
-      body: "A quick conversation to understand your background, mindset, and fit.",
-    },
-    {
-      number: "03",
-      title: "Task / Case",
-      body: "A practical exercise that reflects the kind of thinking the role requires.",
-    },
-    {
-      number: "04",
-      title: "Final Discussion",
-      body: "A final alignment conversation around expectations, role scope, and next steps.",
-    },
-  ],
-};
-
-const handleClick = () => {
-  window.location.href = "#open-roles";
-}
 
 function Container({ children, className }) {
   return <div className={cx("mx-auto max-w-7xl px-6 md:px-8", className)}>{children}</div>;
@@ -142,11 +94,6 @@ function CareersHero() {
               We partner with ambitious brands, move fast, solve real problems, and focus on measurable results. If you like
               clarity, challenge, and impact, you’ll feel at home here.
             </motion.p>
-            <motion.div variants={fadeUp} className="mt-8 flex flex-wrap items-center gap-4 text-sm text-[#5E645F]">
-              <span className="inline-flex items-center gap-2"><span className="h-2 w-2 rounded-full bg-[#8DC53E]" />Hybrid-first</span>
-              <span className="inline-flex items-center gap-2"><span className="h-2 w-2 rounded-full bg-[#8DC53E]" />Performance-driven</span>
-              <span className="inline-flex items-center gap-2"><span className="h-2 w-2 rounded-full bg-[#8DC53E]" />Global team</span>
-            </motion.div>
           </motion.div>
 
           <motion.div
@@ -204,41 +151,6 @@ function RolesSection() {
   );
 }
 
-function FitSection() {
-  return (
-    <section className="py-20 md:py-24">
-      <Container>
-        <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
-          <SectionHeader
-            eyebrow="Who Thrives Here"
-            title="The kind of people who tend to do well with us"
-          />
-          <motion.div
-            variants={stagger}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
-            className="grid gap-4"
-          >
-            {pageData.fit.map((item) => (
-              <motion.div
-                key={item}
-                variants={fadeUp}
-                className="flex items-start gap-4 rounded-[1.5rem] border border-[#E6EBE7] bg-white p-5 shadow-[0_8px_24px_rgba(24,32,28,0.03)]"
-              >
-                <div className="rounded-2xl bg-[#EAF5DA] p-2.5 text-[#5A7B24]">
-                  <CheckCircle2 size={18} />
-                </div>
-                <span className="pt-1 text-base font-medium text-[#414042]">{item}</span>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </Container>
-    </section>
-  );
-}
-
 function SpontaneousApplicationSection() {
   return (
     <section className="py-20 md:py-24">
@@ -271,13 +183,73 @@ function SpontaneousApplicationSection() {
   );
 }
 
+const ApplicationSection = () => {
+  return (
+    <section className="py-20 md:py-24">
+      <Container>
+        <motion.div
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.25 }}
+          className="rounded-[2.1rem] bg-[linear-gradient(180deg,#EEF6E4_0%,#E7F2D8_100%)] p-5 shadow-[0_16px_40px_rgba(24,32,28,0.06)] md:p-6"
+        >
+          <div className="rounded-[1.8rem] border border-white/70 bg-white p-8 text-center shadow-[0_16px_40px_rgba(24,32,28,0.06)] md:p-12">
+            <div className="flex">
+              {/* Start Open Roles */}
+              <div className="w-32 flex-1">
+                <RolesSection />
+              </div>
+              {/* End Open Roles */}
+
+              {/* Start Open Application*/}
+              <div className="w-32 flex-1">
+                <Container>
+                  <motion.div
+                    variants={fadeUp}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.25 }}
+                    className="rounded-[2.1rem] bg-[linear-gradient(180deg,#EEF6E4_0%,#E7F2D8_100%)] p-5 shadow-[0_16px_40px_rgba(24,32,28,0.06)] md:p-6"
+                  >
+                    <div className="rounded-[1.8rem] border border-white/70 bg-white p-8 text-center shadow-[0_16px_40px_rgba(24,32,28,0.06)] md:p-12">
+                      <span className="inline-flex rounded-full bg-[#F1F4F2] px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.14em] text-[#5E645F]">
+                        Open application
+                      </span>
+                      <h2 className="mx-auto mt-5 max-w-3xl text-3xl font-semibold tracking-tight text-[#414042] md:text-5xl">
+                        Don’t see a role that fits?
+                      </h2>
+                      <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-[#5E645F]">
+                        We’re always open to meeting great talent. If you think you’d add value to the team, send us your profile anyway.
+                      </p>
+                      <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
+                        <Button>Send Your CV</Button>
+                        <Button variant="secondary">Say Hello</Button>
+                      </div>
+                    </div>
+                  </motion.div>
+                </Container>
+              </div>
+              
+              {/* End Open Application*/}
+
+            </div>
+          </div>
+        </motion.div>
+      </Container>
+    </section>
+  );
+};
+
 export default function Careers() {
   return (
     <main className="min-h-screen bg-[#FFFFFF] text-[#414042]">
       <CareersHero />
-      <RolesSection />
-      <FitSection />
-      <SpontaneousApplicationSection />
+      <ApplicationSection />
+      {/* 
+          <RolesSection />
+          <SpontaneousApplicationSection />
+      */}
     </main>
   );
 }
