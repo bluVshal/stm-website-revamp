@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import PortfolioPage from "../components/Portfolio";
+import PortfolioPage from "./Portfolio";
 
 const cx = (...classes) => classes.filter(Boolean).join(" ");
 
@@ -146,38 +146,6 @@ function RolesSection() {
   );
 }
 
-function SpontaneousApplicationSection() {
-  return (
-    <section className="py-20 md:py-24">
-      <Container>
-        <motion.div
-          variants={fadeUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.25 }}
-          className="rounded-[2.1rem] bg-[linear-gradient(180deg,#EEF6E4_0%,#E7F2D8_100%)] p-5 shadow-[0_16px_40px_rgba(24,32,28,0.06)] md:p-6"
-        >
-          <div className="rounded-[1.8rem] border border-white/70 bg-white p-8 text-center shadow-[0_16px_40px_rgba(24,32,28,0.06)] md:p-12">
-            <span className="inline-flex rounded-full bg-[#F1F4F2] px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.14em] text-[#5E645F]">
-              Open application
-            </span>
-            <h2 className="mx-auto mt-5 max-w-3xl text-3xl font-semibold tracking-tight text-[#414042] md:text-5xl">
-              Don’t see a role that fits?
-            </h2>
-            <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-[#5E645F]">
-              We’re always open to meeting great talent. If you think you’d add value to the team, send us your profile anyway.
-            </p>
-            <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-              <Button>Send Your CV</Button>
-              <Button variant="secondary">Say Hello</Button>
-            </div>
-          </div>
-        </motion.div>
-      </Container>
-    </section>
-  );
-}
-
 const ApplicationSection = () => {
   return (
     <section className="py-20 md:py-24">
@@ -205,9 +173,9 @@ const ApplicationSection = () => {
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true, amount: 0.25 }}
-                    className="rounded-[2.1rem] bg-[linear-gradient(180deg,#EEF6E4_0%,#E7F2D8_100%)] p-5 shadow-[0_16px_40px_rgba(24,32,28,0.06)] md:p-6"
+                    className="rounded-[2.1rem] p-5 md:p-6"
                   >
-                    <div className="rounded-[1.8rem] border border-white/70 bg-white p-8 text-center shadow-[0_16px_40px_rgba(24,32,28,0.06)] md:p-12">
+                    <div className="rounded-[1.8rem] border border-white/70 bg-[#F6F8F7] p-8 text-center shadow-[0_16px_40px_rgba(24,32,28,0.06)] md:p-12">
                       <span className="inline-flex rounded-full bg-[#F1F4F2] px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.14em] text-[#5E645F]">
                         Open application
                       </span>
@@ -241,10 +209,6 @@ export default function Careers() {
     <main className="min-h-screen bg-[#FFFFFF] text-[#414042]">
       <CareersHero />
       <ApplicationSection />
-      {/* 
-          <RolesSection />
-          <SpontaneousApplicationSection />
-      */}
     </main>
   );
 }

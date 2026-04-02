@@ -1,19 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
-import { Button } from "./Buttons";
+import { Button } from "../components/Buttons";
 import {
   ArrowRight,
-  Briefcase,
-  CheckCircle2,
-  Clock3,
-  Globe,
-  HeartHandshake,
-  MapPin,
-  Send,
-  Sparkles,
-  Users,
 } from "lucide-react";
 
 export default function PortfolioPage() {
@@ -43,22 +33,6 @@ export default function PortfolioPage() {
         <p>No items found.</p>
       ) : (
         <div className="oppor-container">
-          {/* {portfolio.map((item) => (
-            <div
-             key={item.id} className="grid gap-5 rounded-[1.85rem] border border-[#E6EBE7] bg-white p-7 shadow-[0_8px_24px_rgba(24,32,28,0.04)] md:grid-cols-[1fr_auto] md:items-center md:gap-10 mb-4"
-            >
-
-              {item._embedded?.["wp:featuredmedia"]?.[0]?.source_url && (
-                <img
-                  loading="lazy"
-                  src={item._embedded["wp:featuredmedia"][0].source_url}
-                  alt={item.title.rendered}
-                  style={{ maxWidth: "900px" }}
-                />
-              )}
-            </div>
-          ))} */}
-
           <ul>
             {portfolio.map((item) => (
               <li key={item.id} className="grid gap-5 rounded-[1.85rem] border border-[#E6EBE7] bg-white p-7 shadow-[0_8px_24px_rgba(24,32,28,0.04)] md:grid-cols-[1fr_auto] md:items-center md:gap-10 mb-4">
@@ -67,9 +41,6 @@ export default function PortfolioPage() {
                   className="oppor-container"
                 >
                   <h2 className="mb-4 font-bold text-xl" dangerouslySetInnerHTML={{ __html: item.title.rendered }} />
-                 {/* <div
-                    dangerouslySetInnerHTML={{ __html: item.content.rendered }}
-                  />*/}
                   <Button variant="primary" onClick={() => window.open(item.link, "_blank")} icon={<ArrowRight size={16} />}>
                     Apply Now
                   </Button>
