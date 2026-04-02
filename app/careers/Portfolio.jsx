@@ -32,7 +32,13 @@ export default function PortfolioPage() {
       {portfolio.length === 0 ? (
         <p>No items found.</p>
       ) : (
-        <div className="oppor-container">
+        <div className="rounded-[1.8rem] border border-white/70 bg-[#F6F8F7] p-8 text-center shadow-[0_16px_40px_rgba(24,32,28,0.06)] md:p-12">
+          <span className="inline-flex rounded-full bg-[#F1F4F2] px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.14em] text-[#5E645F]">
+            Open Roles
+          </span>
+          <h2 className="mx-auto mt-5 max-w-3xl text-3xl font-semibold tracking-tight text-[#414042] md:text-5xl mb-10">
+            Opportunities to join the team
+          </h2>
           <ul>
             {portfolio.map((item) => (
               <li key={item.id} className="grid gap-5 rounded-[1.85rem] border border-[#E6EBE7] bg-white p-7 shadow-[0_8px_24px_rgba(24,32,28,0.04)] md:grid-cols-[1fr_auto] md:items-center md:gap-10 mb-4">
