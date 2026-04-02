@@ -1,16 +1,13 @@
-import React from 'react'
+'use client';
+
+import React, { useState } from "react";
 import { motion } from "framer-motion";
+import { Send } from "lucide-react";
+import { fadeUp, scaleIn } from "../Data";
+import { Field } from "../components/Field";
 
 const cx = (...classes) => classes.filter(Boolean).join(" ");
 
-const fadeUp = {
-    hidden: { opacity: 0, y: 24 },
-    visible: {
-        opacity: 1,
-        y: 0,
-        transition: { duration: 0.55, ease: [0.16, 1, 0.3, 1] },
-    },
-};
 
 const stagger = {
     hidden: {},
@@ -50,7 +47,10 @@ function Button({ children, variant = "primary", className, ...props }) {
 function Container({ children, className }) {
     return <div className={cx("mx-auto max-w-7xl px-6 md:px-8", className)}>{children}</div>;
 }
+
 const OpenRoles = () => {
+
+    const [isOpen, setIsOpen] = useState(false);
     return (
         <div>
             <Container>
@@ -59,7 +59,7 @@ const OpenRoles = () => {
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true, amount: 0.25 }}
-                    className="rounded-[2.1rem] p-5 md:p-6"
+                    className="rounded-[2.1rem]"
                 >
                     <div className="rounded-[1.8rem] border border-white/70 bg-[#F6F8F7] p-8 text-center shadow-[0_16px_40px_rgba(24,32,28,0.06)] md:p-12">
                         <motion.div initial="hidden" animate="visible" variants={stagger}>
@@ -79,9 +79,41 @@ const OpenRoles = () => {
                             We’re always open to meeting great talent. If you think you’d add value to the team, send us your profile anyway.
                         </p>
                         <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-                            <Button>Send Your CV</Button>
-                            <Button variant="secondary">Say Hello</Button>
+                            <Button variant='secondary' icon={<Send size={16} />} onClick={() => setIsOpen(true)}>
+                                Send Your CV
+                            </Button>
                         </div>
+
+                        {isOpen && (
+                            <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80">
+                                <motion.form
+                                    variants={scaleIn}
+                                    initial="hidden"
+                                    whileInView="visible"
+                                    viewport={{ once: true, amount: 0.2 }}
+                                    className="rounded-[2rem] border border-[#E6EBE7] bg-white p-8 shadow-[0_8px_24px_rgba(24,32,28,0.05)] md:p-10"
+                                >
+                                    <div className="grid gap-5 md:grid-cols-1 mb-5">
+                                        <Field label="Name" placeholder="Your name" />
+                                    </div>
+                                    <div className="grid gap-5 md:grid-cols-2 mb-5">
+                                        <Field label="Email" placeholder="you@company.com" type="email" />
+                                        <Field label="Phone" placeholder="Your phone number" />
+                                    </div>
+                                    <div className="grid gap-5 md:grid-cols-2 mb-5">
+                                        <Button variant="secondary" icon={<Send size={16} />}>Upload Your CV</Button>
+                                        <Button variant="secondary" onClick={() => setIsOpen(false)}>
+                                            Upload Cover Letter
+                                        </Button>
+                                    </div>
+                                    <div className="mt-6 flex flex-wrap items-center justify-between gap-4">
+                                        <Button icon={<Send size={16} />}>Send Your CV</Button>
+                                        <Button onClick={() => setIsOpen(false)}>Close</Button>
+                                    </div>
+                                </motion.form>
+                            </div>
+                        )}
+
                     </div>
                 </motion.div>
             </Container>
@@ -89,4 +121,4 @@ const OpenRoles = () => {
     )
 }
 
-export default OpenRoles
+export default OpenRoles;
