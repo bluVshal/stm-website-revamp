@@ -58,7 +58,6 @@ export function ContactSection() {
             <Field as="textarea" label="Message" placeholder="Tell us about your goals" rows={6} />
           </div>
           <div className="mt-6 flex flex-wrap items-center justify-between gap-4">
-            <p className="text-sm text-[#858C86]">We usually reply within 1 business day.</p>
             <Button icon={<Send size={16} />}>Send Message</Button>
           </div>
         </motion.form>

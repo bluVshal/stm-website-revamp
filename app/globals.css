@@ -25,6 +25,11 @@ body {
   font-family: var(--font-sans);
 }
 
-.oppor-container{
+.oppor-container {
   gap: 1.5rem;
+}
+
+#not-found-container {
+  background-image: url('/stm-waves.avif');
+  box-shadow: inset 0 0 0 2000px rgba(255, 255, 255, 0.884);
 }

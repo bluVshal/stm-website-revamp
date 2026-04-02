@@ -31,19 +31,6 @@ function Button({ children, variant = "primary", ...props }) {
   );
 }
 
-function Card({ title }) {
-  return (
-    <motion.div
-      whileHover={{ y: -6 }}
-      className="rounded-2xl border border-[#E6EBE7] bg-white p-6 text-center shadow-sm"
-    >
-      <span className="font-semibold">{title}</span>
-    </motion.div>
-  );
-}
-
-
-
 export default function NotFound() {
 
   function handleGoBackBtn() {
@@ -51,7 +38,7 @@ export default function NotFound() {
   }
 
   return (
-    <div className="relative min-h-screen bg-[#F6F8F7] text-[#202220] flex flex-col items-center justify-center px-6 overflow-hidden">
+    <div id="not-found-container" className="relative min-h-screen bg-[#F6F8F7] text-[#202220] flex flex-col items-center justify-center px-6 overflow-hidden">
 
       {/* Background Glow */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-[radial-gradient(circle,rgba(141,197,62,0.25),transparent)] blur-3xl" />
