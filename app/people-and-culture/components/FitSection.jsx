@@ -3,16 +3,7 @@ import { motion } from "framer-motion";
 import { Container } from '@/app/Container';
 
 import {
-  ArrowRight,
-  Briefcase,
   CheckCircle2,
-  Clock3,
-  Globe,
-  HeartHandshake,
-  MapPin,
-  Send,
-  Sparkles,
-  Users,
 } from "lucide-react";
 const cx = (...classes) => classes.filter(Boolean).join(" ");
 
@@ -86,10 +77,6 @@ const pageData = {
       body: "A final alignment conversation around expectations, role scope, and next steps.",
     },
   ],
-};
-
-const handleClick = () => {
-  window.location.href = "#open-roles";
 };
 
 export default function FitSection() {

@@ -2,8 +2,6 @@ import React from 'react'
 import PortfolioPage from './Portfolio';
 import { motion } from "framer-motion";
 
-const cx = (...classes) => classes.filter(Boolean).join(" ");
-
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
   visible: {
