@@ -29,7 +29,7 @@ function Container({ children, className }) {
 
 function CareersHero() {
   return (
-    <section className="relative overflow-hidden pb-20 pt-14 md:pb-24 md:pt-20">
+    <section className="careers-hero relative overflow-hidden pb-20 pt-14 md:pb-24 md:pt-20">
       <div className="absolute inset-x-0 top-0 -z-10 h-[34rem] bg-[radial-gradient(circle_at_75%_15%,rgba(141,197,62,0.20),transparent_25%),linear-gradient(180deg,#FFFFFF_0%,#F6F8F7_100%)]" />
       <Container>
         <div className="grid items-center gap-10 rounded-[2rem] border border-[#E6EBE7] bg-white/80 p-6 shadow-[0_16px_40px_rgba(24,32,28,0.06)] backdrop-blur md:p-8 lg:grid-cols-[1.05fr_0.95fr] lg:p-10">
@@ -81,7 +81,7 @@ function CareersHero() {
 
 export default function Careers() {
   return (
-    <main className="min-h-screen bg-[#FFFFFF] text-[#414042] py-10">
+    <main className="min-h-screen bg-[#FFFFFF] text-[#414042] py-10 ">
       <CareersHero />
       <Applications />
     </main>
