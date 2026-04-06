@@ -45,3 +45,9 @@ body {
     background-attachment: fixed;
   }
 }
+
+.app-bckgrnd {
+  background-image: url('/background_img_1.avif');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}

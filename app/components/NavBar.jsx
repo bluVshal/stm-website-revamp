@@ -17,6 +17,11 @@ export function NavBar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  const handleContactBtn = () => {
+    console.log("Contact button clicked");
+    window.location.href = "#contact";
+  };
+
   return (
     <div className="sticky top-0 z-50 px-4 pt-4 md:px-6">
       <motion.header
@@ -72,7 +77,7 @@ export function NavBar() {
                 {item}
               </a>
             ))}
-            <Button className="mt-2 w-full" icon={<ArrowRight size={16} />}>
+            <Button onClick={handleContactBtn()} className="mt-2 w-full" icon={<ArrowRight size={16} />}>
               Let&apos;s Talk
             </Button>
           </div>

@@ -8,7 +8,6 @@ import { Field } from "../components/Field";
 
 const cx = (...classes) => classes.filter(Boolean).join(" ");
 
-
 const stagger = {
     hidden: {},
     visible: {
@@ -51,6 +50,23 @@ function Container({ children, className }) {
 const OpenRoles = () => {
 
     const [isOpen, setIsOpen] = useState(false);
+    const [file, setFile] = useState(null);
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [phone, setPhone] = useState("");
+
+    const handleSendCV = () => {
+        if( !name || !email || !phone) {
+            alert("Please fill in all the fields before sending.");
+            return;
+        }
+        if (!file) {
+            alert("Please upload your CV before sending.");
+            return;
+        }
+    };
+
+
     return (
         <div>
             <Container>
@@ -91,29 +107,30 @@ const OpenRoles = () => {
                                     initial="hidden"
                                     whileInView="visible"
                                     viewport={{ once: true, amount: 0.2 }}
-                                    className="rounded-[2rem] border border-[#E6EBE7] bg-white p-8 shadow-[0_8px_24px_rgba(24,32,28,0.05)] md:p-10"
+                                    className="rounded-[2rem] border border-[#E6EBE7] bg-white p-8 shadow-[0_8px_24px_rgba(24,32,28,0.05)] md:p-10 px-36 py-12"
                                 >
-                                    <div className="grid gap-5 md:grid-cols-1 mb-5">
-                                        <Field label="Name" placeholder="Your name" />
+                                    <div className="grid gap-5 md:grid-cols-2 mb-5">
+                                        <Field required label="Name" placeholder="Your name" value={name} onChange={(e) => setName(e.target.value)} />
+                                        <Field required label="Email" placeholder="you@company.com" type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
                                     </div>
                                     <div className="grid gap-5 md:grid-cols-2 mb-5">
-                                        <Field label="Email" placeholder="you@company.com" type="email" />
-                                        <Field label="Phone" placeholder="Your phone number" />
+                                        <Field required label="Phone" placeholder="Your phone number" type="tel" value={phone} onChange={(e) => setPhone(e.target.value)} />
+                                        <label><span><p>Upload your CV</p></span>
+                                            <input accept=".pdf, .doc, .docx, .jpeg, .png, .jpg" className="border border-[#E6EBE7] bg-input p-2 shadow-sm" type="file" onChange={(e) => setFile(e.target.files[0])} />
+                                        </label>
                                     </div>
-                                    <div className="grid gap-5 md:grid-cols-2 mb-5">
-                                        <Button variant="secondary" icon={<Send size={16} />}>Upload Your CV</Button>
-                                        <Button variant="secondary" onClick={() => setIsOpen(false)}>
-                                            Upload Cover Letter
+                                    <div className="mt-6 flex flex-wrap items-center gap-1">
+                                        <Button icon={<Send size={16} />} onClick={handleSendCV}>
+                                            Send Your CV
                                         </Button>
-                                    </div>
-                                    <div className="mt-6 flex flex-wrap items-center justify-between gap-4">
-                                        <Button icon={<Send size={16} />}>Send Your CV</Button>
-                                        <Button onClick={() => setIsOpen(false)}>Close</Button>
+                                        <Button variant="outline" onClick={() => setIsOpen(false)}>
+                                            Close
+                                        </Button>
                                     </div>
                                 </motion.form>
                             </div>
                         )}
-                        
+
                     </div>
                 </motion.div>
             </Container>
