@@ -18,8 +18,7 @@ export function NavBar() {
   }, []);
 
   const handleContactBtn = () => {
-    console.log("Contact button clicked");
-    window.location.href = "#contact";
+    alert("You can reach us ");
   };
 
   return (
@@ -77,7 +76,7 @@ export function NavBar() {
                 {item}
               </a>
             ))}
-            <Button onClick={handleContactBtn()} className="mt-2 w-full" icon={<ArrowRight size={16} />}>
+            <Button onClick={handleContactBtn} className="mt-2 w-full" icon={<ArrowRight size={16} />}>
               Let&apos;s Talk
             </Button>
           </div>

@@ -54,9 +54,10 @@ const OpenRoles = () => {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [phone, setPhone] = useState("");
+    const [position, setPosition] = useState("");
 
     const handleSendCV = () => {
-        if( !name || !email || !phone) {
+        if (!name || !email || !phone) {
             alert("Please fill in all the fields before sending.");
             return;
         }
@@ -65,7 +66,6 @@ const OpenRoles = () => {
             return;
         }
     };
-
 
     return (
         <div>
@@ -111,11 +111,14 @@ const OpenRoles = () => {
                                 >
                                     <div className="grid gap-5 md:grid-cols-2 mb-5">
                                         <Field required label="Name" placeholder="Your name" value={name} onChange={(e) => setName(e.target.value)} />
-                                        <Field required label="Email" placeholder="you@company.com" type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+                                        <Field required label="Email" placeholder="you@mail.com" type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
                                     </div>
                                     <div className="grid gap-5 md:grid-cols-2 mb-5">
                                         <Field required label="Phone" placeholder="Your phone number" type="tel" value={phone} onChange={(e) => setPhone(e.target.value)} />
-                                        <label><span><p>Upload your CV</p></span>
+                                        <Field required label="Position" placeholder="Your desired position" value={position} onChange={(e) => setPosition(e.target.value)} />
+                                    </div>
+                                    <div className="grid gap-5 md:grid-cols-2 mb-5">
+                                        <label><span><p className="text-sm font-semibold">Upload your CV</p></span>
                                             <input accept=".pdf, .doc, .docx, .jpeg, .png, .jpg" className="border border-[#E6EBE7] bg-input p-2 shadow-sm" type="file" onChange={(e) => setFile(e.target.files[0])} />
                                         </label>
                                     </div>
@@ -130,7 +133,6 @@ const OpenRoles = () => {
                                 </motion.form>
                             </div>
                         )}
-
                     </div>
                 </motion.div>
             </Container>
