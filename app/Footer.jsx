@@ -1,5 +1,6 @@
 "use client";
 
+import ScrollToTop from "./components/ScrollToTop";
 import { Container } from "./Container"; 
 
 export function Footer() {
@@ -20,7 +21,7 @@ export function Footer() {
             </div>
 
             <FooterColumn title="Navigation" items={[{title:"About Us", link:"/about-us"}, {title:"People and Culture", link:"/people-and-culture"}, {title:"Services", link:"/services"}, {title:"Careers", link:"/careers"}, {title:"Contact", link:"/#contact"}]} />
-            <FooterColumn title="Services" items={[{title:"SEO", link:"/services/seo"}, {title:"Paid Media", link:"/services/paid-media"}, {title:"CRM", link:"/services/crm"}, {title:"Creative", link:"/services/creative"}, {title:"Analytics", link:"/services/analytics"}, {title:"Strategy", link:"/services/strategy"}]} />
+            <FooterColumn title="Services" items={[{title:"SEO", link:"/services#seo"}, {title:"Digital Marketing", link:"/services#digital-marketing"}, {title:"CRM", link:"/services#crm"}, {title:"Graphic Design", link:"/services#graphic-design"}]} />
             <FooterColumn title="Contact" items={[{title:"info@stmconsulting.io", link:"mailto:info@stmconsulting.io"}, /*{title:"+230 000 0000", link:"tel:+2300000000"},*/ {title:"8th Floor, Nexteracom 1, Ebène, Mauritius", link:"https://maps.google.com/?q=8th+Floor,+Nexteracom+1,+Ebène,+Mauritius"}]} />
           </div>
 
@@ -32,7 +33,14 @@ export function Footer() {
             </div>
           </div>
         </div>
+        <div className="mt-10 text-center text-sm text-white/70">
+          Made with ❤️ by STM Consulting
+        </div>
+        <div className="mt-2 text-center text-sm text-white/70">
+          <ScrollToTop />
+        </div>
       </Container>
+
     </footer>
   );
 }

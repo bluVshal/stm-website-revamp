@@ -81,7 +81,7 @@ const pageData = {
 
 export default function DigitalMarketing() {
   return (
-    <section className="py-20 md:py-24">
+    <section id='digital-marketing' className="py-20 md:py-24">
       <Container>
         <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
           <SectionHeader

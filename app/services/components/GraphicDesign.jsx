@@ -77,7 +77,7 @@ const stagger = {
 
 const GraphicDesign = () => {
   return (
-    <section className="py-20 md:py-24">
+    <section id='graphic-design' className="py-20 md:py-24">
       <Container>
         <SectionHeader
           center

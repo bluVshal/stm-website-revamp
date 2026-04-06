@@ -63,7 +63,7 @@ const ServicesLifeAtSTMSection = () => {
   }
 
   return (
-    <section className="bg-[#414042] py-20 text-white md:py-24">
+    <section id='seo' className="bg-[#414042] py-20 text-white md:py-24">
       <Container>
         <SectionHeader
           center
