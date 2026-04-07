@@ -96,12 +96,12 @@ const CultureSection = () => {
                 key={item.title}
                 variants={fadeUp}
                 whileHover={{ y: -6 }}
-                className="rounded-[1.75rem] border border-[#E6EBE7] bg-white p-7 shadow-[0_8px_24px_rgba(24,32,28,0.04)]"
+                className="group rounded-[1.75rem] border border-[#E6EBE7] bg-white p-7 shadow-[0_8px_24px_rgba(24,32,28,0.04)]"
               >
-                <div className="mb-5 inline-flex rounded-2xl bg-[#EAF5DA] p-3 text-[#5A7B24]">
-                  <Icon size={18} />
+                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#F1F4F2] text-[#414042] transition group-hover:bg-[#EAF5DA] group-hover:text-[#5A7B24]">
+                  <Icon size={20} />
                 </div>
-                <h3 className="text-xl font-semibold tracking-tight text-[#414042]">{item.title}</h3>
+                <h3 className="text-xl font-semibold tracking-tight text-[#414042] mt-5">{item.title}</h3>
                 <p className="mt-3 text-base leading-7 text-[#5E645F]">{item.body}</p>
               </motion.div>
             );
@@ -112,4 +112,4 @@ const CultureSection = () => {
   );
 }
 
-export default CultureSection
+export default CultureSection;

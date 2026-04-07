@@ -99,9 +99,9 @@ export default function FitSection() {
               <motion.div
                 key={item}
                 variants={fadeUp}
-                className="flex items-start gap-4 rounded-[1.5rem] border border-[#E6EBE7] bg-white p-5 shadow-[0_8px_24px_rgba(24,32,28,0.03)]"
+                className="group flex items-start gap-4 rounded-[1.5rem] border border-[#E6EBE7] bg-white p-5 shadow-[0_8px_24px_rgba(24,32,28,0.03)]"
               >
-                <div className="rounded-2xl bg-[#EAF5DA] p-2.5 text-[#5A7B24]">
+                <div className="rounded-2xl bg-[#EAF5DA] p-2.5 text-[#5A7B24] transition group-hover:bg-[#C3E48B] transition-transform duration-300 hover:translate-x-12">
                   <CheckCircle2 size={18} />
                 </div>
                 <span className="pt-1 text-base font-medium text-[#414042]">{item}</span>

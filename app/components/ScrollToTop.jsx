@@ -1,5 +1,4 @@
-// components/ScrollToTop.js
-"use client"; // Required for Next.js App Router (client-side behavior)
+"use client";
 
 import { useState, useEffect } from "react";
 
@@ -37,7 +36,7 @@ export default function ScrollToTop() {
             position: "fixed",
             bottom: "40px",
             right: "40px",
-            background: "#31f300",
+            background: "#8DC53E",
             color: "#000000",
             border: "none",
             borderRadius: "50%",
