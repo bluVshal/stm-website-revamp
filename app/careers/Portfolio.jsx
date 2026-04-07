@@ -39,7 +39,7 @@ export default function PortfolioPage() {
                 >
                   <h2 className="mb-4 font-bold text-xl" dangerouslySetInnerHTML={{ __html: item.title.rendered }} />
                   <Button variant="primary" onClick={() => window.open(item.link, "_blank")} icon={<ArrowRight size={16} />}>
-                    Apply Now
+                    Learn More
                   </Button>
                 </div>
               </li>

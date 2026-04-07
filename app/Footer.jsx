@@ -33,14 +33,10 @@ export function Footer() {
             </div>
           </div>
         </div>
-        <div className="mt-10 text-center text-sm text-white/70">
-          Made with ❤️ by STM Consulting
-        </div>
         <div className="mt-2 text-center text-sm text-white/70">
           <ScrollToTop />
         </div>
       </Container>
-
     </footer>
   );
 }

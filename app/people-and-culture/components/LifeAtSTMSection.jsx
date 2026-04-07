@@ -25,13 +25,13 @@ const stagger = {
 const LifeAtSTMSection = () => {
 
   const items = [{
-    src: 'https://www.stmconsulting.io/wp-content/uploads/2025/12/leadership-program-1.jpg'
+    src: 'https://www.stmconsulting.io/wp-content/uploads/2025/12/leadership-program.jpg'
   }, {
     src: 'https://www.stmconsulting.io/wp-content/uploads/2025/12/Stronger-Together-1.jpg'
   }, {
-    src: 'https://www.stmconsulting.io/wp-content/uploads/2025/12/leadership-program.jpg'
-  }, {
     src: 'https://www.stmconsulting.io/wp-content/uploads/2025/12/Stronger-Together.jpg'
+  }, {
+    src: 'https://www.stmconsulting.io/wp-content/uploads/2026/04/stm-events-everydaylife.jpg'
   }, {
     src: 'https://www.stmconsulting.io/wp-content/uploads/2025/12/Team-event.jpg'
   }, {

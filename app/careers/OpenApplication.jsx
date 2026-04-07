@@ -119,7 +119,7 @@ const OpenRoles = () => {
                                     </div>
                                     <div className="grid gap-5 md:grid-cols-2 mb-5">
                                         <label><span><p className="text-sm font-semibold">Upload your CV</p></span>
-                                            <input accept=".pdf, .doc, .docx, .jpeg, .png, .jpg" className="border border-[#E6EBE7] bg-input p-2 shadow-sm" type="file" onChange={(e) => setFile(e.target.files[0])} />
+                                            <input accept=".pdf, .doc, .docx" className="border border-[#E6EBE7] bg-input p-2 shadow-sm" type="file" onChange={(e) => setFile(e.target.files[0])} />
                                         </label>
                                     </div>
                                     <div className="mt-6 flex flex-wrap items-center gap-1">

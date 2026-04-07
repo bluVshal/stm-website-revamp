@@ -74,7 +74,7 @@ const pageData = {
 
 const CultureSection = () => {
   return (
-    <section className="py-20 md:py-24">
+    <section className="app-bckgrnd mx-auto max-w-7xl px-6 md:px-8 py-10 bg-[linear-gradient(180deg,#EEF6E4_0%,#E7F2D8_100%)] rounded-[4rem] shadow-[0_16px_40px_rgba(24,32,28,0.06)] mt-10">
       <Container>
         <SectionHeader
           center
@@ -98,7 +98,7 @@ const CultureSection = () => {
                 whileHover={{ y: -6 }}
                 className="group rounded-[1.75rem] border border-[#E6EBE7] bg-white p-7 shadow-[0_8px_24px_rgba(24,32,28,0.04)]"
               >
-                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#F1F4F2] text-[#414042] transition group-hover:bg-[#EAF5DA] group-hover:text-[#5A7B24]">
+                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#EAF5DA] text-[#414042] transition group-hover:bg-[#C3E48B] group-hover:text-[#5A7B24] duration-450">
                   <Icon size={20} />
                 </div>
                 <h3 className="text-xl font-semibold tracking-tight text-[#414042] mt-5">{item.title}</h3>
