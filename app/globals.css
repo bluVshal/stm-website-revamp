@@ -64,3 +64,11 @@ body {
   display: flex;
   filter: brightness(70%);
 }
+
+.services-hero {
+  background-image: url('/STM_Services_Hero.avif');
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  filter: brightness(79%);
+}

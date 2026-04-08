@@ -68,8 +68,8 @@ const ServicesLifeAtSTMSection = () => {
         <SectionHeader
           center
           eyebrow="SEO"
-          title="A glimpse inside the team"
-          body="We work hard, move fast, and celebrate wins together. Here are a few moments from our journey so far."
+          title="Optimize Your Online Presence with Our SEO Services"
+          body="Our SEO services are designed to help your business improve its online visibility, drive organic traffic, and increase conversions. We use a data-driven approach to develop customized SEO strategies that align with your business goals and target audience."
         />
         <motion.div
           variants={stagger}

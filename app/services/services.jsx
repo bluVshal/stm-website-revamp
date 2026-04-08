@@ -12,10 +12,10 @@ const ServicePage = () => {
   return (
     <main className="min-h-screen bg-[#FFFFFF] text-[#414042]">
       <ServicesHero />
-      <DigitalMarketing />
-      <GraphicDesign />
       <SEOSection />
+      <DigitalMarketing />
       <CRM />
+      <GraphicDesign />
       <Analytics />
     </main>
   )

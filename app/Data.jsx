@@ -56,6 +56,7 @@ export const siteData = {
         { label: "Digital Marketing", href: "/services#digital-marketing" },
         { label: "CRM & Retention", href: "/services#crm" },
         { label: "Graphic Design", href: "/services#graphic-design" },
+        { label: "Analytics", href: "/services#analytics" },
       ],
     },
     { label: "Careers" },

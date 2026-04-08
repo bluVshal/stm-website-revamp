@@ -82,8 +82,8 @@ const GraphicDesign = () => {
         <SectionHeader
           center
           eyebrow="Graphic Design"
-          title="What you get"
-          body="We invest in the team’s growth, well-being, and environment so people can do their best work."
+          title="Create Impactful Visuals with Our Graphic Design Services"
+          body="Our graphic design services are focused on creating visually stunning and impactful designs that effectively communicate your brand's message. From logo design to marketing collateral, we work closely with you to understand your vision and deliver designs that resonate with your target audience."
         />
         <motion.div
           variants={stagger}

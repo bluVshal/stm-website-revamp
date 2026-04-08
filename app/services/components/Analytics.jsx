@@ -50,7 +50,8 @@ const Analytics = () => {
         <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
           <SectionHeader
             eyebrow="Analytics"
-            title="Data-Driven Insights"
+            title="Unlock Insights and Drive Growth with Our Analytics Services"
+            body="Our analytics services provide you with the data and insights needed to make informed decisions and drive business growth. We help you understand your customers, optimize your marketing efforts, and identify new opportunities for expansion."
           />
           <motion.div
             variants={stagger}
