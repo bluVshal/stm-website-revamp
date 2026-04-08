@@ -41,8 +41,25 @@ export const stagger = {
 };
 
 export const siteData = {
-  nav: ["About Us", "People And Culture", "Services", "Careers"],
-  trust: ["Fintech", "Professional Services", "B2B SaaS", "E-commerce"],
+  nav: [
+    { label: "About Us",
+      children: [
+        { label: "Who We Are", href: "/about-us#who-we-are" },
+        { label: "What We Do", href: "/about-us#what-we-do" },
+      ],
+    },
+    { label: "People And Culture" },
+    {
+      label: "Services",
+      children: [
+        { label: "SEO", href: "/services#seo" },
+        { label: "Digital Marketing", href: "/services#digital-marketing" },
+        { label: "CRM & Retention", href: "/services#crm" },
+        { label: "Graphic Design", href: "/services#graphic-design" },
+      ],
+    },
+    { label: "Careers" },
+  ],
   services: [
     {
       icon: Search,
@@ -113,12 +130,6 @@ export const siteData = {
       title: "Scale",
       body: "Double down on what performs and refine continuously.",
     },
-  ],
-  metrics: [
-    { value: "+230%", label: "Organic visibility" },
-    { value: "4.2x", label: "Return on ad spend" },
-    { value: "-38%", label: "Cost per acquisition" },
-    { value: "+62%", label: "Qualified lead growth" },
   ],
   culture: ["Hybrid collaboration", "Growth-focused culture", "High-impact client work"],
 };

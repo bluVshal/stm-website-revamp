@@ -27,8 +27,7 @@ export function CTASection() {
             Use this area as a premium conversion moment with focused copy, strong buttons, and minimal distractions.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-            <Button icon={<ArrowRight size={16} />}>Book a Discovery Call</Button>
-            <Button variant="secondary">Contact Us</Button>
+            <Button icon={<ArrowRight size={16} />}>Contact Us</Button>
           </div>
         </div>
       </motion.div>
