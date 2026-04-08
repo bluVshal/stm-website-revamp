@@ -38,14 +38,14 @@ function SectionHeader({ eyebrow, title, body, center }) {
         </span>
       )}
       <h2 className="text-3xl font-semibold tracking-tight text-[#414042] md:text-5xl">{title}</h2>
-      {body && <p className="mt-5 text-lg leading-8 text-[#FFF]">{body}</p>}
+      {body && <p className="mt-5 text-lg leading-8 text-[#000]">{body}</p>}
     </motion.div>
   );
 }
 
 const Analytics = () => {
     return (
-    <section id='analytics' className="py-20 md:py-24">
+    <section id="analytics" className="py-20 md:py-24">
       <Container>
         <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
           <SectionHeader
@@ -59,7 +59,6 @@ const Analytics = () => {
             viewport={{ once: true, amount: 0.2 }}
             className="grid gap-4"
           >
-
           </motion.div>
         </div>
       </Container>

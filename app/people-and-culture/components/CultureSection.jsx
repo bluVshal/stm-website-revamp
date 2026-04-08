@@ -27,7 +27,7 @@ function SectionHeader({ eyebrow, title, body, center }) {
         </span>
       )}
       <h2 className="text-3xl font-semibold tracking-tight text-[#414042] md:text-5xl">{title}</h2>
-      {body && <p className="mt-5 text-lg leading-8 text-[#FFF]">{body}</p>}
+      {body && <p className="mt-5 text-lg leading-8 text-[#000]">{body}</p>}
     </motion.div>
   );
 }
@@ -74,7 +74,7 @@ const pageData = {
 
 const CultureSection = () => {
   return (
-    <section className="app-bckgrnd mx-auto max-w-7xl px-6 md:px-8 py-10 bg-[linear-gradient(180deg,#EEF6E4_0%,#E7F2D8_100%)] rounded-[4rem] shadow-[0_16px_40px_rgba(24,32,28,0.06)] mt-10">
+    <section className="app-bckgrnd mx-auto max-w-7xl px-6 md:px-8 mb-10 py-10 bg-[linear-gradient(180deg,#EEF6E4_0%,#E7F2D8_100%)] rounded-[4rem] shadow-[0_16px_40px_rgba(24,32,28,0.06)] mt-10">
       <Container>
         <SectionHeader
           center

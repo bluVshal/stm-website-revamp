@@ -17,9 +17,9 @@ export function NavBar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const handleContactBtn = () => {
+  function handleContactBtn() {
     alert("You can reach us ");
-  };
+  }
 
   return (
     <div className="sticky top-0 z-50 px-4 pt-4 md:px-6">
@@ -41,7 +41,7 @@ export function NavBar() {
             <a
               key={item}
               href={`/${item.toLowerCase().replace(/\s+/g, "-")}`}
-              className="group relative text-sm font-medium text-[#4B504C] transition hover:text-[#414042]"
+              className="group relative text-sm font-medium text-[#4B504C] transition hover:text-[#414042] linkClasses"
             >
               {item}
               <span className="absolute -bottom-2 left-0 h-0.5 w-0 rounded-full bg-[#8DC53E] transition-all duration-200 group-hover:w-full" />

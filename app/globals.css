@@ -51,3 +51,16 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
+
+.pc-hero {
+  background-image: url('/stm-office-work.avif');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  filter: brightness(99%);
+}
+
+.darken {
+  display: flex;
+  filter: brightness(70%);
+}

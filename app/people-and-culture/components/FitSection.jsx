@@ -81,9 +81,9 @@ const pageData = {
 
 export default function FitSection() {
   return (
-    <section className="py-20 md:py-24">
+    <section className="py-20 md:py-24 pc-hero">
       <Container>
-        <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+        <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start shadow-[0_16px_40px_rgba(24,32,28,0.06)] backdrop-blur rounded-[2rem] border border-[#E6EBE7] bg-white/80 p-6 md:p-8 lg:p-10">
           <SectionHeader
             eyebrow="Who Thrives Here"
             title="The kind of people who tend to do well with us"
