@@ -213,7 +213,13 @@ export function NavBar() {
   }, []);
 
   function handleContactBtn() {
-    alert("You can reach us ");
+    const el = document.getElementById("contact");
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+      setOpen(false);
+    } else {
+      window.location.href = "/#contact";
+    }
   }
 
   return (
@@ -238,7 +244,7 @@ export function NavBar() {
         </nav>
 
         <div className="hidden md:block">
-          <Button icon={<ArrowRight size={16} />}>Let&apos;s Talk</Button>
+          <Button onClick={handleContactBtn} icon={<ArrowRight size={16} />}>Let&apos;s Talk</Button>
         </div>
 
         <button
