@@ -47,12 +47,7 @@ const Analytics = () => {
     return (
     <section id="analytics" className="py-20 md:py-24">
       <Container>
-        <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
-          <SectionHeader
-            eyebrow="Analytics"
-            title="Unlock Insights and Drive Growth with Our Analytics Services"
-            body="Our analytics services provide you with the data and insights needed to make informed decisions and drive business growth. We help you understand your customers, optimize your marketing efforts, and identify new opportunities for expansion."
-          />
+        <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
           <motion.div
             variants={stagger}
             initial="hidden"
@@ -61,6 +56,11 @@ const Analytics = () => {
             className="grid gap-4"
           >
           </motion.div>
+          <SectionHeader
+            eyebrow="Analytics"
+            title="Unlock Insights and Drive Growth with Our Analytics Services"
+            body="Our analytics services provide you with the data and insights needed to make informed decisions and drive business growth. We help you understand your customers, optimize your marketing efforts, and identify new opportunities for expansion."
+          />
         </div>
       </Container>
     </section>
