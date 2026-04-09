@@ -1,5 +1,3 @@
-"use client";
-
 import { cx } from "../Data";
 
 export function Field({ label, as = "input", className, ...props }) {

@@ -96,7 +96,7 @@ const CultureSection = () => {
                 key={item.title}
                 variants={fadeUp}
                 whileHover={{ y: -6 }}
-                className="group rounded-[1.75rem] border border-[#E6EBE7] bg-white p-7 shadow-[0_8px_24px_rgba(24,32,28,0.04)]"
+                className="group rounded-[1.75rem] border border-[#E6EBE7] bg-white p-7 shadow-[0_8px_24px_rgba(24,32,28,0.04)]  hover:bg-[#F6FAF3] transition duration-450"
               >
                 <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#EAF5DA] text-[#414042] transition group-hover:bg-[#C3E48B] group-hover:text-[#5A7B24] duration-450">
                   <Icon size={20} />

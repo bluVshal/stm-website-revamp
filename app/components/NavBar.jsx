@@ -122,7 +122,7 @@ function MobileNavItem({ item, active, pathname }) {
   const [expanded, setExpanded] = React.useState(false);
 
   const label = item.label;
-  const href = item.href ?? `#${label.toLowerCase().replace(/\s+/g, "-")}`;
+  const href = item.href ?? `/${label.toLowerCase().replace(/\s+/g, "-")}`;
   const hasChildren = Array.isArray(item.children) && item.children.length > 0;
 
   if (!hasChildren) {

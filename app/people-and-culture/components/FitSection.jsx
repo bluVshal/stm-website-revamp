@@ -46,7 +46,6 @@ function SectionHeader({ eyebrow, title, body, center }) {
   );
 }
 
-
 const pageData = {
   fit: [
     "Problem-solvers, not task-doers",
@@ -99,7 +98,7 @@ export default function FitSection() {
               <motion.div
                 key={item}
                 variants={fadeUp}
-                className="group flex items-start gap-4 rounded-[1.5rem] border border-[#E6EBE7] bg-white p-5 shadow-[0_8px_24px_rgba(24,32,28,0.03)] transition-transform duration-450 hover:translate-x-8"
+                className="group flex items-start gap-4 rounded-[1.5rem] border border-[#E6EBE7] bg-white p-5 shadow-[0_8px_24px_rgba(24,32,28,0.03)] transition-transform duration-450 hover:translate-x-8 hover:bg-[#F6FAF3]"
               >
                 <div className="rounded-2xl bg-[#EAF5DA] p-2.5 text-[#5A7B24] transition group-hover:bg-[#C3E48B]">
                   <CheckCircle2 size={20} />

@@ -5,7 +5,7 @@ import { ChevronRight } from "lucide-react";
 import { fadeUp, stagger, siteData } from "../Data";
 import { Section } from "./Section";
 
-export function ServiceCard({ icon: Icon, title, body }) {
+export function ServiceCard({ icon: Icon, title, body, link }) {
   return (
     <motion.div
       variants={fadeUp}
@@ -18,8 +18,10 @@ export function ServiceCard({ icon: Icon, title, body }) {
       <h3 className="mt-6 text-xl font-semibold tracking-tight text-[#414042]">{title}</h3>
       <p className="mt-3 text-base leading-7 text-[#5E645F]">{body}</p>
       <div className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-[#414042]">
-        Explore service
-        <ChevronRight size={16} className="transition group-hover:translate-x-1" />
+        <a href={link} className="flex items-center gap-2">
+          Explore service
+          <ChevronRight size={16} className="transition group-hover:translate-x-1" />
+        </a>
       </div>
     </motion.div>
   );
@@ -41,7 +43,7 @@ export function ServicesSection() {
         viewport={{ once: true, amount: 0.15 }}
         className="grid gap-6 md:grid-cols-2 xl:grid-cols-3"
       >
-        {siteData.services.map((service) => (
+        {siteData.services.map((service) => (          
           <ServiceCard key={service.title} {...service} />
         ))}
       </motion.div>

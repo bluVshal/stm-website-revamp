@@ -23,7 +23,7 @@ const stagger = {
 
 const OpenRoles = () => {
     return (
-        <div className="rounded-[1.8rem] border border-white/70 bg-[#F6F8F7] p-8 text-center shadow-[0_16px_40px_rgba(24,32,28,0.06)] md:p-12">
+        <div className="rounded-[1.8rem] border border-white/70 bg-[#F6F8F7] ps-2 p-8 text-center shadow-[0_16px_40px_rgba(24,32,28,0.06)] md:p-12">
             <motion.div initial="hidden" animate="visible" variants={stagger}>
                 <motion.div variants={fadeUp}>
                     <span className="inline-flex rounded-full border border-[#E6EBE7] bg-white px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.14em] text-[#5E645F] shadow-sm">

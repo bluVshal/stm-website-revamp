@@ -2,11 +2,10 @@ import {
   BarChart3,
   Briefcase,
   Building2,
-  Globe,
   Layers3,
   Search,
   Sparkles,
-  Target,
+  SplinePointer,
   Users,
 } from "lucide-react";
 
@@ -52,11 +51,11 @@ export const siteData = {
     {
       label: "Services",
       children: [
-        { label: "SEO", href: "/services#seo" },
+        { label: "SEO Strategy", href: "/services#seo" },
         { label: "Digital Marketing", href: "/services#digital-marketing" },
         { label: "CRM & Retention", href: "/services#crm" },
         { label: "Graphic Design", href: "/services#graphic-design" },
-        { label: "Analytics", href: "/services#analytics" },
+        { label: "Analytics & CRO", href: "/services#analytics" },
       ],
     },
     { label: "Careers" },
@@ -66,31 +65,31 @@ export const siteData = {
       icon: Search,
       title: "SEO Strategy",
       body: "Technical, content, and authority growth systems built for sustainable search visibility.",
-    },
-    {
-      icon: Target,
-      title: "Paid Media",
-      body: "Performance campaigns across paid search, social, and display with rigorous optimization.",
+      link: "/services#seo",
     },
     {
       icon: Users,
       title: "CRM & Retention",
       body: "Lifecycle journeys, segmentation, and retention frameworks that increase customer value.",
+      linek: "/services#crm",
     },
     {
       icon: Sparkles,
-      title: "Creative & Content",
+      title: "Digital Marketing",
       body: "Campaign messaging, landing page copy, and content systems shaped around conversion.",
+      link: "/services#digital-marketing",
     },
     {
       icon: BarChart3,
       title: "Analytics & CRO",
       body: "Measurement, attribution, experimentation, and conversion insights that sharpen performance.",
+      link: "/services#analytics",
     },
     {
-      icon: Globe,
-      title: "Growth Strategy",
-      body: "Channel planning and market positioning aligned to commercial outcomes and scale.",
+      icon: SplinePointer,
+      title: "Graphic Design",
+      body: "Brand identity, campaign creative, and presentation design that elevate your visual presence.",
+      link: "/services#graphic-design",
     },
   ],
   industries: [
