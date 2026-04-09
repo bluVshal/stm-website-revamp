@@ -46,7 +46,6 @@ function SectionHeader({ eyebrow, title, body, center }) {
   );
 }
 
-
 const pageData = {
   fit: [
     "Problem-solvers, not task-doers",
