@@ -5,10 +5,10 @@ import { Container } from "./Container";
 
 export function Footer() {
   return (
-    <footer className="px-6 pb-8 pt-10 md:px-8">
+    <footer className="px-4 pb-8 pt-10 sm:px-6 md:px-8">
       <Container>
         <div className="rounded-[2rem] bg-[#414042] p-8 text-white md:p-10">
-          <div className="grid gap-10 md:grid-cols-2 xl:grid-cols-4">
+          <div className="grid gap-8 sm:grid-cols-2 sm:gap-10 xl:grid-cols-4">
             <div>
               <div className="flex items-center gap-3">
                 <div>

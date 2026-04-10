@@ -18,7 +18,7 @@ export function ProcessSection() {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
-        className="relative grid gap-6 xl:grid-cols-4"
+        className="relative grid gap-6 md:grid-cols-2 xl:grid-cols-4"
       >
         <div className="absolute left-0 right-0 top-12 hidden h-px bg-[#DDE4DE] xl:block" />
         {siteData.process.map((step) => (

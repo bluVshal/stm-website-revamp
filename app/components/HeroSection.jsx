@@ -32,7 +32,7 @@ export function HeroSection() {
 
 
   return (
-    <section id="top" className="relative overflow-hidden px-6 pb-24 pt-16 md:px-8 md:pb-28 md:pt-24">
+    <section id="top" className="relative overflow-hidden px-4 pb-16 pt-12 sm:px-6 md:px-8 md:pb-28 md:pt-24">
       <div className="absolute inset-x-0 top-0 -z-10 h-[34rem] bg-[radial-gradient(circle_at_70%_20%,rgba(141,197,62,0.22),transparent_26%),linear-gradient(180deg,#FFFFFF_0%,#F6F8F7_100%)]" />
       <Container>
         <div className="grid items-center gap-14 lg:grid-cols-[1.05fr_0.95fr]">
@@ -45,12 +45,12 @@ export function HeroSection() {
 
             <motion.h1
               variants={fadeUp}
-              className="mt-6 text-5xl font-semibold leading-[1.02] tracking-[-0.04em] text-[#414042] md:text-6xl xl:text-7xl"
+              className="mt-6 text-3xl font-semibold leading-[1.08] tracking-[-0.04em] text-[#414042] sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl"
             >
               We build digital growth systems for ambitious brands.
             </motion.h1>
 
-            <motion.p variants={fadeUp} className="mt-6 max-w-xl text-lg leading-8 text-[#5E645F] md:text-xl">
+            <motion.p variants={fadeUp} className="mt-4 max-w-xl text-base leading-7 text-[#5E645F] sm:mt-6 sm:text-lg sm:leading-8 md:text-xl">
               Performance marketing, SEO, CRM, and strategic execution designed for brands that want measurable growth,
               sharper positioning, and better conversion economics.
             </motion.p>

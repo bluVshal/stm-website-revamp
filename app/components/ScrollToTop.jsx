@@ -32,22 +32,7 @@ export default function ScrollToTop() {
       {isVisible && (
         <button
           onClick={scrollToTop}
-          style={{
-            position: "fixed",
-            bottom: "40px",
-            right: "40px",
-            background: "#8DC53E",
-            color: "#000000",
-            border: "none",
-            borderRadius: "50%",
-            height: "50px",
-            width: "50px",
-            padding: "0 1px 30px 0",
-            cursor: "pointer",
-            boxShadow: "0 4px 6px rgba(0,0,0,0.2)",
-            fontSize: "38px",
-            zIndex: 1000,
-          }}
+          className="fixed bottom-5 right-5 z-[1000] flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border-none bg-[#8DC53E] text-2xl text-black shadow-[0_4px_6px_rgba(0,0,0,0.2)] sm:bottom-8 sm:right-8 sm:h-[50px] sm:w-[50px] sm:text-[38px]"
           aria-label="Scroll to top"
         >
           ↑
