@@ -1,5 +1,5 @@
 "use client";
-
+import React from "react";
 import { motion } from "framer-motion";
 import { ArrowRight, Sparkles } from "lucide-react";
 import { fadeUp, stagger } from "../Data";
@@ -7,6 +7,30 @@ import { Container } from "../Container";
 import { Button } from "./Buttons";
 
 export function HeroSection() {
+
+  const [open, setOpen] = React.useState(false);
+
+  function handleContactBtn() {
+    const el = document.getElementById("contact");
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+      setOpen(false);
+    } else {
+      window.location.href = "/#contact";
+    }
+  }
+
+  function handleServicesBtn() {
+    const el = document.getElementById("services");
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+      setOpen(false);
+    } else {
+      window.location.href = "/#services";
+    }
+  }
+
+
   return (
     <section id="top" className="relative overflow-hidden px-6 pb-24 pt-16 md:px-8 md:pb-28 md:pt-24">
       <div className="absolute inset-x-0 top-0 -z-10 h-[34rem] bg-[radial-gradient(circle_at_70%_20%,rgba(141,197,62,0.22),transparent_26%),linear-gradient(180deg,#FFFFFF_0%,#F6F8F7_100%)]" />
@@ -32,8 +56,12 @@ export function HeroSection() {
             </motion.p>
 
             <motion.div variants={fadeUp} className="mt-8 flex flex-wrap gap-3">
-              <Button icon={<ArrowRight size={16} />}>View Services</Button>
-              <Button variant="secondary">Book a Meeting</Button>
+              <Button icon={<ArrowRight size={16} />} onClick={handleServicesBtn}>
+                View Services
+              </Button>
+              <Button variant="secondary" onClick={handleContactBtn}>
+                Contact Us
+              </Button>
             </motion.div>
           </motion.div>
         </div>

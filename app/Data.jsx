@@ -71,7 +71,7 @@ export const siteData = {
       icon: Users,
       title: "CRM & Retention",
       body: "Lifecycle journeys, segmentation, and retention frameworks that increase customer value.",
-      linek: "/services#crm",
+      link: "/services#crm",
     },
     {
       icon: Sparkles,
