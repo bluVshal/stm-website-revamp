@@ -23,7 +23,7 @@ export default function PortfolioPage() {
   }, []);
 
   if (portfolio === null) return <h2>Loading Vacancies...</h2>;
-  if (error) return <p>Error: {error}</p>;
+  if (error) return <p>No vacancies available at the moment. Stay tuned for updates!</p>;
 
   return (
     <div id="vacancies" style={{ padding: "20px" }}>

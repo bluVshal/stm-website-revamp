@@ -2,9 +2,6 @@ import React from 'react';
 import { motion } from "framer-motion";
 import { Container } from '@/app/Container';
 
-import {
-  CheckCircle2,
-} from "lucide-react";
 const cx = (...classes) => classes.filter(Boolean).join(" ");
 
 const fadeUp = {

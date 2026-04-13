@@ -56,16 +56,57 @@ const OpenRoles = () => {
     const [phone, setPhone] = useState("");
     const [position, setPosition] = useState("");
 
-    const handleSendCV = () => {
-        if (!name || !email || !phone) {
-            alert("Please fill in all the fields before sending.");
-            return;
+    const handleSendCV = async () => {
+        try {
+            if (!name || !email || !phone) {
+                alert("Please fill in all the fields before sending.");
+                return;
+            }
+            if (!file) {
+                alert("Please upload your CV before sending.");
+                return;
+            }
+
+            if (name && email && phone && file) {
+                // Implement the logic to send the CV via email or API
+                alert("Your CV has been sent successfully!");
+                // Reset form fields            setName("");
+                setEmail("");
+                setPhone("");
+                setPosition("");
+                setFile(null);
+                setIsOpen(false);
+
+                const formData = new FormData();
+
+                formData.append("name", "PraVishal");
+                formData.append("email", "pravishal@stmconsulting.io");
+                formData.append("message", "Hello with attachment!");
+
+                if (file) {
+                    formData.append("file", file);
+                }
+
+                const res = await fetch("/api/send-email", {
+                    method: "POST",
+                    body: formData,
+                });
+
+                const data = await res.json();
+
+                if (data.success) {
+                    alert("Email sent!");
+                } else {
+                    alert(`Failed: ${data.error || "Unknown error"}`);
+                }
+            }
         }
-        if (!file) {
-            alert("Please upload your CV before sending.");
-            return;
-        }
-    };
+
+        catch (error) {
+            console.error("FRONTEND ERROR:", error);
+            alert("Something went wrong. Check console.");
+        };
+    }
 
     return (
         <div>

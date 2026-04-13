@@ -72,3 +72,27 @@ body {
   background-attachment: fixed;
   filter: brightness(79%);
 }
+
+  .arrow-container {
+    display: none;
+  }
+@media screen and (min-width: 1000px) {
+
+  .arrow-container {
+    margin-top: -10px;
+    margin-left: 40px;
+  }
+
+  .arrow-img {
+    width: 28rem;
+    transform: rotate(16deg);
+    padding: 1px 0 0 0;
+  }
+
+  .arrow-box {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+
+}

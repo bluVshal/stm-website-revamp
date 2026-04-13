@@ -5,6 +5,12 @@ import { fadeUp, stagger, siteData } from "../Data";
 import { Section } from "./Section";
 
 export function ProcessSection() {
+
+  const arrowElements = [];
+  for (let i = 0; i < 3; i++) {
+    arrowElements.push(<img className="arrow-img" key={i} src={`/arrow.png`} alt={`Step ${i + 1}`} />);
+  }
+
   return (
     <Section
       id="process"
@@ -40,6 +46,9 @@ export function ProcessSection() {
           </motion.div>
         ))}
       </motion.div>
+      <div className="arrow-container">
+        <div className="arrow-box">{arrowElements}</div>
+      </div>
     </Section>
   );
 }
