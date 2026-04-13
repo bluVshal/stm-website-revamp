@@ -46,38 +46,6 @@ function SectionHeader({ eyebrow, title, body, center }) {
   );
 }
 
-const pageData = {
-  fit: [
-    "Problem-solvers, not task-doers",
-    "People who think in systems",
-    "Curious and data-driven minds",
-    "Clear communicators",
-    "Comfortable with responsibility",
-  ],
-  process: [
-    {
-      number: "01",
-      title: "Apply",
-      body: "Send your CV, portfolio, or LinkedIn profile with a short introduction.",
-    },
-    {
-      number: "02",
-      title: "Intro Call",
-      body: "A quick conversation to understand your background, mindset, and fit.",
-    },
-    {
-      number: "03",
-      title: "Task / Case",
-      body: "A practical exercise that reflects the kind of thinking the role requires.",
-    },
-    {
-      number: "04",
-      title: "Final Discussion",
-      body: "A final alignment conversation around expectations, role scope, and next steps.",
-    },
-  ],
-};
-
 export default function DigitalMarketing() {
   return (
     <section id='digital-marketing' className="py-20 md:py-24">
@@ -95,18 +63,6 @@ export default function DigitalMarketing() {
             viewport={{ once: true, amount: 0.2 }}
             className="grid gap-4"
           >
-            {pageData.fit.map((item) => (
-              <motion.div
-                key={item}
-                variants={fadeUp}
-                className="flex items-start gap-4 rounded-[1.5rem] border border-[#E6EBE7] bg-white p-5 shadow-[0_8px_24px_rgba(24,32,28,0.03)]"
-              >
-                <div className="rounded-2xl bg-[#EAF5DA] p-2.5 text-[#5A7B24]">
-                  <CheckCircle2 size={18} />
-                </div>
-                <span className="pt-1 text-base font-medium text-[#414042]">{item}</span>
-              </motion.div>
-            ))}
           </motion.div>
         </div>
       </Container>

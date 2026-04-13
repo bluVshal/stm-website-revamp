@@ -10,12 +10,13 @@ export default function CareersSection() {
   return (
     <Section
       id="careers"
-      eyebrow="Careers"
+      eyebrow="Join Us"
       title="Join a team shaping smarter digital growth."
       body="Present the agency as a place for strategic thinkers, creative problem-solvers, and performance-minded marketers."
       className={"app-bckgrnd mx-auto max-w-7xl rounded-[2rem] border border-[#E6EBE7] bg-white shadow-[0_8px_24px_rgba(24,32,28,0.04)] h-190 px-6 md:px-8 py-10 bg-[linear-gradient(180deg,#EEF6E4_0%,#E7F2D8_100%)]"}
     >
       <div className="grid gap-8 lg:grid-cols-[1fr_0.9fr] lg:items-center bg-white/80 p-6 shadow-[0_16px_40px_rgba(24,32,28,0.06)] backdrop-blur rounded-[2rem]">
+
         <motion.div
           variants={fadeUp}
           initial="hidden"
@@ -28,7 +29,7 @@ export default function CareersSection() {
             energy, ambition, and the quality of client work.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <Button onClick={() => location.href='/careers#open-roles'} >
+            <Button onClick={() => location.href = '/careers#open-roles'} >
               View Roles
             </Button>
             <Button variant="secondary">

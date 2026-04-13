@@ -47,7 +47,7 @@ export const siteData = {
         { label: "What We Do", href: "/about-us#what-we-do" },
       ],
     },
-    { label: "People And Culture" },
+    { label: "People And Culture", href: "/people-and-culture" },
     {
       label: "Services",
       children: [

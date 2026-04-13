@@ -64,11 +64,10 @@ const ServicesLifeAtSTMSection = () => {
           viewport={{ once: true, amount: 0.15 }}
           className="grid gap-5 md:grid-cols-3"
         >
-
         </motion.div>
       </Container>
     </section>
   )
-}
+};
 
 export default ServicesLifeAtSTMSection;

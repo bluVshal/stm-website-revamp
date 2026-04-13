@@ -7,8 +7,16 @@ import { Container } from "../Container";
 import { Button } from "./Buttons";
 
 export function HeroSection() {
-
+  const videoRef = React.useRef(null);
   const [open, setOpen] = React.useState(false);
+
+  React.useEffect(() => {
+    const video = videoRef.current;
+    if (video) {
+      video.muted = true;
+      video.play().catch(() => {});
+    }
+  }, []);
 
   function handleContactBtn() {
     const el = document.getElementById("contact");
@@ -34,16 +42,17 @@ export function HeroSection() {
   return (
     <section id="top" className="relative overflow-hidden px-4 pb-16 pt-12 sm:px-6 md:px-8 md:pb-28 md:pt-24">
       <video
+        ref={videoRef}
         autoPlay
         loop
         muted
         playsInline
-        className="absolute inset-0 -z-20 h-full w-full object-cover"
+        className="absolute inset-0 h-full w-full object-cover"
       >
         <source src="/STM-Office.mp4" type="video/mp4" />
       </video>
-      <div className="absolute inset-0 -z-10 bg-white/80 backdrop-blur-sm" />
-      <Container>
+      <div className="absolute inset-0 z-10 bg-white/80 backdrop-blur-sm" />
+      <Container className="relative z-20">
 
         <div className="grid items-center gap-14 lg:grid-cols-[1.05fr_0.95fr]">
           <motion.div initial="hidden" animate="visible" variants={stagger} className="max-w-2xl">
