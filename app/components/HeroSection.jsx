@@ -33,10 +33,21 @@ export function HeroSection() {
 
   return (
     <section id="top" className="relative overflow-hidden px-4 pb-16 pt-12 sm:px-6 md:px-8 md:pb-28 md:pt-24">
-      <div className="absolute inset-x-0 top-0 -z-10 h-[34rem] bg-[radial-gradient(circle_at_70%_20%,rgba(141,197,62,0.22),transparent_26%),linear-gradient(180deg,#FFFFFF_0%,#F6F8F7_100%)]" />
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 -z-20 h-full w-full object-cover"
+      >
+        <source src="/STM-Office.mp4" type="video/mp4" />
+      </video>
+      <div className="absolute inset-0 -z-10 bg-white/80 backdrop-blur-sm" />
       <Container>
+
         <div className="grid items-center gap-14 lg:grid-cols-[1.05fr_0.95fr]">
           <motion.div initial="hidden" animate="visible" variants={stagger} className="max-w-2xl">
+
             <motion.div variants={fadeUp}>
               <span className="inline-flex items-center gap-2 rounded-full border border-[#E6EBE7] bg-white/80 px-4 py-2 text-xs font-semibold uppercase tracking-[0.14em] text-[#5E645F] shadow-sm backdrop-blur">
                 <Sparkles size={14} className="text-[#8DC53E]" /> Growth Marketing Company
@@ -63,6 +74,7 @@ export function HeroSection() {
                 Contact Us
               </Button>
             </motion.div>
+
           </motion.div>
         </div>
       </Container>
