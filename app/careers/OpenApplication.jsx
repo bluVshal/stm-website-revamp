@@ -55,6 +55,8 @@ const OpenRoles = () => {
     const [email, setEmail] = useState("");
     const [phone, setPhone] = useState("");
     const [position, setPosition] = useState("");
+    const [message, setMessage] = useState("");
+    const [motLetterFile, setMotLetterFile] = useState(null);
 
     const handleSendCV = async () => {
         try {
@@ -75,17 +77,25 @@ const OpenRoles = () => {
                 setPhone("");
                 setPosition("");
                 setFile(null);
+                setMotLetterFile(null);
+                setMotLetterFile(null)
                 setIsOpen(false);
 
                 const formData = new FormData();
 
                 formData.append("name", name);
                 formData.append("email", email);
-                formData.append("message", "Hello with attachment!");
+                formData.append("message", message);
 
                 if (file) {
                     formData.append("file", file);
                 }
+
+                if (motLetterFile) {
+                    formData.append("motivationLetter", motLetterFile);
+                }
+
+                setMessage(`Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nDesired Position(s): ${position} \n\n[CV attached] \n ${motLetterFile ? "[Motivation Letter attached]" : "[No Motivation Letter]"} `);
 
                 const res = await fetch("/api/send-email", {
                     method: "POST",
@@ -122,7 +132,7 @@ const OpenRoles = () => {
                         <motion.div initial="hidden" animate="visible" variants={stagger}>
                             <motion.div variants={fadeUp}>
                                 <span className="inline-flex rounded-full border border-[#E6EBE7] bg-white px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.14em] text-[#5E645F] shadow-sm">
-                                    Open application
+                                    Connect with us
                                 </span>
                             </motion.div>
                             <motion.h1
@@ -156,14 +166,14 @@ const OpenRoles = () => {
                                     </div>
                                     <div className="grid gap-5 md:grid-cols-2 mb-5">
                                         <Field required label="Phone" placeholder="Your phone number" type="tel" value={phone} onChange={(e) => setPhone(e.target.value)} />
-                                        <Field required label="Desired Position/s" placeholder="Your desired position(s)" value={position} onChange={(e) => setPosition(e.target.value)} />
+                                        <Field required label="Desired Position/s" placeholder="Your desired position/s" value={position} onChange={(e) => setPosition(e.target.value)} />
                                     </div>
                                     <div className="grid gap-5 md:grid-cols-2 mb-5">
                                         <label><span><p className="text-sm font-semibold">Upload your CV</p></span>
-                                            <input accept=".pdf, .doc, .docx" className="border border-[#E6EBE7] bg-input p-2 shadow-sm" type="file" onChange={(e) => setFile(e.target.files[0])} />
+                                            <input id='cv-file' accept=".pdf, .doc, .docx" className="border border-[#E6EBE7] bg-input p-2 shadow-sm" type="file" onChange={(e) => setFile(e.target.files[0])} />
                                         </label>
                                         <label><span><p className="text-sm font-semibold">Upload your Motivation Letter</p></span>
-                                            <input accept=".pdf, .doc, .docx" className="border border-[#E6EBE7] bg-input p-2 shadow-sm" type="file" onChange={(e) => setFile(e.target.files[0])} />
+                                            <input id='motivation-letter-file' accept=".pdf, .doc, .docx" className="border border-[#E6EBE7] bg-input p-2 shadow-sm" type="file" onChange={(e) => setMotLetterFile(e.target.files[0])} />
                                         </label>
                                     </div>
                                     <div className="mt-6 flex flex-wrap items-center gap-1">

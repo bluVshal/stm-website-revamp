@@ -73,9 +73,14 @@ body {
   filter: brightness(79%);
 }
 
-  .arrow-container {
-    display: none;
-  }
+.arrow-container {
+  display: none;
+}
+
+input[type="file"]::file-selector-button {
+  display: none;
+}
+
 @media screen and (min-width: 1000px) {
 
   .arrow-container {
