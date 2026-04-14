@@ -4,7 +4,6 @@ import CultureSection from './components/CultureSection';
 import LifeAtSTMSection from './components/LifeAtSTMSection';
 import BenefitsSection from './components/BenefitsSection';
 import FitSection from './components/FitSection';
-import CareersSection from './components/CareersSection';
 
 const PeopleAndCulture = () => {
   return (
@@ -14,7 +13,6 @@ const PeopleAndCulture = () => {
       <FitSection />
       <LifeAtSTMSection />
       <BenefitsSection />
-      <CareersSection />
     </main>
   )
 }

@@ -32,9 +32,9 @@ export async function POST(req) {
     });
 
     await transporter.sendMail({
-      from: process.env.EMAIL_USER,
+      from: email,
       to: process.env.EMAIL_USER,
-      subject: `New message from ${name}`,
+      subject: `Mail to HR from ${name}`,
       replyTo: email,
       text: message,
       attachments, // ✅ attach file here

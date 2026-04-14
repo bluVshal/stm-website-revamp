@@ -156,10 +156,13 @@ const OpenRoles = () => {
                                     </div>
                                     <div className="grid gap-5 md:grid-cols-2 mb-5">
                                         <Field required label="Phone" placeholder="Your phone number" type="tel" value={phone} onChange={(e) => setPhone(e.target.value)} />
-                                        <Field required label="Position" placeholder="Your desired position" value={position} onChange={(e) => setPosition(e.target.value)} />
+                                        <Field required label="Desired Position/s" placeholder="Your desired position(s)" value={position} onChange={(e) => setPosition(e.target.value)} />
                                     </div>
                                     <div className="grid gap-5 md:grid-cols-2 mb-5">
                                         <label><span><p className="text-sm font-semibold">Upload your CV</p></span>
+                                            <input accept=".pdf, .doc, .docx" className="border border-[#E6EBE7] bg-input p-2 shadow-sm" type="file" onChange={(e) => setFile(e.target.files[0])} />
+                                        </label>
+                                        <label><span><p className="text-sm font-semibold">Upload your Motivation Letter</p></span>
                                             <input accept=".pdf, .doc, .docx" className="border border-[#E6EBE7] bg-input p-2 shadow-sm" type="file" onChange={(e) => setFile(e.target.files[0])} />
                                         </label>
                                     </div>
