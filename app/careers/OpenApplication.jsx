@@ -79,8 +79,8 @@ const OpenRoles = () => {
 
                 const formData = new FormData();
 
-                formData.append("name", "PraVishal");
-                formData.append("email", "pravishal@stmconsulting.io");
+                formData.append("name", name);
+                formData.append("email", email);
                 formData.append("message", "Hello with attachment!");
 
                 if (file) {
