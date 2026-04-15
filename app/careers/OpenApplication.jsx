@@ -78,7 +78,6 @@ const OpenRoles = () => {
                 setPosition("");
                 setFile(null);
                 setMotLetterFile(null);
-                setMotLetterFile(null)
                 setIsOpen(false);
 
                 const formData = new FormData();

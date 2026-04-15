@@ -35,21 +35,21 @@ const ServicesLifeAtSTMSection = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
-        className={cx("mb-12 max-w-3xl", center && "mx-auto text-center")}
+        className={cx("mb-12 max-w-3xl", center && "mx-auto text-center items-center rounded-[2rem] border border-[#E6EBE7] bg-white/80 p-6 shadow-[0_16px_40px_rgba(24,32,28,0.06)] backdrop-blur md:p-8 lg:p-10")}
       >
         {eyebrow && (
           <span className="mb-4 inline-flex rounded-full border border-[#E6EBE7] bg-white px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.14em] text-[#5E645F] shadow-sm">
             {eyebrow}
           </span>
         )}
-        <h2 className="text-3xl font-semibold tracking-tight text-[#EFEFEF] md:text-5xl">{title}</h2>
-        {body && <p className="mt-5 text-lg leading-8 text-[#FFF]">{body}</p>}
+        <h2 className="text-3xl font-semibold tracking-tight text-[#000] md:text-5xl">{title}</h2>
+        {body && <p className="mt-5 text-lg leading-8 text-[#000]">{body}</p>}
       </motion.div>
     );
   }
 
   return (
-    <section id='seo' className="bg-[#414042] py-20 text-white md:py-24">
+    <section id='seo' className="seo-service-container py-20 md:py-24">
       <Container>
         <SectionHeader
           center

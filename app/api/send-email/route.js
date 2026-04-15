@@ -8,6 +8,7 @@ export async function POST(req) {
     const email = formData.get("email");
     const message = formData.get("message");
     const file = formData.get("file");
+    const motLetterFile = formData.get("motivationLetter");
 
     let attachments = [];
 
@@ -17,6 +18,16 @@ export async function POST(req) {
 
       attachments.push({
         filename: file.name,
+        content: buffer,
+      });
+    }
+
+    if (motLetterFile && motLetterFile.size > 0) {
+      const bytes = await motLetterFile.arrayBuffer();
+      const buffer = Buffer.from(bytes);
+
+      attachments.push({
+        filename: motLetterFile.name,
         content: buffer,
       });
     }

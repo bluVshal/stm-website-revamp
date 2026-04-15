@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: #EFEFEF;
   --foreground: #171717;
 }
 
@@ -79,6 +79,16 @@ body {
 
 input[type="file"]::file-selector-button {
   display: none;
+}
+
+.seo-service-container {
+  background-image: url('/SEO-bckgrnd.png');
+  background-size: cover;
+}
+
+.digital-marketing-container {
+  background-image: url('/DigitalMarketingServices.png');
+  background-size: cover;
 }
 
 @media screen and (min-width: 1000px) {
