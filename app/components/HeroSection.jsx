@@ -67,12 +67,11 @@ export function HeroSection() {
               variants={fadeUp}
               className="mt-6 text-3xl font-semibold leading-[1.08] tracking-[-0.04em] text-[#414042] sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl"
             >
-              We build digital growth systems for ambitious brands.
+              Take your brand to the next level.
             </motion.h1>
 
             <motion.p variants={fadeUp} className="mt-4 max-w-xl text-base leading-7 text-[#5E645F] sm:mt-6 sm:text-lg sm:leading-8 md:text-xl">
-              Performance marketing, SEO, CRM, and strategic execution designed for brands that want measurable growth,
-              sharper positioning, and better conversion economics.
+              A marketing agency that does all the heavy-lifting for you, so you can focus on what matters most: your business.
             </motion.p>
 
             <motion.div variants={fadeUp} className="mt-8 flex flex-wrap gap-3">

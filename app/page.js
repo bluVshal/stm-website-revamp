@@ -2,7 +2,6 @@ import { NavBar } from "./components/NavBar";
 import { HeroSection } from "./components/HeroSection";
 import { AboutSection } from "./components/AboutSection";
 import { ServicesSection } from "./components/ServicesSection";
-import { IndustriesSection } from "./components/IndustriesSection";
 import { ProcessSection } from "./components/ProcessSection";
 import { CareersSection } from "./components/CareersSection";
 import { CTASection } from "./components/CTASection";
@@ -17,10 +16,9 @@ export default function STMPremiumUILibrary() {
       <main>
         <AboutSection />
         <ServicesSection />
-        <IndustriesSection />
         <ProcessSection />
-        <CareersSection />
         <CTASection />
+        <CareersSection />
         <ContactSection />
       </main>
       <Footer />
