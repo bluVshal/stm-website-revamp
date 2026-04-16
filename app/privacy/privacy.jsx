@@ -1,6 +1,6 @@
 import React from 'react'
 
-const privacy = () => {
+const Privacy = () => {
     return (
 
         <div className="container mx-auto px-6 py-12">
@@ -37,4 +37,4 @@ const privacy = () => {
     );
 }
 
-export default privacy;
+export default Privacy;
