@@ -1,8 +1,11 @@
 import React from 'react';
 import { motion } from "framer-motion";
-import { Container } from '@/app/Container';
 
 const cx = (...classes) => classes.filter(Boolean).join(" ");
+
+function Container({ children, className }) {
+  return <div className={cx("mx-auto max-w-7xl px-6 md:px-8", className)}>{children}</div>;
+}
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -30,7 +33,7 @@ function SectionHeader({ eyebrow, title, body, center }) {
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.3 }}
-      className={cx("mb-12 max-w-3xl", center && "mx-auto text-center")}
+      className={cx("mb-12 max-w-3xl mx-auto text-center rounded-[2rem] border border-[#E6EBE7] bg-white/80 p-6 shadow-[0_16px_40px_rgba(24,32,28,0.06)] backdrop-blur md:p-8 lg:p-10", center)}
     >
       {eyebrow && (
         <span className="mb-4 inline-flex rounded-full border border-[#E6EBE7] bg-white px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.14em] text-[#5E645F] shadow-sm">
@@ -45,7 +48,7 @@ function SectionHeader({ eyebrow, title, body, center }) {
 
 export default function DigitalMarketing() {
   return (
-    <section id='digital-marketing' className="py-20 md:py-24">
+    <section id='digital-marketing' className="digital-marketing-container py-20 md:py-24">
       <Container>
         <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
           <SectionHeader
