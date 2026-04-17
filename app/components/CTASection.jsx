@@ -1,5 +1,6 @@
 "use client";
 
+import React from "react";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { scaleIn } from "../Data";
@@ -7,8 +8,21 @@ import { Section } from "./Section";
 import { Button } from "./Buttons";
 
 export function CTASection() {
+  
+  const [open, setOpen] = React.useState(false);
+
+  function handleContactBtn() {
+    const el = document.getElementById("contact");
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+      setOpen(false);
+    } else {
+      window.location.href = "/#contact";
+    }
+  }
+
   return (
-    <Section id="contact" className="bg-[#F6F8F7]">
+    <Section className="bg-[#F6F8F7]">
       <motion.div
         variants={scaleIn}
         initial="hidden"
@@ -27,7 +41,7 @@ export function CTASection() {
             Use this area as a premium conversion moment with focused copy, strong buttons, and minimal distractions.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-            <Button icon={<ArrowRight size={16} />}>Contact Us</Button>
+            <Button onClick={handleContactBtn} icon={<ArrowRight size={16} />}>Contact Us</Button>
           </div>
         </div>
       </motion.div>
