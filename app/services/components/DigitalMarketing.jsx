@@ -49,12 +49,12 @@ function SectionHeader({ eyebrow, title, body, center }) {
 export default function DigitalMarketing() {
   return (
     <section id='digital-marketing' className="digital-marketing-container py-20 md:py-24">
-      <Container>
+      <Container className="flex max-w-4xl">
         <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
           <SectionHeader
             eyebrow="Digital Marketing"
-            title="Drive Growth with Our Digital Marketing Services"
-            body="Our digital marketing services are designed to help your business reach new heights in the online space. From search engine optimization to social media management, we provide comprehensive solutions that drive results and deliver value."
+            title="Grow your market with Our Digital Marketing Services"
+            body="We help your business grow online with our digital marketing services. If you need support with search engine optimisation or social media management, our team is here to deliver results you can see."
           />
           <motion.div
             variants={stagger}
@@ -69,4 +69,3 @@ export default function DigitalMarketing() {
     </section>
   );
 }
-

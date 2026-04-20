@@ -7,7 +7,7 @@ import ScrollSection from "./TestSection-wrapper.jsx";
 
 export default function Page() {
   return (
-    <div className="min-h-screen bg-[#F6F8F7] text-[#414042]">
+    <div className="relative min-h-screen bg-[#F6F8F7] text-[#414042]">
       <NavBar />
       <Privacy />
       <ScrollSection />
