@@ -71,7 +71,6 @@ const pageData = {
   ],
 }
 
-
 const CultureSection = () => {
   return (
     <section className="app-bckgrnd mx-auto max-w-7xl px-6 md:px-8 mb-10 py-10 bg-[linear-gradient(180deg,#EEF6E4_0%,#E7F2D8_100%)] rounded-[4rem] shadow-[0_16px_40px_rgba(24,32,28,0.06)] mt-10">

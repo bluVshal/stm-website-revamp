@@ -26,7 +26,6 @@ function Container({ children, className }) {
   return <div className={cx("mx-auto max-w-7xl px-6 md:px-8", className)}>{children}</div>;
 }
 
-
 const PeopleAndCultureHero = () => {
   return (
     <div>
