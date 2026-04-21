@@ -15,6 +15,7 @@ export function CareersSection() {
       body="Present the agency as a place for strategic thinkers, creative problem-solvers, and performance-minded marketers."
     >
       <div className="grid gap-8 lg:grid-cols-[1fr_0.9fr] lg:items-center">
+        
         <motion.div
           variants={fadeUp}
           initial="hidden"
@@ -54,6 +55,7 @@ export function CareersSection() {
             </motion.div>
           ))}
         </motion.div>
+
       </div>
     </Section>
   );
