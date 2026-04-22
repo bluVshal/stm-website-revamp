@@ -26,18 +26,18 @@ export default function PortfolioPage() {
   if (error) return <p>No vacancies available at the moment. Stay tuned for updates!</p>;
 
   return (
-    <div id="vacancies" style={{ padding: "20px" }}>
+    <div id="vacancies" className="px-0 py-4 sm:px-2 sm:py-5">
       {portfolio.length === 0 ? (
         <p>No vacancies available at the moment. Stay tuned for updates!</p>
       ) : (
           <ul>
             {portfolio.map((item) => (
-              <li key={item.id} className="grid gap-5 rounded-[1.85rem] border border-[#E6EBE7] bg-white p-7 shadow-[0_8px_24px_rgba(24,32,28,0.04)] md:grid-cols-[1fr_auto] md:items-center md:gap-10 mb-4">
+              <li key={item.id} className="grid gap-4 rounded-2xl sm:rounded-[1.85rem] border border-[#E6EBE7] bg-white p-4 text-left shadow-[0_8px_24px_rgba(24,32,28,0.04)] sm:p-7 md:grid-cols-[1fr_auto] md:items-center md:gap-10 mb-4">
                 <div
                   key={item.id}
-                  className="oppor-container"
+                  className="oppor-container flex flex-col items-start gap-3 sm:gap-4"
                 >
-                  <h2 className="mb-4 font-bold text-xl" dangerouslySetInnerHTML={{ __html: item.title.rendered }} />
+                  <h2 className="mb-2 font-bold text-lg sm:text-xl" dangerouslySetInnerHTML={{ __html: item.title.rendered }} />
                   <Button variant="primary" onClick={() => window.open(item.link, "_blank")} icon={<ArrowRight size={16} />}>
                     Learn More
                   </Button>
