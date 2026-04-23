@@ -13,7 +13,7 @@ const AboutUs = () => {
       <Section className="bg-[#F6F8F7]">
 
         <motion.div
-          id='about-us'
+          id='who-we-are'
           variants={scaleIn}
           initial="hidden"
           whileInView="visible"
@@ -52,6 +52,5 @@ const AboutUs = () => {
     </div>
   )
 };
-
 
 export default AboutUs;

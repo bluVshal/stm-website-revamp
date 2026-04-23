@@ -43,7 +43,7 @@ export const siteData = {
   nav: [
     { label: "About Us",
       children: [
-        { label: "Who We Are", href: "/about-us#about-us" },
+        { label: "Who We Are", href: "/about-us#who-we-are" },
         { label: "Mission and Purpose", href: "/about-us#mission-and-purpose" },
       ],
     },

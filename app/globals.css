@@ -97,6 +97,11 @@ input[type="file"]::file-selector-button {
   background-size: cover;
 }
 
+.who-we-are{
+ /* background-image: url('/team-work.avif');
+  background-size: cover;*/
+}
+
 @media screen and (min-width: 1000px) {
 
   .arrow-container {
