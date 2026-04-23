@@ -10,7 +10,6 @@ export default function Page() {
     <div className="relative min-h-screen bg-[#F6F8F7] text-[#414042]">
       <NavBar />
       <Privacy />
-      <ScrollSection />
       <Footer />
     </div>
   );
