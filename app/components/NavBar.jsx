@@ -46,7 +46,7 @@ function NavItem({ item, active }) {
       <a
         href={href}
         className={cx(
-          "group relative text-sm font-medium transition linkClasses",
+          "group relative whitespace-nowrap text-xs font-medium transition linkClasses md:text-xs lg:text-sm",
           active ? "text-[#414042]" : "text-[#4B504C] hover:text-[#414042]"
         )}
       >
@@ -63,14 +63,14 @@ function NavItem({ item, active }) {
 
   return (
     <div
-      className="relative"
+      className="relative shrink-0"
       onMouseEnter={openMenu}
       onMouseLeave={closeMenu}
     >
       <button
         type="button"
         className={cx(
-          "group relative flex items-center gap-1 text-sm font-medium transition linkClasses",
+          "group relative flex items-center gap-1 whitespace-nowrap text-xs font-medium transition linkClasses md:text-xs lg:text-sm",
           active ? "text-[#414042]" : "text-[#4B504C] hover:text-[#414042]"
         )}
         onClick={() => setHovered((v) => !v)}
@@ -225,28 +225,34 @@ export function NavBar() {
   }
 
   return (
-    <div className="sticky top-0 z-50 px-4 pt-4 md:px-6">
+    <div className="sticky top-0 z-50 px-3 pt-3 sm:px-4 sm:pt-4 md:px-5 lg:px-6">
       <motion.header
         layout
         className={cx(
-          "mx-auto flex max-w-7xl items-center justify-between rounded-2xl border px-5 py-4 md:px-6",
+          "mx-auto flex max-w-7xl items-center justify-between gap-3 rounded-2xl border px-4 py-3 md:gap-4 md:px-5 md:py-4 lg:gap-6 lg:px-6",
           scrolled
             ? "border-white/70 bg-white/80 shadow-[0_16px_40px_rgba(24,32,28,0.10)] backdrop-blur-xl"
             : "border-transparent bg-white/60 backdrop-blur-md"
         )}
       >
-        <a href="/" className="flex items-center gap-3">
-          <img loading="lazy" src="/STM-Consulting_Logo_(small).png" alt="STM Logo" className="h-auto w-auto max-h-8 sm:max-h-10" />
+        <a href="/" className="flex shrink-0 items-center gap-3">
+          <img loading="lazy" src="/STM-Consulting_Logo_(small).png" alt="STM Logo" className="h-auto w-auto max-h-8 sm:max-h-9 lg:max-h-10" />
         </a>
 
-        <nav className="hidden items-center gap-7 md:flex">
+        <nav className="hidden min-w-0 flex-1 items-center justify-center gap-4 md:flex md:gap-4 lg:gap-7">
           {siteData.nav.map((item) => (
             <NavItem key={item.label} item={item} active={isItemActive(item, pathname)} />
           ))}
         </nav>
 
-        <div className="hidden md:block">
-          <Button onClick={handleContactBtn} icon={<ArrowRight size={16} />}>Let&apos;s Talk</Button>
+        <div className="hidden shrink-0 md:block">
+          <Button
+            onClick={handleContactBtn}
+            icon={<ArrowRight size={16} />}
+            className="whitespace-nowrap px-3 py-2 text-xs md:text-sm lg:px-5 lg:py-3"
+          >
+            Let&apos;s Talk
+          </Button>
         </div>
 
         <button

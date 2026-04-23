@@ -23,7 +23,7 @@ const stagger = {
 
 const OpenRoles = () => {
     return (
-        <div className="rounded-2xl sm:rounded-[1.8rem] border border-white/70 bg-[#F6F8F7] p-4 text-center shadow-[0_16px_40px_rgba(24,32,28,0.06)] sm:p-8 md:p-12">
+        <div className="min-w-0 rounded-2xl border border-white/70 bg-[#F6F8F7] p-4 text-center shadow-[0_16px_40px_rgba(24,32,28,0.06)] sm:rounded-[1.8rem] sm:p-6 md:p-8 lg:p-12">
             <motion.div initial="hidden" animate="visible" variants={stagger}>
                 <motion.div variants={fadeUp}>
                     <span className="inline-flex rounded-full border border-[#E6EBE7] bg-white px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-[#5E645F] shadow-sm sm:px-4 sm:py-1.5 sm:text-xs">
@@ -32,7 +32,7 @@ const OpenRoles = () => {
                 </motion.div>
                 <motion.h1
                     variants={fadeUp}
-                    className="mt-4 max-w-2xl text-2xl font-semibold leading-tight tracking-[-0.03em] text-[#414042] sm:mt-6 sm:text-3xl sm:leading-[1.1] sm:tracking-[-0.04em] md:text-4xl lg:text-5xl"
+                    className="mx-auto mt-4 max-w-2xl text-2xl font-semibold leading-tight tracking-[-0.03em] text-[#414042] sm:mt-6 sm:text-3xl sm:leading-[1.1] sm:tracking-[-0.04em] md:text-3xl lg:text-5xl"
                 >
                     Opportunities to join the team:
                 </motion.h1>

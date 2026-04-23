@@ -39,7 +39,7 @@ const LifeAtSTMSection = () => {
   }];
 
   function Container({ children, className }) {
-    return <div className={cx("mx-auto max-w-7xl px-6 md:px-8", className)}>{children}</div>;
+    return <div className={cx("mx-auto max-w-7xl px-4 sm:px-6 md:px-8", className)}>{children}</div>;
   }
 
   function SectionHeader({ eyebrow, title, body, center }) {
@@ -49,21 +49,21 @@ const LifeAtSTMSection = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
-        className={cx("mb-12 max-w-3xl", center && "mx-auto text-center")}
+        className={cx("mb-8 sm:mb-10 md:mb-12 max-w-3xl", center && "mx-auto text-center")}
       >
         {eyebrow && (
-          <span className="mb-4 inline-flex rounded-full border border-[#E6EBE7] bg-white px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.14em] text-[#5E645F] shadow-sm">
+          <span className="mb-3 sm:mb-4 inline-flex rounded-full border border-[#E6EBE7] bg-white px-3 py-1 sm:px-4 sm:py-1.5 text-[11px] sm:text-xs font-semibold uppercase tracking-[0.14em] text-[#5E645F] shadow-sm">
             {eyebrow}
           </span>
         )}
-        <h2 className="text-3xl font-semibold tracking-tight text-[#EFEFEF] md:text-5xl">{title}</h2>
-        {body && <p className="mt-5 text-lg leading-8 text-[#FFF]">{body}</p>}
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-[#EFEFEF]">{title}</h2>
+        {body && <p className="mt-4 sm:mt-5 text-base sm:text-lg leading-7 sm:leading-8 text-[#FFF]">{body}</p>}
       </motion.div>
     );
   }
 
   return (
-    <section className="bg-[#414042] py-20 text-white md:py-24">
+    <section className="bg-[#414042] py-12 sm:py-16 md:py-20 lg:py-24 text-white">
       <Container>
         <SectionHeader
           center
@@ -76,16 +76,16 @@ const LifeAtSTMSection = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.15 }}
-          className="grid gap-5 md:grid-cols-3"
+          className="grid gap-4 sm:gap-5 sm:grid-cols-2 md:grid-cols-3"
         >
           {items.map((item, index) => (
             <motion.div
               key={index}
               variants={fadeUp}
               whileHover={{ y: -4, scale: 1.01 }}
-              className="overflow-hidden rounded-[1.75rem] border border-white/10 bg-[linear-gradient(135deg,#313431,#1F211F)] p-3"
+              className="overflow-hidden rounded-[1.25rem] sm:rounded-[1.75rem] border border-white/10 bg-[linear-gradient(135deg,#313431,#1F211F)] p-2 sm:p-3"
             >
-              <img lazyload="true" src={item.src} alt="Life at STM" className="h-56 w-full rounded-[1.3rem] object-cover" width={600} height={480} />
+              <img lazyload="true" src={item.src} alt="Life at STM" className="h-44 sm:h-52 md:h-56 w-full rounded-[1rem] sm:rounded-[1.3rem] object-cover" width={600} height={480} />
             </motion.div>
           ))}
         </motion.div>
