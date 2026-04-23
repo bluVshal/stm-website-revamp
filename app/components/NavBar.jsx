@@ -114,6 +114,7 @@ function NavItem({ item, active }) {
           </motion.div>
         )}
       </AnimatePresence>
+
     </div>
   );
 }
@@ -196,6 +197,7 @@ function MobileNavItem({ item, active, pathname }) {
           </motion.div>
         )}
       </AnimatePresence>
+      
     </div>
   );
 }
