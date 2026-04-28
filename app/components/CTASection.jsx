@@ -37,9 +37,6 @@ export function CTASection() {
           <h2 className="mx-auto mt-5 max-w-3xl text-2xl font-semibold tracking-tight text-[#414042] sm:text-3xl md:text-5xl">
             Ready to grow with a partner that thinks beyond campaigns?
           </h2>
-          <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-[#5E645F]">
-            Use this area as a premium conversion moment with focused copy, strong buttons, and minimal distractions.
-          </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
             <Button onClick={handleContactBtn} icon={<ArrowRight size={16} />}>Contact Us</Button>
           </div>

@@ -85,7 +85,7 @@ const LifeAtSTMSection = () => {
               whileHover={{ y: -4, scale: 1.01 }}
               className="overflow-hidden rounded-[1.25rem] sm:rounded-[1.75rem] border border-white/10 bg-[linear-gradient(135deg,#313431,#1F211F)] p-2 sm:p-3"
             >
-              <img lazyload="true" src={item.src} alt="Life at STM" className="h-44 sm:h-52 md:h-56 w-full rounded-[1rem] sm:rounded-[1.3rem] object-cover" width={600} height={480} />
+              <img loading="lazy" src={item.src} alt="Life at STM" className="h-44 sm:h-52 md:h-56 w-full rounded-[1rem] sm:rounded-[1.3rem] object-cover" width={600} height={480} />
             </motion.div>
           ))}
         </motion.div>

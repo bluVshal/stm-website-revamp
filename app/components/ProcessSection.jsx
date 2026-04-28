@@ -8,15 +8,15 @@ export function ProcessSection() {
 
   const arrowElements = [];
   for (let i = 0; i < 3; i++) {
-    arrowElements.push(<img className="arrow-img" key={i} src={`/arrow.png`} alt={`Step ${i + 1}`} />);
+    arrowElements.push(<img className="arrow-img" key={i} src={`/arrow.png`} alt={`Step ${i + 1}`} width={448} height={120} loading="lazy" />);
   }
 
   return (
     <Section
       id="process"
       eyebrow="Process"
-      title="A clear path from strategy to scale."
-      body="Every engagement follows a structure that keeps work focused, measurable, and easy to understand."
+      title="We guide you step by step, from planning your strategy to growing your business."
+      body="We use a clear process for every project, so you always know what to expect and can easily track progress."
       className="bg-[#F6F8F7]"
     >
       <motion.div

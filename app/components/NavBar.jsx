@@ -236,7 +236,7 @@ export function NavBar() {
         )}
       >
         <a href="/" className="flex shrink-0 items-center gap-3">
-          <img loading="lazy" src="/STM-Consulting_Logo_(small).png" alt="STM Logo" className="h-auto w-auto max-h-8 sm:max-h-9 lg:max-h-10" />
+          <img loading="lazy" src="/STM-Consulting_Logo_(small).png" alt="STM Logo" width={160} height={40} className="h-auto w-auto max-h-8 sm:max-h-9 lg:max-h-10" />
         </a>
 
         <nav className="hidden min-w-0 flex-1 items-center justify-center gap-4 md:flex md:gap-4 lg:gap-7">

@@ -113,22 +113,22 @@ export const siteData = {
     {
       number: "01",
       title: "Discover",
-      body: "Audit the market, funnel, channels, and opportunity gaps.",
+      body: "Review the market, sales funnel, channels, and look for areas where there are opportunities.",
     },
     {
       number: "02",
       title: "Plan",
-      body: "Shape a practical roadmap tied to KPIs and business goals.",
+      body: "Create a clear plan that connects your key metrics and business goals.",
     },
     {
       number: "03",
       title: "Execute",
-      body: "Launch campaigns, content, testing, and reporting systems.",
+      body: "Start your campaigns, share content, run tests, and set up ways to track results.",
     },
     {
       number: "04",
       title: "Scale",
-      body: "Double down on what performs and refine continuously.",
+      body: "Focus on what works best and keep improving your approach.",
     },
   ],
   culture: ["Hybrid collaboration", "Growth-focused culture", "High-impact client work"],

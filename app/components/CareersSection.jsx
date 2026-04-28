@@ -11,8 +11,8 @@ export function CareersSection() {
     <Section
       id="careers"
       eyebrow="Careers"
-      title="Join a team shaping smarter digital growth."
-      body="Present the agency as a place for strategic thinkers, creative problem-solvers, and performance-minded marketers."
+      title="Be part of a team that drives smarter digital growth."
+      body="Our agency is a place for strategic thinkers, creative problem-solvers, and marketers who care about results."
     >
       <div className="grid gap-8 lg:grid-cols-[1fr_0.9fr] lg:items-center">
         
@@ -24,8 +24,7 @@ export function CareersSection() {
           className="rounded-[2rem] border border-[#E6EBE7] bg-white p-8 shadow-[0_8px_24px_rgba(24,32,28,0.04)] md:p-10"
         >
           <p className="text-lg leading-8 text-[#5E645F]">
-            We build teams around curiosity, accountability, and measurable impact. The culture block works best when it reinforces
-            energy, ambition, and the quality of client work.
+            We build our teams on curiosity, accountability, and measurable impact. Our culture thrives by supporting energy, ambition, and high-quality client work.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Button onClick={() => location.href='/careers#open-roles'} >

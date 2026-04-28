@@ -14,7 +14,10 @@ export default function ScrollMobile() {
         <div key={i} className="flex flex-col gap-6">
           <img
             src={item.image}
+            alt={item.text}
             loading="lazy"
+            width={1200}
+            height={675}
             className="w-full rounded-2xl shadow-lg"
           />
           <div>

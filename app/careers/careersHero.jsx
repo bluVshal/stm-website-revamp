@@ -60,17 +60,17 @@ const careersHero = () => {
           >
             <div className="col-span-2 h-40 rounded-[1.5rem] bg-[linear-gradient(135deg,#DCEBC1,#F7FAF5)] p-2 shadow-sm sm:h-48 sm:rounded-[1.75rem] sm:p-3 md:h-56">
               <div className="h-full rounded-[1.2rem] bg-[radial-gradient(circle_at_30%_20%,rgba(141,197,62,0.25),transparent_18%),linear-gradient(135deg,#2C2E2C,#4A4D4A)] sm:rounded-[1.35rem]">
-                <img loading="lazy" src="/career-desktop2-small.avif" alt="STM Team" className="h-full w-full rounded-[1.2rem] object-cover sm:rounded-[1.35rem]" />
+                <img loading="lazy" src="/career-desktop2-small.avif" alt="STM Team" width={800} height={400} className="h-full w-full rounded-[1.2rem] object-cover sm:rounded-[1.35rem]" />
               </div>
             </div>
             <div className="h-24 rounded-[1.25rem] bg-[linear-gradient(135deg,#EAF5DA,#F8FBF5)] p-2 shadow-sm sm:h-32 sm:rounded-[1.5rem] sm:p-3 md:h-36">
               <div className="h-full rounded-[1rem] bg-[linear-gradient(135deg,#414042,#353835)] sm:rounded-[1.2rem]">
-                <img loading="lazy" src="/career-desktop-small.avif" alt="STM Team" className="h-full w-full rounded-[1rem] object-cover sm:rounded-[1.35rem]" />
+                <img loading="lazy" src="/career-desktop-small.avif" alt="STM Team" width={400} height={240} className="h-full w-full rounded-[1rem] object-cover sm:rounded-[1.35rem]" />
               </div>
             </div>
             <div className="h-24 rounded-[1.25rem] bg-[linear-gradient(135deg,#F3F6F3,#EAF5DA)] p-2 shadow-sm sm:h-32 sm:rounded-[1.5rem] sm:p-3 md:h-36">
               <div className="h-full rounded-[1rem] bg-[linear-gradient(135deg,#535752,#2A2D2A)] sm:rounded-[1.2rem]">
-                <img loading="lazy" src="/career-desktop3-small.avif" alt="STM Team" className="h-full w-full rounded-[1rem] object-cover sm:rounded-[1.35rem]" />
+                <img loading="lazy" src="/career-desktop3-small.avif" alt="STM Team" width={400} height={240} className="h-full w-full rounded-[1rem] object-cover sm:rounded-[1.35rem]" />
               </div>
             </div>
           </motion.div>
