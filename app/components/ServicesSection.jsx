@@ -32,8 +32,9 @@ export function ServicesSection() {
     <Section
       id="services"
       eyebrow="Services"
-      title="Services designed to scale brands intelligently."
-      body="From visibility to conversion to retention, each service is structured to improve the quality of growth, not just the volume of activity."
+      title="We offer services that help your brand grow in a smart and effective way."
+      body="Our services cover everything from getting your brand noticed to keeping your customers coming back. 
+      We focus on helping you grow in meaningful ways, not just increasing numbers."
       className="bg-[#F6F8F7]"
     >
       <motion.div
