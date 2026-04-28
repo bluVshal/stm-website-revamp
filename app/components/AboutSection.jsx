@@ -10,8 +10,8 @@ export function AboutSection() {
     <Section
       id="about"
       eyebrow="About"
-      title="A modern agency model built around performance, clarity, and long-term growth."
-      body="We connect strategy, creative thinking, and measurable execution into one integrated system so brands can scale with more confidence and less channel fragmentation."
+      title="Our agency is designed to focus on performance, transparency, and helping your business grow over time."
+      body="We bring together strategy, creative ideas, and clear results in one system. This helps brands grow with confidence and avoid scattered marketing efforts."
     >
       <div className="grid gap-8 lg:grid-cols-[1fr_0.95fr] lg:items-start">
         <motion.div
@@ -23,12 +23,12 @@ export function AboutSection() {
         >
           <div className="text-sm font-semibold uppercase tracking-[0.14em] text-[#858C86]">Why brands choose STM</div>
           <p className="mt-5 text-lg leading-8 text-[#5E645F]">
-            Instead of disconnected tactics, we build coherent systems across acquisition, retention, analytics, and messaging. That
-            means clearer priorities, cleaner reporting, and faster improvement cycles.
+            We don’t rely on aimless tactics. Instead, we create unified systems for acquisition, retention, analytics, and messaging. 
+            This approach gives you clearer priorities, easier-to-read reports, and quicker ways to improve.
           </p>
           <div className="mt-8 grid gap-4 sm:grid-cols-2">
             {[
-              "Strategy aligned to business goals",
+              "Expertise in Africa",
               "Data-backed decision making",
               "Clear communication and delivery rhythm",
               "Built to scale, not just launch",
@@ -51,7 +51,7 @@ export function AboutSection() {
           {[
             {
               title: "Strategy-first",
-              body: "Every channel supports commercial goals, not just activity metrics.",
+              body: "Each channel is designed to help you reach your business goals, not just track activity.",
             },
             {
               title: "Performance-led",
