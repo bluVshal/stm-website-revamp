@@ -33,8 +33,7 @@ export function ServicesSection() {
       id="services"
       eyebrow="Services"
       title="We offer services that help your brand grow in a smart and effective way."
-      body="Our services cover everything from getting your brand noticed to keeping your customers coming back. 
-      We focus on helping you grow in meaningful ways, not just increasing numbers."
+      body="Our services cover everything from getting your brand noticed to keeping your customers coming back. We focus on helping you grow in meaningful ways, not just increasing numbers."
       className="bg-[#F6F8F7]"
     >
       <motion.div
