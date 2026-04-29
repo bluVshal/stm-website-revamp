@@ -9,6 +9,7 @@ import { Button } from "./Buttons";
 export function CareersSection() {
   return (
     <Section
+      className="app-bckgrnd px-4 sm:px-6 md:px-8 mb-6 sm:mb-10 py-8 sm:py-10 bg-[linear-gradient(180deg,#EEF6E4_0%,#E7F2D8_100%)] rounded-[1.75rem] sm:rounded-[2.5rem] md:rounded-[4rem] shadow-[0_16px_40px_rgba(24,32,28,0.06)] mt-6 sm:mt-10"
       id="careers"
       eyebrow="Careers"
       title="Be part of a team that drives smarter digital growth."

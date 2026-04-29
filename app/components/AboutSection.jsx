@@ -8,6 +8,7 @@ import { Section } from "./Section";
 export function AboutSection() {
   return (
     <Section
+      className="app-bckgrnd bg-[linear-gradient(180deg,#EEF6E4_0%,#E7F2D8_100%)] rounded-[1.75rem] sm:rounded-[2.5rem] md:rounded-[4rem] shadow-[0_16px_40px_rgba(24,32,28,0.06)] sm:mt-10"
       id="about"
       eyebrow="About"
       title="Our agency is designed to focus on performance, transparency, and helping your business grow over time."

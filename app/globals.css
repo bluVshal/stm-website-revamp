@@ -110,6 +110,14 @@ input[type="file"]::file-selector-button {
     background-color: rgba(65, 64, 66, 0.918);
 }
 
+.main-container{
+  background-image: url('/stm-office-work.avif');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  filter: brightness(99%);
+}
+
 @media screen and (min-width: 1000px) {
 
   .arrow-container {

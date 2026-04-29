@@ -13,7 +13,7 @@ export default function STMPremiumUILibrary() {
     <div className="min-h-screen bg-[#F6F8F7] text-[#414042]">
       <NavBar />
       <HeroSection />
-      <main>
+      <main className="main-container">
         <AboutSection />
         <ServicesSection />
         <ProcessSection />

@@ -17,7 +17,8 @@ export function ProcessSection() {
       eyebrow="Process"
       title="We guide you step by step, from planning your strategy to growing your business."
       body="We use a clear process for every project, so you always know what to expect and can easily track progress."
-      className="bg-[#F6F8F7]"
+      className=""
+      innerClassName="rounded-[1.25rem] sm:rounded-[2rem] border border-[#E6EBE7] bg-white/80 p-5 shadow-[0_16px_40px_rgba(24,32,28,0.06)] backdrop-blur sm:p-6 md:p-8 lg:p-10"
     >
       <motion.div
         variants={stagger}
