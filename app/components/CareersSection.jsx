@@ -1,19 +1,26 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { Sparkles } from "lucide-react";
 import { fadeUp, stagger, siteData } from "../Data";
 import { Section } from "./Section";
 import { Button } from "./Buttons";
+import { SendCVModal } from "./SendCVModal";
 
 export function CareersSection() {
+  const [isCVModalOpen, setIsCVModalOpen] = useState(false);
+
   return (
+    <>
     <Section
-      className="app-bckgrnd px-4 sm:px-6 md:px-8 mb-6 sm:mb-10 py-8 sm:py-10 bg-[linear-gradient(180deg,#EEF6E4_0%,#E7F2D8_100%)] rounded-[1.75rem] sm:rounded-[2.5rem] md:rounded-[4rem] shadow-[0_16px_40px_rgba(24,32,28,0.06)] mt-6 sm:mt-10"
+      className="app-bckgrnd mt-6 sm:mt-10 mb-6 sm:mb-10"
       id="careers"
       eyebrow="Careers"
       title="Be part of a team that drives smarter digital growth."
       body="Our agency is a place for strategic thinkers, creative problem-solvers, and marketers who care about results."
+      innerClassName="rounded-2xl sm:rounded-[1.8rem] border border-white/70 bg-[#F6F8F7] p-4 shadow-[0_16px_40px_rgba(24,32,28,0.06)] sm:p-8 md:p-12"
+      centerHeader
     >
       <div className="grid gap-8 lg:grid-cols-[1fr_0.9fr] lg:items-center">
         
@@ -31,7 +38,7 @@ export function CareersSection() {
             <Button onClick={() => location.href='/careers#open-roles'} >
               View Roles
             </Button>
-            <Button variant="secondary">
+            <Button variant="secondary" onClick={() => setIsCVModalOpen(true)}>
               Send Your CV
             </Button>
           </div>
@@ -58,5 +65,7 @@ export function CareersSection() {
 
       </div>
     </Section>
+    <SendCVModal isOpen={isCVModalOpen} onClose={() => setIsCVModalOpen(false)} />
+    </>
   );
 }

@@ -3,10 +3,10 @@
 import { motion } from "framer-motion";
 import { cx, fadeUp } from "../Data";
 
-export function Section({ id, eyebrow, title, body, children, className, titleClassName, bodyClassName, innerClassName }) {
+export function Section({ id, eyebrow, title, body, children, className, titleClassName, bodyClassName, innerClassName, centerHeader }) {
   const header = (eyebrow || title || body) && (
     <motion.div
-      className="mb-12 max-w-2xl"
+      className={cx("mb-12 max-w-2xl", centerHeader && "mx-auto text-center")}
       variants={fadeUp}
       initial="hidden"
       whileInView="visible"
