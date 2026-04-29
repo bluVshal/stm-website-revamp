@@ -1,6 +1,7 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import { motion } from 'framer-motion';
 import { Send } from 'lucide-react';
 import { scaleIn } from '../Data';
@@ -64,10 +65,14 @@ export function SendCVModal({ isOpen, onClose }) {
     }
   };
 
-  if (!isOpen) return null;
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => { setMounted(true); }, []);
 
-  return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4 overflow-y-auto">
+  if (!isOpen || !mounted) return null;
+
+  return createPortal(
+    <div className="fixed inset-0 z-50 overflow-y-auto bg-black/80">
+      <div className="flex min-h-full items-center justify-center p-4">
       <motion.form
         variants={scaleIn}
         initial="hidden"
@@ -113,6 +118,8 @@ export function SendCVModal({ isOpen, onClose }) {
           </Button>
         </div>
       </motion.form>
-    </div>
+      </div>
+    </div>,
+    document.body
   );
 }
