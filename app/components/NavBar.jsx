@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight, ChevronDown, Menu, X } from "lucide-react";
@@ -43,7 +44,7 @@ function NavItem({ item, active }) {
 
   if (!hasChildren) {
     return (
-      <a
+      <Link
         href={href}
         className={cx(
           "group relative whitespace-nowrap text-xs font-medium transition linkClasses md:text-xs lg:text-sm",
@@ -57,7 +58,7 @@ function NavItem({ item, active }) {
             active ? "w-full" : "w-0 group-hover:w-full"
           )}
         />
-      </a>
+      </Link>
     );
   }
 
@@ -103,13 +104,13 @@ function NavItem({ item, active }) {
             className="absolute left-1/2 top-full z-50 mt-3 min-w-[200px] -translate-x-1/2 rounded-xl border border-[#E6EBE7] bg-white p-2 shadow-[0_16px_40px_rgba(24,32,28,0.10)]"
           >
             {item.children.map((child) => (
-              <a
+              <Link
                 key={child.label}
                 href={child.href ?? `/${child.label.toLowerCase().replace(/\s+/g, "-")}`}
                 className="block rounded-lg px-3 py-2 text-sm font-medium text-[#4B504C] transition hover:bg-[#F1F4F2] hover:text-[#414042]"
               >
                 {child.label}
-              </a>
+              </Link>
             ))}
           </motion.div>
         )}
@@ -128,7 +129,7 @@ function MobileNavItem({ item, active, pathname }) {
 
   if (!hasChildren) {
     return (
-      <a
+      <Link
         href={href}
         className={cx(
           "rounded-xl px-3 py-2 text-sm font-medium",
@@ -138,7 +139,7 @@ function MobileNavItem({ item, active, pathname }) {
         )}
       >
         {label}
-      </a>
+      </Link>
     );
   }
 
@@ -179,7 +180,7 @@ function MobileNavItem({ item, active, pathname }) {
                 const childHref = getItemHref(child);
                 const childActive = pathname === childHref || pathname.startsWith(childHref + "/");
                 return (
-                <a
+                <Link
                   key={child.label}
                   href={child.href ?? `#${child.label.toLowerCase().replace(/\s+/g, "-")}`}
                   className={cx(
@@ -190,7 +191,7 @@ function MobileNavItem({ item, active, pathname }) {
                   )}
                 >
                   {child.label}
-                </a>
+                </Link>
                 );
               })}
             </div>
@@ -235,9 +236,9 @@ export function NavBar() {
             : "border-transparent bg-white/60 backdrop-blur-md"
         )}
       >
-        <a href="/" className="flex shrink-0 items-center gap-3">
+        <Link href="/" className="flex shrink-0 items-center gap-3">
           <img loading="lazy" src="/STM-Consulting_Logo_(small).png" alt="STM Logo" width={160} height={40} className="h-auto w-auto max-h-8 sm:max-h-9 lg:max-h-10" />
-        </a>
+        </Link>
 
         <nav className="hidden min-w-0 flex-1 items-center justify-center gap-4 md:flex md:gap-4 lg:gap-7">
           {siteData.nav.map((item) => (

@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { ChevronRight } from "lucide-react";
 import { fadeUp, stagger, siteData } from "../Data";
@@ -18,10 +19,10 @@ export function ServiceCard({ icon: Icon, title, body, link }) {
       <h3 className="mt-6 text-xl font-semibold tracking-tight text-[#414042]">{title}</h3>
       <p className="mt-3 text-base leading-7 text-[#5E645F]">{body}</p>
       <div className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-[#414042]">
-        <a href={link} className="flex items-center gap-2">
+        <Link href={link} className="flex items-center gap-2">
           Explore service
           <ChevronRight size={16} className="transition group-hover:translate-x-1" />
-        </a>
+        </Link>
       </div>
     </motion.div>
   );

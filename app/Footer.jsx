@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import ScrollToTop from "./components/ScrollToTop";
 import { Container } from "./Container"; 
 
@@ -28,8 +29,8 @@ export function Footer() {
           <div className="mt-10 flex flex-col gap-3 border-t border-white/10 pt-6 text-sm text-white/55 md:flex-row md:items-center md:justify-between">
             <div>© 2021 - 2026 STM Consulting Ltd. All rights reserved.</div>
             <div className="flex gap-5">
-              <a href="/privacy" className="hover:text-white">Privacy</a>
-              <a href="/terms-conditions" className="hover:text-white">Terms</a>
+              <Link href="/privacy" className="hover:text-white">Privacy</Link>
+              <Link href="/terms-conditions" className="hover:text-white">Terms</Link>
             </div>
           </div>
         </div>
@@ -46,11 +47,27 @@ function FooterColumn({ title, items }) {
     <div>
       <div className="text-sm font-semibold text-white">{title}</div>
       <div className="mt-4 grid gap-3 text-sm text-white/70">
-        {items.map((item) => (
-          <a key={item.title} href={item.link} className="transition hover:text-white">
-            {item.title}
-          </a>
-        ))}
+        {items.map((item) => {
+          const isInternal = item.link.startsWith("/");
+          if (isInternal) {
+            return (
+              <Link key={item.title} href={item.link} className="transition hover:text-white">
+                {item.title}
+              </Link>
+            );
+          }
+          const isExternal = /^https?:\/\//.test(item.link);
+          return (
+            <a
+              key={item.title}
+              href={item.link}
+              className="transition hover:text-white"
+              {...(isExternal ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+            >
+              {item.title}
+            </a>
+          );
+        })}
       </div>
     </div>
   );

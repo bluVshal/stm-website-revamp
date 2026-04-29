@@ -1,5 +1,15 @@
 /** @type {import('next').NextConfig} */
 
+const isDev = process.env.NODE_ENV !== "production";
+
+const scriptSrc = isDev
+  ? "script-src 'self' 'unsafe-inline' 'unsafe-eval'"
+  : "script-src 'self' 'unsafe-inline'";
+
+const connectSrc = isDev
+  ? "connect-src 'self' https://www.stmconsulting.io ws: wss: http://localhost:* https://localhost:*"
+  : "connect-src 'self' https://www.stmconsulting.io";
+
 const securityHeaders = [
   {
     key: "Strict-Transport-Security",
@@ -15,10 +25,11 @@ const securityHeaders = [
       "default-src 'self'",
       "img-src 'self' data: blob: https://www.stmconsulting.io",
       "media-src 'self'",
-      "script-src 'self' 'unsafe-inline'",
+      scriptSrc,
       "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
       "font-src 'self' data: https://fonts.gstatic.com",
-      "connect-src 'self'",
+      connectSrc,
+      "frame-src 'self' https://www.google.com https://maps.google.com",
       "frame-ancestors 'self'",
       "base-uri 'self'",
       "form-action 'self'",
