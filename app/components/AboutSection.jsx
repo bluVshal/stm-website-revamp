@@ -38,7 +38,7 @@ export function AboutSection() {
                 "Clear communication and delivery rhythm",
                 "Built to scale, not just launch",
               ].map((item) => (
-                <div key={item} className="flex items-start gap-3 rounded-2xl bg-[#F8FAF9] p-4">
+                <div key={item} className="group flex items-start gap-3 sm:gap-4 rounded-[1.25rem] sm:rounded-[1.5rem] border border-[#E6EBE7] bg-white p-4 sm:p-5 shadow-[0_8px_24px_rgba(24,32,28,0.03)] transition-transform duration-450 sm:hover:translate-x-4 lg:hover:translate-x-8 hover:bg-[#F6FAF3]">
                   <CheckCircle2 size={18} className="mt-0.5 text-[#8DC53E]" />
                   <span className="text-base font-medium text-[#414042]">{item}</span>
                 </div>

@@ -52,7 +52,7 @@ export function CareersSection() {
           className="grid gap-5"
         >
           {siteData.culture.map((item) => (
-            <motion.div key={item} variants={fadeUp} whileHover={{ y: -4 }} className="rounded-[1.75rem] border border-[#E6EBE7] bg-[#F8FAF9] p-6">
+            <motion.div key={item} variants={fadeUp} whileHover={{ y: -4 }} className="group flex items-start gap-3 sm:gap-4 rounded-[1.25rem] sm:rounded-[1.5rem] border border-[#E6EBE7] bg-white p-4 sm:p-5 shadow-[0_8px_24px_rgba(24,32,28,0.03)] transition-transform duration-450 sm:hover:translate-x-4 lg:hover:translate-x-8 hover:bg-[#F6FAF3]">
               <div className="flex items-center gap-3 text-[#414042]">
                 <div className="rounded-2xl bg-[#EAF5DA] p-3 text-[#5A7B24]">
                   <Sparkles size={18} />
