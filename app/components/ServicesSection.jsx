@@ -33,8 +33,8 @@ export function ServicesSection() {
     <Section
       id="services"
       eyebrow="Services"
-      title="We offer services that help your brand grow in a smart and effective way."
-      body="Our services cover everything from getting your brand noticed to keeping your customers coming back. We focus on helping you grow in meaningful ways, not just increasing numbers."
+      title="We provide services that allow your brand to grow in an intelligent and effective way."
+      body="Our services cover everything from brand exposure, customer acquisition, to customer retention. We focus on helping you grow your business, not just increasing numbers."
       className="bg-[#414042] py-12 sm:py-16 md:py-20 lg:py-24 text-white"
       titleClassName="text-white"
       bodyClassName="text-white"

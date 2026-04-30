@@ -54,10 +54,23 @@ export function SendCVModal({ isOpen, onClose }) {
         body: formData,
       });
 
-      const data = await res.json();
+      // Read the body as text first so we can safely diagnose non-JSON responses.
+      const raw = await res.text();
+      let data;
+      try {
+        data = raw ? JSON.parse(raw) : {};
+      } catch (parseErr) {
+        console.error('Non-JSON response from /api/send-email:', {
+          status: res.status,
+          contentType: res.headers.get('content-type'),
+          body: raw,
+        });
+        alert(`Server returned an invalid response (${res.status}). Check console.`);
+        return;
+      }
 
-      if (!data.success) {
-        alert(`Failed: ${data.error || 'Unknown error'}`);
+      if (!res.ok || !data.success) {
+        alert(`Failed: ${data.error || `HTTP ${res.status}`}`);
       }
     } catch (error) {
       console.error('FRONTEND ERROR:', error);

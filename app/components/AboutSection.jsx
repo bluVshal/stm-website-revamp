@@ -11,7 +11,7 @@ export function AboutSection() {
       className="app-bckgrnd sm:mt-10 max-w-8xl mx-auto"
       id="about"
       eyebrow="About"
-      title="Our agency is designed to focus on performance, transparency, and helping your business grow over time."
+      title="Our agency is designed to focus on performance, transparency, and helping your business."
       body="We bring together strategy, creative ideas, and clear results in one system. This helps brands grow with confidence and avoid scattered marketing efforts."
       innerClassName="rounded-[1.25rem] sm:rounded-[2rem] border border-[#E6EBE7] bg-white/80 p-5 shadow-[0_16px_40px_rgba(24,32,28,0.06)] backdrop-blur sm:p-6 md:p-8 lg:p-10"
       centerHeader
@@ -28,7 +28,7 @@ export function AboutSection() {
               <div className="text-sm font-semibold uppercase tracking-[0.14em] text-[#858C86]">Why brands choose STM</div>
               <p className="mt-5 text-lg leading-8 text-[#5E645F]">
                 We don't rely on aimless tactics. Instead, we create unified systems for acquisition, retention, analytics, and messaging.
-                This approach gives you clearer priorities, easier-to-read reports, and quicker ways to improve.
+                This approach gives you clearer priorities, actionable data, and quicker ways to improve.
               </p>
             </div>
             <div className="mt-6 grid gap-4">
@@ -44,46 +44,6 @@ export function AboutSection() {
                 </div>
               ))}
             </div>
-          </motion.div>
-
-          <motion.div
-            variants={stagger}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
-            className="grid gap-5"
-          >
-            {[
-              {
-                title: "Strategy-first",
-                body: "Each channel is designed to help you reach your business goals, not just track activity.",
-              },
-              {
-                title: "Performance-led",
-                body: "Creative, content, and media decisions are shaped by evidence and iteration.",
-              },
-              {
-                title: "Partner mindset",
-                body: "We work like an extension of your internal team with transparent collaboration.",
-              },
-            ].map((item, index) => (
-              <motion.div
-                key={item.title}
-                variants={fadeUp}
-                whileHover={{ x: -6 }}
-                className={cx(
-                  "rounded-[2rem] border border-[#E6EBE7] bg-white p-8 shadow-[0_8px_24px_rgba(24,32,28,0.05)]",
-                  index === 1 && "lg:ml-8",
-                  index === 2 && "lg:ml-16"
-                )}
-              >
-                <div className="mb-4 inline-flex rounded-2xl bg-[#EAF5DA] p-3 text-[#5A7B24]">
-                  <Sparkles size={18} />
-                </div>
-                <h3 className="text-2xl font-semibold tracking-tight text-[#414042]">{item.title}</h3>
-                <p className="mt-3 text-base leading-7 text-[#5E645F]">{item.body}</p>
-              </motion.div>
-            ))}
           </motion.div>
         </div>
     </Section>

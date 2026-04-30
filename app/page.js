@@ -16,7 +16,7 @@ export default function STMPremiumUILibrary() {
       <main className="main-container">
         <AboutSection />
         <ServicesSection />
-        <ProcessSection />
+        { /*<ProcessSection /> */}
         <CTASection />
         <CareersSection />
         <ContactSection />

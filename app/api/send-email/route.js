@@ -1,7 +1,39 @@
 import nodemailer from "nodemailer";
 
+// Ensure this route always runs on Node (nodemailer is not edge-compatible).
+export const runtime = "nodejs";
+export const dynamic = "force-dynamic";
+
+// Always return a real JSON Response with an explicit Content-Type.
+// This guarantees the client's res.json() never sees a non-JSON body.
+function jsonResponse(payload, status = 200) {
+  return new Response(JSON.stringify(payload), {
+    status,
+    headers: { "Content-Type": "application/json; charset=utf-8" },
+  });
+}
+
+// Coerce any thrown value into a plain string so it serializes cleanly.
+function errorToString(err) {
+  if (err == null) return "Unknown error";
+  if (typeof err === "string") return err;
+  if (err instanceof Error && typeof err.message === "string") return err.message;
+  try {
+    return String(err?.message ?? err);
+  } catch {
+    return "Unserializable error";
+  }
+}
+
 export async function POST(req) {
   try {
+    if (!process.env.EMAIL_USER || !process.env.EMAIL_PASS) {
+      return jsonResponse(
+        { success: false, error: "Email service is not configured (missing EMAIL_USER/EMAIL_PASS)." },
+        500
+      );
+    }
+
     const formData = await req.formData();
 
     const name = formData.get("name");
@@ -10,30 +42,33 @@ export async function POST(req) {
     const file = formData.get("file");
     const motLetterFile = formData.get("motivationLetter");
 
-    let attachments = [];
+    if (!name || !email) {
+      return jsonResponse(
+        { success: false, error: "Missing required fields: name and email." },
+        400
+      );
+    }
 
-    if (file && file.size > 0) {
+    const attachments = [];
+
+    if (file && typeof file.arrayBuffer === "function" && file.size > 0) {
       const bytes = await file.arrayBuffer();
-      const buffer = Buffer.from(bytes);
-
       attachments.push({
-        filename: file.name,
-        content: buffer,
+        filename: file.name || "cv",
+        content: Buffer.from(bytes),
       });
     }
 
-    if (motLetterFile && motLetterFile.size > 0) {
+    if (motLetterFile && typeof motLetterFile.arrayBuffer === "function" && motLetterFile.size > 0) {
       const bytes = await motLetterFile.arrayBuffer();
-      const buffer = Buffer.from(bytes);
-
       attachments.push({
-        filename: motLetterFile.name,
-        content: buffer,
+        filename: motLetterFile.name || "motivation-letter",
+        content: Buffer.from(bytes),
       });
     }
 
     const transporter = nodemailer.createTransport({
-      host: "smtp.gmail.com", // your SMTP
+      host: "smtp.gmail.com",
       port: 465,
       secure: true,
       auth: {
@@ -43,22 +78,21 @@ export async function POST(req) {
     });
 
     await transporter.sendMail({
-      from: email,
+      // Gmail SMTP requires the authenticated address as the envelope sender.
+      from: process.env.EMAIL_USER,
       to: process.env.EMAIL_USER,
-      subject: `Mail to HR from ${name}`,
-      replyTo: email,
-      text: message,
-      attachments, // ✅ attach file here
+      subject: `Mail to HR from ${String(name)}`,
+      replyTo: String(email),
+      text: typeof message === "string" ? message : String(message ?? ""),
+      attachments,
     });
 
-    return Response.json({ success: true });
-
+    return jsonResponse({ success: true });
   } catch (error) {
     console.error("ATTACHMENT ERROR:", error);
-
-    return Response.json({
-      success: false,
-      error: error.message,
-    });
+    return jsonResponse(
+      { success: false, error: errorToString(error) },
+      500
+    );
   }
 }
