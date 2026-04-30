@@ -44,10 +44,12 @@ export function ServicesSection() {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.15 }}
-        className="grid gap-6 md:grid-cols-2 xl:grid-cols-3"
+        className="flex flex-wrap justify-center gap-6"
       >
-        {siteData.services.map((service) => (          
-          <ServiceCard key={service.title} {...service} />
+        {siteData.services.map((service) => (
+          <div key={service.title} className="w-full md:w-[calc(50%-12px)] xl:w-[calc(33.333%-16px)]">
+            <ServiceCard {...service} />
+          </div>
         ))}
       </motion.div>
     </Section>

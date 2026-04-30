@@ -39,7 +39,7 @@ export function HeroSection() {
   }
 
   return (
-    <section id="top" className="relative overflow-hidden px-4 pb-16 pt-12 sm:px-6 md:px-8 md:pb-28 md:pt-24">
+    <section id="top" className="relative overflow-hidden px-4 pb-16 pt-12 sm:px-6 md:px-8 md:pb-28 md:pt-24 lg:pb-32 lg:pt-32">
       <video
         ref={videoRef}
         autoPlay

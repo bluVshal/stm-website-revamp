@@ -19,7 +19,7 @@ export function CareersSection() {
       eyebrow="Careers"
       title="Be part of a team that drives smarter digital growth."
       body="Our agency is a place for strategic thinkers, creative problem-solvers, and marketers who care about results."
-      innerClassName="rounded-2xl sm:rounded-[1.8rem] border border-white/70 bg-[#F6F8F7] p-4 shadow-[0_16px_40px_rgba(24,32,28,0.06)] sm:p-8 md:p-12"
+      innerClassName="rounded-[1.25rem] sm:rounded-[2rem] border border-[#E6EBE7] bg-white/80 p-5 shadow-[0_16px_40px_rgba(24,32,28,0.06)] backdrop-blur sm:p-6 md:p-8 lg:p-10"
       centerHeader
     >
       <div className="grid gap-8 lg:grid-cols-[1fr_0.9fr] lg:items-center">
