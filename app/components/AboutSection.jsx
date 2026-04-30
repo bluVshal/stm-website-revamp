@@ -13,10 +13,10 @@ export function AboutSection() {
       eyebrow="About"
       title="Our agency is designed to focus on performance, transparency, and helping your business."
       body="We bring together strategy, creative ideas, and clear results in one system. This helps brands grow with confidence and avoid scattered marketing efforts."
-      innerClassName="rounded-[1.25rem] sm:rounded-[2rem] border border-[#E6EBE7] bg-white/80 p-5 shadow-[0_16px_40px_rgba(24,32,28,0.06)] backdrop-blur sm:p-6 md:p-8 lg:p-10"
+      innerClassName="rounded-[1.25rem] sm:rounded-[2rem] border border-[#E6EBE7] bg-white/80 shadow-[0_16px_40px_rgba(24,32,28,0.06)] backdrop-blur p-5 sm:p-6 md:p-8 lg:p-10"
       centerHeader
     >
-        <div className="grid gap-8 lg:grid-cols-[1fr_0.95fr] lg:items-center">
+        <div className="ml-64 mr-64 md:items-center lg:items-center">
           <motion.div
             variants={fadeUp}
             initial="hidden"

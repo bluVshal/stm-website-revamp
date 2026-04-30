@@ -22,14 +22,14 @@ export function CareersSection() {
       innerClassName="rounded-[1.25rem] sm:rounded-[2rem] border border-[#E6EBE7] bg-white/80 p-5 shadow-[0_16px_40px_rgba(24,32,28,0.06)] backdrop-blur sm:p-6 md:p-8 lg:p-10"
       centerHeader
     >
-      <div className="grid gap-8 lg:grid-cols-[1fr_0.9fr] lg:items-center">
+      <div className="grid gap-8 lg:grid-cols-[1fr_0.9fr] lg:items-stretch">
         
         <motion.div
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
-          className="rounded-[2rem] border border-[#E6EBE7] bg-white p-8 shadow-[0_8px_24px_rgba(24,32,28,0.04)] md:p-10"
+          className="flex h-full flex-col justify-between rounded-[2rem] border border-[#E6EBE7] bg-white p-8 shadow-[0_8px_24px_rgba(24,32,28,0.04)] md:p-10"
         >
           <p className="text-lg leading-8 text-[#5E645F]">
             We build our teams on curiosity, accountability, and measurable impact. Our culture thrives by supporting energy, ambition, and high-quality client work.

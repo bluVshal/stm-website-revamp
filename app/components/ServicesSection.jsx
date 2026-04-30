@@ -35,9 +35,10 @@ export function ServicesSection() {
       eyebrow="Services"
       title="We provide services that allow your brand to grow in an intelligent and effective way."
       body="Our services cover everything from brand exposure, customer acquisition, to customer retention. We focus on helping you grow your business, not just increasing numbers."
-      className="bg-[#414042] py-12 sm:py-16 md:py-20 lg:py-24 text-white"
+      className="bg-[#414042] md:px-12 md:py-12 sm:py-16 lg:py-24 text-white"
       titleClassName="text-white"
       bodyClassName="text-white"
+      centerHeader
     >
       <motion.div
         variants={stagger}
