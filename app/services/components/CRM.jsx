@@ -50,8 +50,8 @@ const CRM = () => {
         <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
           <SectionHeader
             eyebrow="CRM"
-            title="Enhance Customer Relationships with Our CRM Services"
-            body="Our CRM services are designed to help you build stronger customer relationships, streamline your sales process, and drive revenue growth. We provide a comprehensive solution that integrates all your customer interactions into a single, easy-to-use platform."
+            title="Getting customers is important—but keeping them is even more valuable."
+            body="We help you build systems to manage your customers, understand their behavior, and keep them coming back. From email campaigns to loyalty strategies, we turn one-time buyers into loyal customers."
           />
           <motion.div
             variants={stagger}

@@ -53,8 +53,8 @@ export default function DigitalMarketing() {
         <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
           <SectionHeader
             eyebrow="Digital Marketing"
-            title="Grow your market with Our Digital Marketing Services"
-            body="We help your business grow online with our digital marketing services. If you need support with search engine optimisation or social media management, our team is here to deliver results you can see."
+            title="Getting your brand in front of the right people at the right time is key."
+            body="We create and manage marketing campaigns across platforms like Google, Facebook, Instagram, and more. Whether it’s ads, content, or strategy, we focus on bringing in real customers—not just clicks."
           />
           <motion.div
             variants={stagger}

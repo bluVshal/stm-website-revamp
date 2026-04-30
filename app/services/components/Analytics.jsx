@@ -58,8 +58,8 @@ const Analytics = () => {
           </motion.div>
           <SectionHeader
             eyebrow="Analytics"
-            title="Unlock Insights and Drive Growth with Our Analytics Services"
-            body="Our analytics services provide you with the data and insights needed to make informed decisions and drive business growth. We help you understand your customers, optimize your marketing efforts, and identify new opportunities for expansion."
+            title="It’s not just about traffic—it’s about results."
+            body="We analyze how people use your website and find ways to improve it so more visitors take action, whether that’s signing up, buying, or contacting you."
           />
         </div>
       </Container>
