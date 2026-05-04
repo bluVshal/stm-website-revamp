@@ -111,7 +111,7 @@ input[type="file"]::file-selector-button {
 }
 
 .main-container{
-  background-image: url('/stm-office-work.avif');
+  background-image: url('/contact-us.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
