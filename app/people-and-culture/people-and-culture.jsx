@@ -7,7 +7,7 @@ import FitSection from './components/FitSection';
 
 const PeopleAndCulture = () => {
   return (
-     <main className="min-h-screen bg-[#FFFFFF] text-[#414042]">
+     <main className="min-h-screen bg-[#F6F8F7] text-[#414042]">
       <PeopleAndCultureHero />
       <CultureSection />
       <FitSection />
