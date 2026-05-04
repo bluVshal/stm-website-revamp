@@ -102,21 +102,21 @@ export function SendCVModal({ isOpen, onClose }) {
         </div>
         <div className="grid gap-4 sm:gap-5 md:grid-cols-2 mb-4 sm:mb-5">
           <label className="block">
-            <p className="text-sm font-semibold mb-1">Upload your CV</p>
+            <p className="text-sm font-semibold mb-1 text-black">Upload your CV</p>
             <input
               id="cv-file"
               accept=".pdf, .doc, .docx"
-              className="w-full border border-[#E6EBE7] bg-input p-2 shadow-sm text-sm"
+              className="w-full cursor-pointer rounded-md border border-[#414042] bg-[#414042] p-2 text-sm text-white shadow-sm file:mr-3 file:cursor-pointer file:rounded-md file:border-0 file:bg-white file:px-3 file:py-1 file:text-sm file:font-semibold file:text-[#414042] hover:file:bg-[#F1F4F2]"
               type="file"
               onChange={(e) => setFile(e.target.files[0])}
             />
           </label>
           <label className="block">
-            <p className="text-sm font-semibold mb-1">Upload your Motivation Letter</p>
+            <p className="text-sm font-semibold mb-1 text-black">Upload your Motivation Letter</p>
             <input
               id="motivation-letter-file"
               accept=".pdf, .doc, .docx"
-              className="w-full border border-[#E6EBE7] bg-input p-2 shadow-sm text-sm"
+              className="w-full cursor-pointer rounded-md border border-[#414042] bg-[#414042] p-2 text-sm text-white shadow-sm file:mr-3 file:cursor-pointer file:rounded-md file:border-0 file:bg-white file:px-3 file:py-1 file:text-sm file:font-semibold file:text-[#414042] hover:file:bg-[#F1F4F2]"
               type="file"
               onChange={(e) => setMotLetterFile(e.target.files[0])}
             />
