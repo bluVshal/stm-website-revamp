@@ -22,7 +22,7 @@ export function CTASection() {
   }
 
   return (
-    <Section className="bg-[#F6F8F7]">
+    <Section className="bg-[#F6F8F7] py-0 sm:py-0 md:py-0">
       <motion.div
         variants={scaleIn}
         initial="hidden"

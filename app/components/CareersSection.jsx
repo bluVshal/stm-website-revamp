@@ -14,7 +14,7 @@ export function CareersSection() {
   return (
     <>
     <Section
-      className="app-bckgrnd mt-6 sm:mt-10 mb-6 sm:mb-10"
+      className="app-bckgrnd py-0 sm:py-0 md:py-0"
       id="careers"
       eyebrow="Careers"
       title="Be part of a team that drives smarter digital growth."
