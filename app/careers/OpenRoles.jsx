@@ -40,6 +40,6 @@ const OpenRoles = () => {
             <PortfolioPage />
         </div>
     )
-}
+};
 
-export default OpenRoles
+export default OpenRoles;
