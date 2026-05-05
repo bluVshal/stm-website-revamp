@@ -84,6 +84,14 @@ input[type="file"]::file-selector-button {
   display: none;
 }
 
+.services-bckgrnd {
+  background-image: url('/services_backgrnd.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  filter: brightness(99%);
+}
+
 .seo-service-container {
   background-image: url('/SEO-bckgrnd.png');
   background-size: cover;

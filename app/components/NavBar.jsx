@@ -12,6 +12,29 @@ function getItemHref(item) {
   return item.href ?? `/${item.label.toLowerCase().replace(/\s+/g, "-")}`;
 }
 
+/**
+ * Intercepts clicks on links of the form `/path#anchor` when the user is
+ * already on `/path`. Without this, Next.js's <Link> can produce URLs like
+ * `/services#digital-marketing#crm` because the App Router treats the new
+ * href as a hash to append to the current URL instead of replacing it.
+ */
+function handleHashLinkClick(e, href, onAfterNavigate) {
+  if (typeof window === "undefined" || !href || !href.includes("#")) return;
+  const [path, hash] = href.split("#");
+  if (!hash) return;
+  // Only intercept when target path equals current pathname.
+  if (path && path !== window.location.pathname) return;
+
+  e.preventDefault();
+  // Replace any existing hash with the new one (no double hash).
+  window.history.replaceState(null, "", `${window.location.pathname}#${hash}`);
+  const el = document.getElementById(hash);
+  if (el) {
+    el.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+  if (typeof onAfterNavigate === "function") onAfterNavigate();
+}
+
 function isItemActive(item, pathname) {
   const href = getItemHref(item);
   if (pathname === href || pathname.startsWith(href + "/")) return true;
@@ -103,15 +126,19 @@ function NavItem({ item, active }) {
             transition={{ duration: 0.18, ease: "easeOut" }}
             className="absolute left-1/2 top-full z-50 mt-3 min-w-[200px] -translate-x-1/2 rounded-xl border border-[#E6EBE7] bg-white p-2 shadow-[0_16px_40px_rgba(24,32,28,0.10)]"
           >
-            {item.children.map((child) => (
-              <Link
-                key={child.label}
-                href={child.href ?? `/${child.label.toLowerCase().replace(/\s+/g, "-")}`}
-                className="block rounded-lg px-3 py-2 text-sm font-medium text-[#4B504C] transition hover:bg-[#F1F4F2] hover:text-[#414042]"
-              >
-                {child.label}
-              </Link>
-            ))}
+            {item.children.map((child) => {
+              const childHref = child.href ?? `/${child.label.toLowerCase().replace(/\s+/g, "-")}`;
+              return (
+                <Link
+                  key={child.label}
+                  href={childHref}
+                  onClick={(e) => handleHashLinkClick(e, childHref, () => setHovered(false))}
+                  className="block rounded-lg px-3 py-2 text-sm font-medium text-[#4B504C] transition hover:bg-[#F1F4F2] hover:text-[#414042]"
+                >
+                  {child.label}
+                </Link>
+              );
+            })}
           </motion.div>
         )}
       </AnimatePresence>
@@ -179,11 +206,13 @@ function MobileNavItem({ item, active, pathname }) {
             <div className="ml-3 grid gap-1 border-l border-[#E6EBE7] pl-3 pt-1">
               {item.children.map((child) => {
                 const childHref = getItemHref(child);
+                const linkHref = child.href ?? `#${child.label.toLowerCase().replace(/\s+/g, "-")}`;
                 const childActive = pathname === childHref || pathname.startsWith(childHref + "/");
                 return (
                 <Link
                   key={child.label}
-                  href={child.href ?? `#${child.label.toLowerCase().replace(/\s+/g, "-")}`}
+                  href={linkHref}
+                  onClick={(e) => handleHashLinkClick(e, linkHref, () => setExpanded(false))}
                   className={cx(
                     "rounded-lg px-3 py-1.5 text-sm",
                     childActive

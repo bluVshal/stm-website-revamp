@@ -10,7 +10,7 @@ import Analytics from './components/Analytics';
 
 const ServicePage = () => {
   return (
-    <main className="min-h-screen bg-[#FFFFFF] text-[#414042]">
+    <main className="min-h-screen bg-[#F6F8F7] text-[#414042]">
       <ServicesHero />
       <SEOSection />
       <DigitalMarketing />
