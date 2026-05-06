@@ -7,6 +7,7 @@ import GraphicDesign from './components/GraphicDesign';
 import DigitalMarketing from './components/DigitalMarketing';
 import CRM from './components/CRM';
 import Analytics from './components/Analytics';
+import OutOfHomeMarketing from './components/OutOfHomeMarketing';
 
 const ServicePage = () => {
   return (
@@ -14,6 +15,7 @@ const ServicePage = () => {
       <ServicesHero />
       <SEOSection />
       <DigitalMarketing />
+      <OutOfHomeMarketing />
       <CRM />
       <GraphicDesign />
       <Analytics />

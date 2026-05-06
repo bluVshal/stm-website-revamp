@@ -26,11 +26,10 @@ function Container({ children, className }) {
   return <div className={cx("mx-auto max-w-7xl px-4 sm:px-6 md:px-8", className)}>{children}</div>;
 }
 
-
 const OutOfHomeMarketing = () => {
     return (
-        <div>
-            <section className="services-hero relative flex min-h-[600px] items-center justify-center overflow-hidden px-4 py-8 sm:py-12 md:min-h-[720px] md:py-16 lg:min-h-[900px]">
+        <div id='out-of-home-marketing'>
+            <section className="relative flex min-h-[600px] items-center justify-center overflow-hidden px-4 py-8 sm:py-12 md:min-h-[720px] md:py-16 lg:min-h-[720px]">
                 <div className='relative w-full rounded-lg overflow-hidden object-center'>
                     <Container>
                         <div className="items-center rounded-[1.25rem] sm:rounded-[2rem] border border-[#E6EBE7] bg-white/80 p-5 shadow-[0_16px_40px_rgba(24,32,28,0.06)] backdrop-blur sm:p-6 md:p-8 lg:p-10">
@@ -44,10 +43,10 @@ const OutOfHomeMarketing = () => {
                                     variants={fadeUp}
                                     className="mx-auto mt-4 sm:mt-6 max-w-2xl text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold leading-[1.1] sm:leading-[1.05] md:leading-[1.02] tracking-[-0.04em] text-[#414042]"
                                 >
-                                    <span>Elevate Your Brand with Our Comprehensive Out Of Home Marketing Solutions</span>.
+                                    <span>Strategic outdoor presence, built for measurable brand impact.</span>
                                 </motion.h1>
                                 <motion.p variants={fadeUp} className="mx-auto mt-4 sm:mt-6 max-w-xl text-base sm:text-lg leading-7 sm:leading-8 text-[#5E645F]">
-                                    We offer a complete suite of services designed to elevate your brand and drive growth. From strategic digital marketing to innovative graphic design, our team is dedicated to delivering results that exceed expectations.
+                                    We deliver end-to-end out-of-home marketing, from site selection and creative development to vendor management and post-campaign reporting. Whether it's billboards, transit media, branded environments, or experiential activations, we ensure each placement aligns with your audience, your geography, and your business objectives.
                                 </motion.p>
                             </motion.div>
 

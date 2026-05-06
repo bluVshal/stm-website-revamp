@@ -6,6 +6,7 @@ import {
   Search,
   Sparkles,
   SplinePointer,
+  TentTree,
   Users,
 } from "lucide-react";
 
@@ -41,7 +42,8 @@ export const stagger = {
 
 export const siteData = {
   nav: [
-    { label: "About Us",
+    {
+      label: "About Us",
       children: [
         { label: "Who We Are", href: "/about-us#who-we-are" },
         { label: "Mission and Purpose", href: "/about-us#mission-and-purpose" },
@@ -53,6 +55,7 @@ export const siteData = {
       children: [
         { label: "SEO Strategy", href: "/services#seo" },
         { label: "Digital Marketing", href: "/services#digital-marketing" },
+        { label: "Out Of Home Marketing", href: "/services#out-of-home-marketing" },
         { label: "CRM & Retention", href: "/services#crm" },
         { label: "Graphic Design", href: "/services#graphic-design" },
         { label: "Analytics & CRO", href: "/services#analytics" },
@@ -72,12 +75,17 @@ export const siteData = {
       title: "CRM & Retention",
       body: "We design lifecycle journeys, segmentation strategies, and retention frameworks to help you increase customer value.",
       link: "/services#crm",
-    },
-    {
+    }, {
       icon: Sparkles,
       title: "Digital Marketing",
       body: "We create campaign messaging, landing page copy, and content systems focused on driving conversions.",
       link: "/services#digital-marketing",
+    },
+    {
+      icon: TentTree,
+      title: "Out of Home Marketing",
+      body: "We design and manage out-of-home campaigns that boost brand visibility in high-traffic locations and deliver measurable results.",
+      link: "/services#out-of-home-marketing",
     },
     {
       icon: BarChart3,

@@ -11,14 +11,14 @@ export function ServiceCard({ icon: Icon, title, body, link }) {
     <motion.div
       variants={fadeUp}
       whileHover={{ y: -6 }}
-      className="group rounded-[1.75rem] border border-[#E6EBE7] bg-white p-7 shadow-[0_8px_24px_rgba(24,32,28,0.04)] transition hover:bg-[#F6FAF3] duration-450"
+      className="group flex h-full flex-col rounded-[1.75rem] border border-[#E6EBE7] bg-white p-7 shadow-[0_8px_24px_rgba(24,32,28,0.04)] transition hover:bg-[#F6FAF3] duration-450"
     >
       <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#F1F4F2] text-[#414042] transition group-hover:bg-[#C3E48B] group-hover:text-[#5A7B24] duration-450">
         <Icon size={20} />
       </div>
       <h3 className="mt-6 text-xl font-semibold tracking-tight text-[#414042]">{title}</h3>
       <p className="mt-3 text-base leading-7 text-[#5E645F]">{body}</p>
-      <div className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-[#414042]">
+      <div className="mt-auto pt-6 inline-flex items-center gap-2 text-sm font-semibold text-[#414042]">
         <Link href={link} className="flex items-center gap-2">
           Explore service
           <ChevronRight size={16} className="transition group-hover:translate-x-1" />
@@ -45,12 +45,10 @@ export function ServicesSection() {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.15 }}
-        className="flex flex-wrap justify-center gap-6"
+        className="grid auto-rows-fr gap-6 sm:grid-cols-2 xl:grid-cols-3"
       >
         {siteData.services.map((service) => (
-          <div key={service.title} className="w-full md:w-[calc(50%-12px)] xl:w-[calc(33.333%-16px)]">
-            <ServiceCard {...service} />
-          </div>
+          <ServiceCard key={service.title} {...service} />
         ))}
       </motion.div>
     </Section>

@@ -46,7 +46,13 @@ const CRM = () => {
                   <span>Getting customers is important—but keeping them is even more valuable.</span>
                 </motion.h1>
                 <motion.p variants={fadeUp} className="mx-auto mt-4 sm:mt-6 max-w-xl text-base sm:text-lg leading-7 sm:leading-8 text-[#5E645F]">
-                  We help you build systems to manage your customers, understand their behavior, and keep them coming back. From email campaigns to loyalty strategies, we turn one-time buyers into loyal customers.
+                  For marketing-focused businesses, CRM is essential for improving communication and increasing conversions. It enables you to deliver targeted messages to the right audience at the right time. Whether through personalized offers, follow-up campaigns, or retention strategies, CRM helps maintain relevance and consistency.
+                </motion.p>
+                <motion.p variants={fadeUp} className="mx-auto mt-4 sm:mt-6 max-w-xl text-base sm:text-lg leading-7 sm:leading-8 text-[#5E645F]">
+                  At STM, we help you set up and optimize CRM systems that fit your business goals. We handle everything from automation and segmentation to reporting and performance tracking, making sure your CRM supports your marketing efforts smoothly.
+                </motion.p>
+                <motion.p variants={fadeUp} className="mx-auto mt-4 sm:mt-6 max-w-xl text-base sm:text-lg leading-7 sm:leading-8 text-[#5E645F]">
+                  This leads to better customer experiences, stronger loyalty, and smarter business decisions based on real data.
                 </motion.p>
               </motion.div>
 
