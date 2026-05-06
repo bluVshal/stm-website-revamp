@@ -7,26 +7,6 @@ function Container({ children, className }) {
   return <div className={cx("mx-auto max-w-7xl px-6 md:px-8", className)}>{children}</div>;
 }
 
-function SectionHeader({ eyebrow, title, body, center }) {
-  return (
-    <motion.div
-      variants={fadeUp}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, amount: 0.3 }}
-      className={cx("mb-12 max-w-3xl", center && "mx-auto text-center")}
-    >
-      {eyebrow && (
-        <span className="mb-4 inline-flex rounded-full border border-[#E6EBE7] bg-white px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.14em] text-[#5E645F] shadow-sm">
-          {eyebrow}
-        </span>
-      )}
-      <h2 className="text-3xl font-semibold tracking-tight text-[#414042] md:text-5xl">{title}</h2>
-      {body && <p className="mt-5 text-lg leading-8 text-[#000]">{body}</p>}
-    </motion.div>
-  );
-}
-
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
   visible: {
