@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import ScrollToTop from "./components/ScrollToTop";
-import { Container } from "./Container"; 
+import { Container } from "./Container";
 
 export function Footer() {
   return (
@@ -13,7 +13,9 @@ export function Footer() {
             <div>
               <div className="flex items-center gap-3">
                 <div>
-                 <img loading="lazy" src="/STM-Consulting_logo_White.png" alt="STM Logo" width={160} height={48} className="h-9 w-auto sm:h-10" />
+                  <Link href="/" className="flex shrink-0 items-center gap-3">
+                    <img loading="lazy" src="/STM-Consulting_logo_White.png" alt="STM Logo" width={160} height={48} className="h-9 w-auto sm:h-10" />
+                  </Link>
                 </div>
               </div>
               <p className="mt-5 max-w-xs text-sm leading-7 text-white/70">
@@ -21,9 +23,9 @@ export function Footer() {
               </p>
             </div>
 
-            <FooterColumn title="Navigation" items={[{title:"About Us", link:"/about-us"}, {title:"People and Culture", link:"/people-and-culture"}, {title:"Services", link:"/services"}, {title:"Careers", link:"/careers"}, {title:"Contact", link:"/#contact"}]} />
-            <FooterColumn title="Services" items={[{title:"SEO", link:"/services#seo"}, {title:"Digital Marketing", link:"/services#digital-marketing"}, {title:"Out Of Home Marketing", link:"/services#out-of-home-marketing"}, {title:"CRM", link:"/services#crm"}, {title:"Graphic Design", link:"/services#graphic-design"}, {title:"Analytics & CRO", link:"/services#analytics"}]} />
-            <FooterColumn title="Contact" items={[{title:"info@stmconsulting.io", link:"mailto:info@stmconsulting.io"}, /*{title:"+230 000 0000", link:"tel:+2300000000"},*/ {title:"8th Floor, Nexteracom 1, Ebène, Mauritius", link:"https://maps.google.com/?q=8th+Floor,+Nexteracom+1,+Ebène,+Mauritius"}]} />
+            <FooterColumn title="Navigation" items={[{ title: "About Us", link: "/about-us" }, { title: "People and Culture", link: "/people-and-culture" }, { title: "Services", link: "/services" }, { title: "Careers", link: "/careers" }, { title: "Contact", link: "/#contact" }]} />
+            <FooterColumn title="Services" items={[{ title: "SEO", link: "/services#seo" }, { title: "Digital Marketing", link: "/services#digital-marketing" }, { title: "Out Of Home Marketing", link: "/services#out-of-home-marketing" }, { title: "CRM", link: "/services#crm" }, { title: "Graphic Design", link: "/services#graphic-design" }, { title: "Analytics & CRO", link: "/services#analytics" }]} />
+            <FooterColumn title="Contact" items={[{ title: "info@stmconsulting.io", link: "mailto:info@stmconsulting.io" }, /*{title:"+230 000 0000", link:"tel:+2300000000"},*/ { title: "8th Floor, Nexteracom 1, Ebène, Mauritius", link: "https://maps.google.com/?q=8th+Floor,+Nexteracom+1,+Ebène,+Mauritius" }]} />
           </div>
 
           <div className="mt-10 flex flex-col gap-3 border-t border-white/10 pt-6 text-sm text-white/55 md:flex-row md:items-center md:justify-between">
