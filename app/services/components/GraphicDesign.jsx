@@ -29,7 +29,7 @@ const stagger = {
 const GraphicDesign = () => {
   return (
     <div id='graphic-design'>
-      <section className="relative flex min-h-[600px] items-center justify-center overflow-hidden px-4 py-8 sm:py-12 md:min-h-[720px] md:py-16 lg:min-h-[820px]">
+      <section className="app-bckgrnd relative flex min-h-[600px] items-center justify-center overflow-hidden px-4 py-8 sm:py-12 md:min-h-[720px] md:py-16 lg:min-h-[820px]">
         <div className='relative w-full rounded-lg overflow-hidden object-center'>
           <Container>
             <div className="items-center rounded-[1.25rem] sm:rounded-[2rem] border border-[#E6EBE7] bg-white/80 p-5 shadow-[0_16px_40px_rgba(24,32,28,0.06)] backdrop-blur sm:p-6 md:p-8 lg:p-10">
