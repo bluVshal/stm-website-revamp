@@ -85,7 +85,7 @@ input[type="file"]::file-selector-button {
 }
 
 .services-bckgrnd {
-  background-image: url('/services_backgrnd.png');
+  background-image: url('/services_backgrnd.webp');
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
