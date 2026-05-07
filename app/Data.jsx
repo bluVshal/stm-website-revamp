@@ -47,6 +47,7 @@ export const siteData = {
       children: [
         { label: "Who We Are", href: "/about-us#who-we-are" },
         { label: "Mission and Purpose", href: "/about-us#mission-and-purpose" },
+        { label: "Core Values", href: "/about-us#core-values" },
       ],
     },
     { label: "People And Culture", href: "/people-and-culture" },
