@@ -30,12 +30,12 @@ body {
 }
 
 #not-found-container {
-  background-image: url('/stm-waves.avif');
+  background-image: url('/stm-waves.webp');
   box-shadow: inset 0 0 0 2000px rgba(255, 255, 255, 0.884);
 }
 
 .careers-hero {
-  background-image: url('/stm-works.avif');
+  background-image: url('/stm-works.webp');
   background-size: cover;
 }
 
@@ -47,7 +47,7 @@ body {
 }
 
 .app-bckgrnd {
-  background-image: url('/background_img_1.avif');
+  background-image: url('/background_img_1.webp');
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -59,7 +59,7 @@ body {
 }
 
 .pc-hero {
-  background-image: url('/stm-office-work.avif');
+  background-image: url('/stm-office-work.webp');
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -103,7 +103,7 @@ input[type="file"]::file-selector-button {
 }
 
 .who-we-are-container {
-    background-image: url('/team-work.avif');
+    background-image: url('/team-work.webp');
     background-position: center;
 }
 
