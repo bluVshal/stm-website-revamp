@@ -9,7 +9,7 @@ import { Field } from "./Field";
 
 export function ContactSection() {
   return (
-    <Section className="pt-0">
+    <Section className="pt-8 sm:pt-0">
       <div id="contact" className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr]">
         <motion.div
           variants={fadeUp}
