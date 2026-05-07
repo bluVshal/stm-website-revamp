@@ -64,13 +64,13 @@ const careersHero = () => {
               </div>
             </div>
             <div className="h-24 rounded-[1.25rem] bg-[linear-gradient(135deg,#EAF5DA,#F8FBF5)] p-2 shadow-sm sm:h-32 sm:rounded-[1.5rem] sm:p-3 md:h-36">
-              <div className="h-full rounded-[1rem] bg-[linear-gradient(135deg,#414042,#353835)] sm:rounded-[1.2rem]">
-                <img loading="lazy" src="/career-desktop-small.avif" alt="STM Careers Header" width={400} height={240} className="h-full w-full rounded-[1rem] object-cover sm:rounded-[1.35rem]" />
+              <div className="h-full rounded-[1rem] sm:rounded-[1.2rem]">
+                <img loading="lazy" src="/career-desktop-small.avif" alt="STM Careers Header" width={400} height={240} className="h-full w-full rounded-[1rem] object-cover sm:rounded-[1.2rem]" />
               </div>
             </div>
             <div className="h-24 rounded-[1.25rem] bg-[linear-gradient(135deg,#F3F6F3,#EAF5DA)] p-2 shadow-sm sm:h-32 sm:rounded-[1.5rem] sm:p-3 md:h-36">
-              <div className="h-full rounded-[1rem] bg-[linear-gradient(135deg,#535752,#2A2D2A)] sm:rounded-[1.2rem]">
-                <img loading="lazy" src="/career-desktop3-small.avif" alt="STM Careers Header" width={400} height={240} className="h-full w-full rounded-[1rem] object-cover sm:rounded-[1.35rem]" />
+              <div className="h-full rounded-[1rem] sm:rounded-[1.2rem]">
+                <img loading="lazy" src="/career-desktop3-small.avif" alt="STM Careers Header" width={400} height={240} className="h-full w-full rounded-[1rem] object-cover sm:rounded-[1.2rem]" />
               </div>
             </div>
           </motion.div>
