@@ -40,6 +40,9 @@ const securityHeaders = [
 ];
 
 const nextConfig = {
+  turbopack: {
+    root: ".",
+  },
   reactCompiler: true,
   productionBrowserSourceMaps: true,
   poweredByHeader: false,

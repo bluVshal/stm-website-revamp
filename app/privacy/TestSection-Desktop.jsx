@@ -4,10 +4,10 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
 const items = [
-  { image: "/stm-waves.avif", text: "Strategy begins with insight." },
-  { image: "/stm-works.avif", text: "Design creates connection." },
-  { image: "/stm-waves.avif", text: "Technology powers execution." },
-  { image: "/stm-works.avif", text: "Data drives optimization." },
+  { image: "/stm-waves.webp", text: "Strategy begins with insight." },
+  { image: "/stm-works.webp", text: "Design creates connection." },
+  { image: "/stm-waves.webp", text: "Technology powers execution." },
+  { image: "/stm-works.webp", text: "Data drives optimization." },
 ];
 
 export default function ScrollDesktop() {
