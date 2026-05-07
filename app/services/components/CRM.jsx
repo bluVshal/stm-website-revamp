@@ -43,7 +43,7 @@ const CRM = () => {
                   variants={fadeUp}
                   className="mx-auto mt-4 sm:mt-6 max-w-2xl text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold leading-[1.1] sm:leading-[1.05] md:leading-[1.02] tracking-[-0.04em] text-[#414042]"
                 >
-                  <span>Getting customers is important—but keeping them is even more valuable.</span>
+                  <span>Finding customers is important—but retaining them is even more valuable.</span>
                 </motion.h1>
                 <motion.p variants={fadeUp} className="mx-auto mt-4 sm:mt-6 max-w-3xl text-base sm:text-lg leading-7 sm:leading-8 text-[#5E645F]">
                   For marketing-focused businesses, CRM is essential for improving communication and increasing conversions. It enables you to deliver targeted messages to the right audience at the right time. Whether through personalized offers, follow-up campaigns, or retention strategies, CRM helps maintain relevance and consistency.
