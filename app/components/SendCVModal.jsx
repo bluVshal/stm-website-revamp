@@ -8,6 +8,16 @@ import { scaleIn } from '../Data';
 import { Field } from './Field';
 import { Button } from './Buttons';
 
+const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5 MB
+const MAX_FILE_SIZE_LABEL = '5 MB';
+
+function validateFileSize(file) {
+  if (file && file.size > MAX_FILE_SIZE) {
+    return `"${file.name}" is too large (${(file.size / (1024 * 1024)).toFixed(1)} MB). Maximum file size is ${MAX_FILE_SIZE_LABEL}.`;
+  }
+  return null;
+}
+
 export function SendCVModal({ isOpen, onClose }) {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -16,6 +26,24 @@ export function SendCVModal({ isOpen, onClose }) {
   const [message, setMessage] = useState('');
   const [file, setFile] = useState(null);
   const [motLetterFile, setMotLetterFile] = useState(null);
+  const [fileError, setFileError] = useState('');
+  const [motLetterError, setMotLetterError] = useState('');
+
+  function handleFileChange(e) {
+    const selected = e.target.files[0];
+    const error = validateFileSize(selected);
+    setFileError(error || '');
+    setFile(error ? null : selected);
+    if (error) e.target.value = '';
+  }
+
+  function handleMotLetterChange(e) {
+    const selected = e.target.files[0];
+    const error = validateFileSize(selected);
+    setMotLetterError(error || '');
+    setMotLetterFile(error ? null : selected);
+    if (error) e.target.value = '';
+  }
 
   const handleSendCV = async () => {
     try {
@@ -25,6 +53,10 @@ export function SendCVModal({ isOpen, onClose }) {
       }
       if (!file) {
         alert('Please upload your CV before sending.');
+        return;
+      }
+      if (fileError || motLetterError) {
+        alert('Please fix the file size errors before sending.');
         return;
       }
 
@@ -70,7 +102,10 @@ export function SendCVModal({ isOpen, onClose }) {
       }
 
       if (!res.ok || !data.success) {
-        alert(`Failed: ${data.error || `HTTP ${res.status}`}`);
+        const msg = res.status === 413
+          ? `The uploaded files are too large. Maximum file size is ${MAX_FILE_SIZE_LABEL} per file.`
+          : data.error || `HTTP ${res.status}`;
+        alert(msg);
       }
     } catch (error) {
       console.error('FRONTEND ERROR:', error);
@@ -108,8 +143,12 @@ export function SendCVModal({ isOpen, onClose }) {
               accept=".pdf, .doc, .docx"
               className="w-full cursor-pointer rounded-md border border-[#414042] bg-[#414042] p-2 text-sm text-white shadow-sm file:mr-3 file:cursor-pointer file:rounded-md file:border-0 file:bg-white file:px-3 file:py-1 file:text-sm file:font-semibold file:text-[#414042] hover:file:bg-[#F1F4F2]"
               type="file"
-              onChange={(e) => setFile(e.target.files[0])}
+              onChange={handleFileChange}
             />
+            {fileError
+              ? <p className="mt-1 text-xs text-red-600">{fileError}</p>
+              : <p className="mt-1 text-xs text-[#9AA19B]">PDF, DOC, or DOCX — max {MAX_FILE_SIZE_LABEL}</p>
+            }
           </label>
           <label className="block">
             <p className="text-sm font-semibold mb-1 text-black">Upload your Motivation Letter</p>
@@ -118,8 +157,12 @@ export function SendCVModal({ isOpen, onClose }) {
               accept=".pdf, .doc, .docx"
               className="w-full cursor-pointer rounded-md border border-[#414042] bg-[#414042] p-2 text-sm text-white shadow-sm file:mr-3 file:cursor-pointer file:rounded-md file:border-0 file:bg-white file:px-3 file:py-1 file:text-sm file:font-semibold file:text-[#414042] hover:file:bg-[#F1F4F2]"
               type="file"
-              onChange={(e) => setMotLetterFile(e.target.files[0])}
+              onChange={handleMotLetterChange}
             />
+            {motLetterError
+              ? <p className="mt-1 text-xs text-red-600">{motLetterError}</p>
+              : <p className="mt-1 text-xs text-[#9AA19B]">PDF, DOC, or DOCX — max {MAX_FILE_SIZE_LABEL}</p>
+            }
           </label>
         </div>
         <div className="mt-6 flex flex-wrap items-center justify-center gap-2 sm:justify-start">

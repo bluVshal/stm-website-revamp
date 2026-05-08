@@ -25,6 +25,8 @@ function errorToString(err) {
   }
 }
 
+const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5 MB
+
 export async function POST(req) {
   try {
     if (!process.env.EMAIL_USER || !process.env.EMAIL_PASS) {
@@ -41,6 +43,19 @@ export async function POST(req) {
     const message = formData.get("message");
     const file = formData.get("file");
     const motLetterFile = formData.get("motivationLetter");
+
+    if (file && file.size > MAX_FILE_SIZE) {
+      return jsonResponse(
+        { success: false, error: "Your CV exceeds the 5 MB file size limit. Please upload a smaller file." },
+        413
+      );
+    }
+    if (motLetterFile && motLetterFile.size > MAX_FILE_SIZE) {
+      return jsonResponse(
+        { success: false, error: "Your Motivation Letter exceeds the 5 MB file size limit. Please upload a smaller file." },
+        413
+      );
+    }
 
     if (!name || !email) {
       return jsonResponse(
