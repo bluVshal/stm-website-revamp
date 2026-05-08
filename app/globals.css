@@ -80,9 +80,6 @@ body {
   display: none;
 }
 
-input[type="file"]::file-selector-button {
-  display: none;
-}
 
 .services-bckgrnd {
   background-image: url('/services_backgrnd.webp');
