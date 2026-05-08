@@ -109,7 +109,7 @@ export function SendCVModal({ isOpen, onClose }) {
       }
     } catch (error) {
       console.error('FRONTEND ERROR:', error);
-      alert('Something went wrong. Check console.');
+      alert('Error sending your CV. Please try again later or contact us directly at info@stmconsulting.io');
     }
   };
 
