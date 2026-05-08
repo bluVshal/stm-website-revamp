@@ -35,7 +35,7 @@ const CRM = () => {
             <div className="items-center rounded-[1.25rem] sm:rounded-[2rem] border border-[#E6EBE7] bg-white/80 p-5 shadow-[0_16px_40px_rgba(24,32,28,0.06)] backdrop-blur sm:p-6 md:p-8 lg:p-10">
               <motion.div initial="hidden" animate="visible" variants={stagger} className="text-center">
                 <motion.div variants={fadeUp}>
-                  <span className="inline-flex rounded-full border border-[#E6EBE7] bg-white px-3 py-1 sm:px-4 sm:py-1.5 text-[11px] sm:text-xs font-semibold uppercase tracking-[0.14em] text-[#5E645F] shadow-sm">
+                  <span className="inline-flex rounded-full border border-[#E6EBE7] bg-white px-3 py-1 sm:px-4 sm:py-1.5 text-[11px] sm:texxt-xs font-semibold uppercase tracking-[0.14em] text-[#5E645F] shadow-sm">
                     CRM
                   </span>
                 </motion.div>
