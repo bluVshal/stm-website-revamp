@@ -23,7 +23,7 @@ export default function PortfolioPage() {
   }, []);
 
   if (portfolio === null) return <h2>Loading Vacancies...</h2>;
-  if (error) return <p>No vacancies available at the moment. Stay tuned for updates!</p>;
+  if (error) return <p className="py-6 sm:text-lg lg:text-xl">No vacancies available at the moment. Stay tuned for updates!</p>;
 
   return (
     <div id="vacancies" className="min-w-0 px-0 py-4 sm:px-2 sm:py-5">
