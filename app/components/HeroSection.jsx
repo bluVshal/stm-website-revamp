@@ -66,7 +66,7 @@ export function HeroSection() {
               variants={fadeUp}
               className="mt-6 text-3xl font-semibold leading-[1.08] tracking-[-0.04em] text-[#414042] sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl"
             >
-              Take your business to the next level.
+              Take your business to the <span className="text-[#7FAF2D] text-shadow-[1px_1px_1px_rgba(55,55,55,0.5)]">next level</span>.
             </motion.h1>
 
             <motion.p variants={fadeUp} className="mt-4 max-w-xl text-base leading-7 text-[#5E645F] sm:mt-6 sm:text-lg sm:leading-8 md:text-xl">
