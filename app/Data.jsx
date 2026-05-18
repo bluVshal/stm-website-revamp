@@ -68,7 +68,7 @@ export const siteData = {
     {
       icon: Search,
       title: "SEO Strategy",
-      body: "We build technical, content, and authority systems to help your business achieve lasting search visibility.",
+      body: "We specialize in link building, keyword research, technical SEO, landing page optimization, and on-page/off-page SEO to help your website rank higher and attract the right audience.",
       link: "/services#seo",
     },
     {
