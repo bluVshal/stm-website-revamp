@@ -11,8 +11,8 @@ export function AboutSection() {
       className="app-bckgrnd sm:mt-10 max-w-8xl mx-auto"
       id="about"
       eyebrow="About"
-      title="Our agency is designed to focus on performance, transparency, and helping your business."
-      body="We bring together strategy, creative ideas, and clear results in one system. This helps brands grow with confidence and avoid scattered marketing efforts."
+      title="Our agency is designed to focus on performance, transparency, and delivering value for your business."
+      body="We bring together strategy, creative ideas, with clear, visible results in one system. This allows brands grow with confidence."
       innerClassName="rounded-[1.25rem] sm:rounded-[2rem] border border-[#E6EBE7] bg-white/80 shadow-[0_16px_40px_rgba(24,32,28,0.06)] backdrop-blur p-5 sm:p-6 md:p-8 lg:p-10"
       centerHeader
     >
@@ -27,8 +27,8 @@ export function AboutSection() {
             <div>
               <div className="text-xs font-semibold uppercase tracking-[0.14em] text-[#858C86] sm:text-sm">Why brands choose STM</div>
               <p className="mt-4 text-base leading-7 text-[#5E645F] sm:mt-5 sm:text-lg sm:leading-8">
-                We don't rely on aimless tactics. Instead, we create unified systems for acquisition, retention, analytics, and messaging.
-                This approach gives you clearer priorities, actionable data, and quicker ways to improve.
+                We don't rely on aimless tactics. Instead, we define unified approach for acquisition, retention, analytics, and messaging.
+                This approach gives you peace of mind and critical data to focus on what matters.
               </p>
             </div>
             <div className="mt-5 grid gap-3 sm:mt-6 sm:gap-4">

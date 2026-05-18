@@ -4,8 +4,8 @@ import ServiceSection, { fadeUp } from "./ServiceSection";
 export default function OutOfHomeMarketing() {
   return (
     <ServiceSection
-      id="out-of-home-marketing"
-      eyebrow="Out Of Home Marketing"
+      id="on-the-ground-marketing"
+      eyebrow="On The Ground Marketing"
       title="Strategic outdoor presence, built for measurable brand impact."
       className="app-bckgrnd lg:min-h-[720px]"
     >

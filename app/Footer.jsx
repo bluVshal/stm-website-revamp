@@ -24,7 +24,7 @@ export function Footer() {
             </div>
 
             <FooterColumn title="Navigation" items={[{ title: "About Us", link: "/about-us" }, { title: "People and Culture", link: "/people-and-culture" }, { title: "Services", link: "/services" }, { title: "Careers", link: "/careers" }, { title: "Contact", link: "/#contact" }]} />
-            <FooterColumn title="Services" items={[{ title: "SEO", link: "/services#seo" }, { title: "Digital Marketing", link: "/services#digital-marketing" }, { title: "Out Of Home Marketing", link: "/services#out-of-home-marketing" }, { title: "CRM", link: "/services#crm" }, { title: "Graphic Design", link: "/services#graphic-design" }, { title: "Analytics & CRO", link: "/services#analytics" }]} />
+            <FooterColumn title="Services" items={[{ title: "SEO", link: "/services#seo" }, { title: "Digital Marketing", link: "/services#digital-marketing" }, { title: "On The Ground Marketing", link: "/services#on-the-ground-marketing" }, { title: "CRM", link: "/services#crm" }, { title: "Graphic Design", link: "/services#graphic-design" }, { title: "Analytics & CRO", link: "/services#analytics" }]} />
             <FooterColumn title="Contact" items={[{ title: "info@stmconsulting.io", link: "mailto:info@stmconsulting.io" }, /*{title:"+230 000 0000", link:"tel:+2300000000"},*/ { title: "8th Floor, Nexteracom 1, Ebène, Mauritius", link: "https://maps.google.com/?q=8th+Floor,+Nexteracom+1,+Ebène,+Mauritius" }]} />
           </div>
 
