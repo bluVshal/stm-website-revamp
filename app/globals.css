@@ -120,6 +120,7 @@ body {
   filter: brightness(99%);
 }
 
+
 @media screen and (min-width: 1000px) {
 
   .arrow-container {
